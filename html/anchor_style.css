@@ -1,0 +1,50 @@
+body {
+	font: 14px 맑은 고딕;
+}
+nav ul {
+	list-style:none;
+}
+nav ul li {
+	float:left;
+	margin : 10px 30px;
+	padding:10px;
+	border:1px solid #222;
+	border-radius:5px;
+}
+a {
+	text-decoration:none;
+}
+a:link, a:visited {
+	color: black;
+}
+
+a:hover, a:active, a:focus {
+	color:red;
+}
+.link1 {
+	border-bottom:dotted 1px #ccc;
+	padding-bottom:10px;
+	text-align:right;
+	margin-right:40px;
+}
+.container {
+	width: 650px;
+	margin : 0 auto;
+	background-color:#fff;
+}
+.content {
+	background-color: #FFFFFF;	
+	padding-top:5px;
+	padding-left:10px;
+	width: 720px;
+	clear:both;
+}
+footer {
+	margin:10 auto;
+	padding: 10px 0;
+	width:600px;
+	background-color:#030;
+	color:#fff;
+	text-align:center;
+}
+</style>

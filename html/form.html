@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가입하기</title>
+    <style>
+        form fieldset { margin : 10px 0; }
+        form legend { font-size: 18px; color: #0066ff; font-weight: 600; }
+        /* form 태그 하위 중 label 태그의 클래스명이 reg 인 것에 적용 */
+        form label.reg { font-size: 14px; width: 120px; float: left; }
+        form label em { font-size: 15px; color: red; font-weight: 800; }
+        form ul li { list-style: none; margin: 10px 0; }
+        /* form 태그 하위 중 fieldset 태그의 클래스명이 sendform 인 것에 적용 */
+        form fieldset.sendform { text-align: center; }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset class="login">
+            <legend>로그인</legend>
+            <label for="user_id">아이디 </label>
+            <input type="text" id="user_id" size="10" autofocus>
+            <label for="user_pw">비밀번호 </label>
+            <input type="password" id="user_pw" size="10">
+            <input type="submit" value="로그인">
+        </fieldset>
+        <fieldset class="register">
+            <legend>가입하기</legend>
+            <ul>
+                <li><label class="reg" for="new_id">아이디 <em>*</em></label>
+                    <input type="text" id="new_id" size="20" autocomplete="on" placeholder="아이디는 영문과 숫자 조합입니다"></li>
+                <li><label class="reg" for="new_pw1">비밀번호 <em>*</em></label>
+                    <input type="password" id="new_pw1" size="20" required></li>
+                <li><label class="reg" for="new_pw2">비밀번호 확인 <em>*</em></label>
+                    <input type="password" id="new_pw2" size="20" required></li>
+                <li><label class="reg" for="user_name">이름 <em>*</em></label>
+                    <input type="text" id="user_name" size="20" required></li>
+                <li><label class="reg" for="user_mail">메일 주소 <em>*</em></label>
+                    <input type="email" id="user_mail" size="20" required></li>
+                <li><label class="reg" for="user_tel">전화번호 </label>
+                    <input type="tel" id="user_tel" size="20"></li>
+                <!-- 여기서부터 select요소 시작 -->
+                <li>
+                    <label>학과</label>
+                    <select>
+                        <optgroup label="공과대학">
+                            <option value="archi">건축공학과</option>
+                            <option value="mechanic">기계공학과</option>
+                            <option value="indust">산업공학과</option>
+                            <option value="elec">전기전자공학과</option>
+                            <option value="computer" selected>컴퓨터공학과</option>
+                            <option value="chemical">화학공학과</option>
+                        </optgroup>
+                        <optgroup label="인문대학">
+                            <option value="history">사학과</option>
+                            <option value="lang">어문학부</option>
+                            <option value="philo">철학</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li><label><input type="checkbox">아이디 저장</label></li>
+            </ul>
+            <ul>
+                <li>
+                <input type="checkbox" name="pre" value="grammar">문법
+                <input type="checkbox" name="pre" value="voca">어휘
+                <input type="checkbox" name="pre" value="talking">회화
+                <input type="checkbox" name="pre" value="listening">리스닝
+                <input type="checkbox" name="pre" value="news">뉴스 청취
+                <input type="checkbox" name="pre" value="reading">독해                
+                </li>
+                <li>
+                    <span class="reg">신청 과목<small>(자격)</small></span>
+                    <label> <input type="radio" name="certificate" value="toeic" checked>TOEIC</label>
+                    <label> <input type="radio" name="certificate" value="toefl">TOEFL</label>
+                    <label> <input type="radio" name="certificate" value="opic">OPIC</label>
+                    <li>
+                        <legend>원하는 대관시간을 선택하세요.</legend>
+                        <label>날짜<input type="date"></label>
+                        <label>시작<input type="time" value="09:00" id = "start"></label>
+                        <label>끝<input type="time" value="18:00" id = "stop"></label>
+                        <label>첨부파일 선택 : <input type="file"></label>
+                    </li>
+                </li>  
+            </ul>
+        </fieldset>
+        <fieldset class="sendform">
+            <input type="submit" value="가입하기">
+            <input type="reset" value="다시쓰기">
+        </fieldset>
+    </form>
+</body>
+</html>
