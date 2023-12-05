@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#box{display: flex;
+						width:1000px; height:300px;background:#fff;margin:10px;}
+		#flex-box {
+						display: flex; 
+						width:300px; 
+						height:300px; 
+						background:#2F343E; 
+						margin:10px;
+		}
+		span{font-weight:900;display:block; width:100px; height:100px; background:#A5BAC4;}
+		.top-left      {align-items: flex-start; justify-content: flex-start; }
+		.top-center    {align-items: flex-start; justify-content: center;}
+		.top-right     {align-items: flex-start; justify-content: flex-end;}
+
+		.center-left   {align-items: center; justify-content: flex-start;   }
+		.center-center {align-items: center; justify-content: center;}
+		.center-right  {align-items: center; justify-content: flex-end;}
+
+		.bottom-left   {align-items: flex-end; justify-content: flex-start;}
+		.bottom-center {align-items: flex-end; justify-content: center;}
+		.bottom-right  {align-items: flex-end; justify-content: flex-end;}
+	</style>
+</head>
+<body>
+<div id="box">
+	
+		<div id="flex-box" class="top-left"><span>top-left</span></div>
+		<div id="flex-box" class="top-center"><span>top-center</span></div>
+		<div id="flex-box"class="top-right"><span>top-right</span></div>
+</div>
+<div id="box">
+		<div id="flex-box"class="center-left"><span>center-left</span></div>
+		<div id="flex-box"class="center-center"><span>center-center</span></div>
+		<div id="flex-box"class="center-right"><span>center-right</span></div>
+</div>
+<div id="box">
+		<div id="flex-box"class="bottom-left"><span>bottom-left</span></div>
+		<div id="flex-box"class="bottom-center"><span>bottom-center</span></div>
+		<div id="flex-box"class="bottom-right"><span>bottom-right</span></div>
+</div>
+</body>
+</html>
