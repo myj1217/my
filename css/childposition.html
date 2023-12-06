@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ padding: 0; margin: 0; }
+        body{ height: 2500px; }
+        #a{ position: relative; width: 500px; height: 500px;
+            background: green; margin: 0 auto; }
+        #c{ position: fixed; width: 100%; height: 30px; left: 0;
+            background: yellow; transition: all 1s; cursor: pointer; }
+        #c:hover{ width: 100%; height: 300px;
+            border-bottom: 2px solid #ee3212; background: #fff;
+            text-align: left; }
+        #e{ position: fixed; width: 200px; height: 100px;
+            background: rgb(1, 49, 1); top: 100px; right: 0;
+            }
+        #g{ position: fixed; width: 50px; height: 50px;
+            background: purple; bottom: 50px; right: 50px;
+            border-radius: 50px;
+            }
+    </style>
+</head>
+<body>
+    <div id="e"></div>
+    <div id="g"></div>
+    <div id="a">
+        <div id="c">메뉴</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ex{ width: 100px; height: 100px;}
+        #ex div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 0px;
+            transition: background-color, border-radius;
+            transition:all 0.5s 0s;
+            border: 2px solid aquamarine;
+            background: url(chris.jpg) no-repeat center center;
+        }
+        #ex:hover div{
+            background-color: blue;
+            border-radius: 50px;
+            background: url(chris2.jpg) no-repeat center center;
+            border: 2px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <p>도형 위로 마우스 포인터를 올려보세요</p>
+    <div id="ex">
+        <div></div>
+    </div>
+</body>
+</html>

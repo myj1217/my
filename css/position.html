@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        body{ background-color: gainsboro; }
+        #box{
+            margin: 100px auto;
+            background-color: #367e8c;
+            width: 600px; height: 500px;
+        }
+        div[class *="side"]{
+            float: left;
+            background-color: white;
+            width: 100px; height: 100px;
+            position: relative;
+        }
+        p{
+            position: relative;
+            top: 35%;
+            text-align: center;
+            color: #004f5e;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #side_1{ left: 200px; top: 100px; }
+        .side_0{ top: 200px; }
+        #side_6{ top: 300px; left: -200px; }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="side" id="side_1"><p>1</p></div>
+        <div class="side_0" id="side_2"><p>2</p></div>
+        <div class="side_0" id="side_3"><p>3</p></div>
+        <div class="side_0" id="side_5"><p>5</p></div>
+        <div class="side_0" id="side_4"><p>4</p></div>
+        <div class="side" id="side_6"><p>6</p></div>
+    </div>
+</body>
+</html>

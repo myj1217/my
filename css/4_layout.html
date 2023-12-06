@@ -5,45 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{ display: flex; flex-direction: column; }
+        /* 801이상이면 */
+        .container{display: flex; flex-direction: column;}
+        .container nav li{color:red;}
         header{border-bottom: 1px solid gray;}
-        section{display: flex;}
+        section{display: flex;flex-direction: row;}
         section > nav {border-right: 1px solid gray;}
-        section > aside {border-left: 1px solid gray;}
-        footer {border-top: 1px solid gray; text-align: center; background-color: skyblue;}
-        /* 반응형 웹 */
+        section > aside{border-left:1px solid gray;}
+        footer{border-top:1px solid gray;background-color: skyblue;text-align:center;}
+        li {color:blue;}
+
+   
+
+        /* 반응형웹 */
+        /* max : 이하 
+        551이상이고 800px 이하이면 */
         @media(max-width:800px){
-            .content{display: flex; flex-direction: column;}
-            section > nav {border-right: 0;}
-            section > aside {border-left: 0; display: none;}
-            main{order: 0;}
-            nav{order: 1;}
+                .content{display: flex; flex-direction: column;}
+                .content > nav {border-right: 0;}
+                .content aside{border-left:0;display: none;}
+                main{order:100;}
+                nav{order:200;}
+        }
+
+            /* 550px이하이면 */
+            @media(max-width:550px){
+                .content{display: flex; flex-direction: column;}
+                .content > nav {border-right: 0;}
+                .content aside{border-left:0;display: none;}
+                main{order:100;}
+                nav{order:200;}
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>flex</h1>
-        </header>
-        <section class="content">
-            <nav>
-                <ul>
-                    <li>html</li>
-                    <li>css</li>
-                    <li>javascript</li>
-                </ul>
-            </nav>
-            <main>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </main>
-            <aside>
-                AD(광고)
-            </aside>
-        </section>
-        <footer>
-                <a href="https://www.naver.com">홈페이지</a>
-        </footer>
-    </div>
+		<header>
+			<h1>flex</h1>
+		</header>
+		<section class="content">
+			<nav>
+				<ul>
+					<li>html</li>
+					<li>css</li>
+					<li>javascript</li>
+				</ul>
+			</nav>
+			<main>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo nunc sit amet scelerisque tempor. Proin nec hendrerit turpis, a interdum sapien. In et molestie dolor. Aenean luctus consectetur magna, at varius tortor ornare nec. Quisque et justo pretium, dignissim nunc ut, porta lorem. Nam non faucibus lectus, nec accumsan odio. Phasellus eu egestas tellus, eu gravida ante. Aenean placerat, augue vitae sagittis mollis, diam turpis iaculis dolor, at ullamcorper enim felis nec ante. Nullam vulputate dui blandit ex viverra, sed mattis tellus facilisis. Phasellus non urna a velit dictum lacinia ac nec tortor. Etiam posuere luctus tellus eget blandit. Nunc tincidunt libero at tellus tempor, nec dapibus ligula vulputate. Donec sed dignissim lorem. Quisque ornare scelerisque nulla vel mollis.
+			 </main>
+			<aside>
+				AD(광고)
+			</aside>
+		</section>
+		<footer>
+			<a href="https://www.naver.com">홈페이지</a>
+		</footer>
+	</div>
 </body>
 </html>
