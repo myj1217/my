@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 10%; height: auto;
+            /* 'height: auto' : 비율에 맞춰서 크기 조정 */
+            opacity: 0.5;
+            transition: all 2s;
+        }
+        img:hover{
+            cursor: pointer;
+            opacity: 1;
+            /* 선명하게 변해라 */
+            width: 30%;
+            transform: translate(200px, 200px);
+        }
+    </style>
+</head>
+<body>
+    <img src="../chris.jpg">
+    <!-- .. : 상위 디렉토리로 이동 -->
+</body>
+</html>

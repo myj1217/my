@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        img{
+            width: 10%; height: auto; opacity: .5;
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+            transition: all 1s ease; cursor: pointer;
+        }
+        img:hover{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(3) rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.jpg">
+</body>
+</html>

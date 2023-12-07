@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px; height: 100px; margin: 50px auto;
+            /* 가운데 정렬, 블록일 때만 가능 */
+            background-color: #000; transition: all 1s ease;
+            /* duration이 우선순위 */
+            cursor: pointer;
+        }
+        .myClass1:hover{
+            transform: translateX(50px);
+            /* 값만큼 X축으로 이동 */
+            background-color: #f00;
+        }
+        .myClass2:hover{ transform: translateY(50px); }
+        /* 값만큼 Y축으로 이동 */
+        .myClass3:hover{ transform: rotate(45deg); }
+        /* 값만큼 회전 */
+        .myClass4:hover{ transform: scaleY(1.5); }
+        /* 값만큼 Y축 1.5배 */
+    </style>
+</head>
+<body>
+    <div class="myClass1"></div>
+    <div class="myClass2"></div>
+    <div class="myClass3"></div>
+    <div class="myClass4"></div>
+</body>
+</html>

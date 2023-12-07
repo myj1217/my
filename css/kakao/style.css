@@ -1,0 +1,22 @@
+*{ margin: 0; padding: 0; }
+.container{ width: 100%; float: left; }
+#top{ width: 100%; height: 300px; }
+#le_ri{
+    width: 100%; height: 2022px;
+    float: left; position: relative; clear: both;
+    /* 부모가 position이 있어야 자식도 position을 쓸 수가 있음 */
+    /* 자식에는 있는데 부모에는 없는 내용은 부모에 반드시 추가할 것 */
+    /* 'clear: both' : 새로운 줄로부터 시작 */
+}
+#left{
+    width: 50%; height: 747px;
+    float: left; position: sticky; top: 0;
+}
+#right{
+    width: 50%; height: 2022px;
+    float: right; position: relative;
+}
+#banner{
+    width: 100%; height: 699px;
+    float: left; clear: both;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        body{
+            height: 8000px;
+        }
+        a{ text-decoration: none; }
+        ul.pc_menu li{ list-style: none; }
+        nav {
+            width: 100%; height: 44px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed; left: 0; top: 0;
+        }
+        .pc_menu{
+            width: 80%; margin: 0 auto;
+            /* 가운데 정렬 */
+            display: flex;
+            /* 세로 -> 가로로 정렬, 기본값이 row */
+            align-items: center; justify-content: center;
+            /* 가운데 정렬 */
+        }
+        .pc_menu li {
+            padding: 0 25px;
+            /* 간격이 일정하게 벌어짐 */
+            /* margin이 아닌 padding을 사용하는 이유 */
+            /* 사용성이 더 좋기 때문 - 살찌는 형식이라 버튼 크기가 커짐 */
+        }
+        .pc_menu li a{
+            color: #f5f5f7; font-size: 10px;
+        }
+        .reward{
+            width: 100%; height: 44px;
+            position: absolute; left: 0; top: 44px;
+            background-color: white;
+            display: flex;
+            align-items: center; justify-content: center;
+        }
+        .reward p{
+            font-size: 14px;
+        }
+        #onhit:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="pc_menu">
+            <li><a href="#"><img src="./images/globalnav_apple_image__cxwwnrj0urau_large.svg" alt="logo"></a></li>
+            <li><a href="#">스토어</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">TV 및 홈</a></li>
+            <li><a href="#">엔터테인먼트</a></li>
+            <li><a href="#">액세서리</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li class="menu_search"><a href="#">돋보기</a></li>
+            <li class="menu_store"><a href="#">스토어</a></li>
+        </ul>
+    </nav>
+    <div class="reward">
+        <p>iPhone 11 이상의 모델을 보상 판매하면 iPhone 15 또는 iPhone 15 Pro 구입 시 사용할 수 있는 ₩250,000-₩1,060,000 상당의 크레딧이.1<a href="#" id="onhit">iPhone 쇼핑하기></a></p>
+    </div>
+    <video class="ac-video-media-controller" crossorigin="anonymous" preload="true" x-webkit-airplay="" aria-hidden="true" src="blob:https://www.apple.com/f927796c-89b0-433a-9cea-e89651f2df42" data-original-aria-hidden="true"></video>
+</body>
+</html>
