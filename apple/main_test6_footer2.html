@@ -96,7 +96,6 @@
         #sec_2{ display: flex; flex-direction: column; }
         .art1, .art2, .art3{
             display: flex; height: 500px; flex: 1;
-            flex-wrap: wrap;
         }
         h4{ font-size: 32px; margin-top: 80px; }
         h5{ margin: 20px; font-size: 24px; }
@@ -138,36 +137,22 @@
         .ft_menu_list{
             flex: 1;
         }
-        .ft_menu_list_sb ~ .ft_menu_list_sb{ padding-top: 20px; }
-        /* (첫째를 제외한) 아래 형제 모두에게 여백 부여 */
+        /* foot2 */
         #foot2{
-            width: 75%; display: flex; flex-direction: column;
+            width: 75%; display: flex; margin-bottom: 20px;
+            flex-direction: column;
+            font-size: 12px; color: #1d1d1f;
         }
-        .call{
-            flex: 1; padding: 10px 0; font-size: 12px;
-            /* flex: 1 을 단일로 사용시 채우기 개념 */
-            color: #86868d; border-bottom: 1px solid #d2d2d7;
-        }
-        .call strong{ color: #06c; }
         .copy{
-            display: flex; flex: 1;
-            /* row는 기본값이라 생략 */
-            position: relative; flex-wrap: wrap;
-        }
-        .copy p{
-            font-size: 12px; color: #86868b;
-            padding-top: 5px; padding-right: 10px;
+            display: flex;
+            align-items: center; margin: 20px 0;
+            border-top: 1px solid #1d1d1f;
         }
         .copy ul{
-            display: flex;
-        }
-        .copy ul li{
-            font-size: 11px; color: #515154;
-            padding-top: 5px; padding-right: 10px;
+            display: flex; margin: 20px;
         }
         .ko{
-            display: block; font-size: 11px; color: #86868b;
-            position: absolute; right: 0; top: 5px;
+            display: flex; margin-left: auto;
         }
     </style>
 </head>

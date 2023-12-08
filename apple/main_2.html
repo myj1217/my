@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding:0;margin:0;}
+        a{text-decoration: none;}
+        ul.pc_menu li {list-style: none;}
+        nav {width: 100%;height:44px;background-color: rgba(0,0,0,0.8);
+        position:fixed;left:0;top:0;}
+        .pc_menu{width:75%;margin:0 auto;display: flex;
+           align-items: center;justify-content: center;}
+        .pc_menu li a{flex:1;padding:0 1.5em;color:#f5f5f7;font-size: 10px;}
+        aside{width:100%;height:50px;margin-top:44px;background-color: #fbfbfd;
+        display: flex;align-items: center;justify-content: center;font-size: 14px;letter-spacing: -1px;}
+        aside p a {color:#06c;}
+      /* 본문영역 */
+      #sec_1{display: flex;flex-direction: column;}
+      .sec_1_video{display: flex;flex-direction: column;
+    background: url(./images/hero_idpd__bh9gqwj0jrg2_large.jpg)
+    no-repeat center top;height: 70vh;background-size: cover;
+align-items: center;justify-content: flex-end;}
+.sec_1_video > div{display: flex;flex-direction: column;
+margin-bottom: 80px; align-items: center;}
+.sec_1_video h2 {font-size: 36px;color: white;}
+.sec_1_video p{font-size: 20px;color:white;margin:20px;}
+.sec_1_button{width: 150px;height:50px;background-color: white;
+border-radius: 20px;text-align: center;color:black;line-height: 50px;;}
+.sec_1_shopping{display: flex;flex-direction: column;
+    background: url(./images/holiday_2023_hero_endframe__bw0ymeto1p0i_largetall.jpg)
+    no-repeat center top;height: 650px;background-size: cover;
+align-items: center;justify-content: flex-end;} 
+.shopping_link{display: flex;flex-direction: column;margin-bottom:80px;
+align-items: center;justify-content: flex-end;}
+.shopping_link > h2 {font-size: 36px;color:black;}
+.shopping_link > p {font-size: 24px;color:black;margin:20px;}
+.shopping_link > a{font-size:16px;color:blue;}
+.shopping_link > a:hover{text-decoration: underline;}
+.sec_1_iphone15{display: flex;flex-direction: column;
+    background: url(./images/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg)
+    no-repeat center top;height: 500px;background-size: cover;
+align-items: center;justify-content: flex-start;} 
+  .iphone15{display: flex;flex-direction: column;margin-top:80px;
+align-items: center;justify-content: flex-end;}  
+.iphone15 > h2 {font-size: 36px;color:black;}
+.iphone15 > p {font-size: 24px;color:black;margin:20px;}
+.iphone15 > a{font-size:16px;color:blue;}
+.iphone15 > a:hover{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="pc_menu">
+            <li><a href="#"><img src="./images/globalnav_apple_image__cxwwnrj0urau_large.svg" alt="logo"></a></li>
+            <li><a href="#">스토어</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">TV 및 홈</a></li>
+            <li><a href="#">엔터테이먼트</a></li>
+            <li><a href="#">액세서리</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li class="menu_search"><a href="#">돋보기</a></li>
+            <li class="menu_store"><a href="#">스토어</a></li>
+        </ul>
+    </nav> 
+    <aside>
+        <p>iPhone 11 이상의 모델을 보상 판매하면 iPhone 15 또는 iPhone 15 Pro 구입 시 사용할 수 있는 ₩250,000-₩1,060,000 상당의 크레딧이.1 <a href="#">iPhone 쇼핑하기 ></a></p>
+    </aside>
+    <section id="sec_1">
+        <a class="sec_1_video" href="#">
+            <div>
+                <h2>잃어버린 목소리</h2>
+                <p>'개인 음성' 기능은 목소리 상실 가능성에 대비해,<br>
+                당신의 목소리와 유사한 음성을 iPhone에 생성해 줍니다.</p>
+                <div class="sec_1_button">동영상 보기</div>
+            </div>
+        </a>
+        <div class="sec_1_shopping">
+            <div class="shopping_link">
+                <h2>설렘의 시작.</h2>
+                <p>모두가 손꼽아 기다려 온 바로 그 선물을 준비해 보세요.</p>
+                <a href="#">쇼핑하기 ></a>
+            </div>
+        </div>
+        <div class="sec_1_iphone15">
+            <div class="iphone15">
+                <h2>iPhone 15</h2>
+                <p>새로운 카메라. 새로운 디자인. 새로움이 물씬.</p>
+                <a href="#">더 알아보기 ></a>
+            </div>
+        </div>
+    </section>
+    <section id="sec_2">
+        <div class="art1">
+            <div class="art1_1">
+                <h4>iPhone 15 Pro</h4>
+                <h5>티타늄.초강력.초경량.초프로.</h5>
+                <div class="art_link"><a href="#">더 알아보기 ></a><a href="#">구입하기 ></a></div>
+            </div>
+            <div class="art1_2">
+                <h4>iPhone 15 Pro</h4>
+                <h5>티타늄.초강력.초경량.초프로.</h5>
+                <div class="art_link"><a href="#">더 알아보기 ></a><a href="#">구입하기 ></a></div>
+            </div>
+        </div>
+        <div class="art2">
+            <div class="art2_1">
+                <h4>iPhone 15 Pro</h4>
+                <h5>티타늄.초강력.초경량.초프로.</h5>
+                <div class="art_link"><a href="#">더 알아보기 ></a><a href="#">구입하기 ></a></div>
+            </div>
+            <div class="art2_2">
+                <h4>iPhone 15 Pro</h4>
+                <h5>티타늄.초강력.초경량.초프로.</h5>
+                <div class="art_link"><a href="#">더 알아보기 ></a><a href="#">구입하기 ></a></div>
+            </div>
+        </div>
+        <div class="art3">
+            <div class="art3_1">
+                <h4>iPhone 15 Pro</h4>
+                <h5>티타늄.초강력.초경량.초프로.</h5>
+                <div class="art_link"><a href="#">더 알아보기 ></a><a href="#">구입하기 ></a></div>
+            </div>
+            <div class="art3_2">
+                <h4>iPhone 15 Pro</h4>
+                <h5>티타늄.초강력.초경량.초프로.</h5>
+                <div class="art_link"><a href="#">더 알아보기 ></a><a href="#">구입하기 ></a></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

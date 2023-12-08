@@ -96,7 +96,6 @@
         #sec_2{ display: flex; flex-direction: column; }
         .art1, .art2, .art3{
             display: flex; height: 500px; flex: 1;
-            flex-wrap: wrap;
         }
         h4{ font-size: 32px; margin-top: 80px; }
         h5{ margin: 20px; font-size: 24px; }
@@ -116,59 +115,32 @@
             background: url(./images/5.png) no-repeat center 200px;
             background-size: 50%;
         }
-        /* 본문2 영역 끝 */
-        footer ul li{
+        #end{
+            display: flex; flex-direction: column;
+        }
+        .main_list{
+            border-top: 1px solid rgb(61, 61, 61);
+            display: flex; flex-direction: row;
+            width: 100%; height: 500px;
+        }
+        /* .main_list > ul{
+            display: flex; flex-direction: column;
+            flex: 1;
+        } */
+        .main_list li{
             list-style: none;
         }
-        input[type="checkbox"]{ display: none; }
-        footer{
-            display: flex; flex-direction: column;
-            align-items: center; margin: 20px 0;
+        .main_list > li {
+            font-weight: 800;
         }
-        #foot1{
-            width: 75%; display: flex; margin-bottom: 20px;
+        .main_list a{
+            color: black;
+            font-weight: 400;
         }
-        .f_label{
-            color: #1d1d1f; font-size: 12px;
-            font-weight: bold; padding-bottom: 10px;
+        .main_list li ul li > a:hover{
+            text-decoration: underline;
         }
-        #foot1 ul li a{
-            font-size: 12px; color: #1d1d1f;
-        }
-        .ft_menu_list{
-            flex: 1;
-        }
-        .ft_menu_list_sb ~ .ft_menu_list_sb{ padding-top: 20px; }
-        /* (첫째를 제외한) 아래 형제 모두에게 여백 부여 */
-        #foot2{
-            width: 75%; display: flex; flex-direction: column;
-        }
-        .call{
-            flex: 1; padding: 10px 0; font-size: 12px;
-            /* flex: 1 을 단일로 사용시 채우기 개념 */
-            color: #86868d; border-bottom: 1px solid #d2d2d7;
-        }
-        .call strong{ color: #06c; }
-        .copy{
-            display: flex; flex: 1;
-            /* row는 기본값이라 생략 */
-            position: relative; flex-wrap: wrap;
-        }
-        .copy p{
-            font-size: 12px; color: #86868b;
-            padding-top: 5px; padding-right: 10px;
-        }
-        .copy ul{
-            display: flex;
-        }
-        .copy ul li{
-            font-size: 11px; color: #515154;
-            padding-top: 5px; padding-right: 10px;
-        }
-        .ko{
-            display: block; font-size: 11px; color: #86868b;
-            position: absolute; right: 0; top: 5px;
-        }
+        
     </style>
 </head>
 <body>
@@ -255,122 +227,44 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div id="foot1">
-            <div class="ft_menu_list">
-            <input type="checkbox" id="f_m1" class="ft_menu">
-            <label for="f_m1" class="f_label m1_label">쇼핑 및 알아보기</label>
-            <ul class="m1_list">
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">iPad</a></li>
-                <li><a href="#">iPhone</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">AirPods</a></li>
-                <li><a href="#">TV 및 홈</a></li>
-                <li><a href="#">AirTag</a></li>
-                <li><a href="#">액세서리</a></li>
-            </ul>
-            </div>
-            <div class="ft_menu_list">
-                <div class="ft_menu_list_sb">
-            <input type="checkbox" id="f_m2" class="ft_menu">
-            <label for="f_m2" class="f_label m2_label">서비스</label>
-            <ul class="m2_list">
-                <li><a href="#">Apple Music</a></li>
-                <li><a href="#">Apple TV+</a></li>
-                <li><a href="#">Apple Arcade</a></li>
-                <li><a href="#">iCloud</a></li>
-                <li><a href="#">Apple Books</a></li>
-                <li><a href="#">Apple Podcast</a></li>
-                <li><a href="#">App Store</a></li>
-            </ul>
-                </div>
-                <div class="ft_menu_list_sb">
-            <input type="checkbox" id="f_m3" class="ft_menu">
-            <label for="f_m3" class="f_label m3_label">계정</label>
-            <ul class="ul_2 m3_list">
-                <li><a href="#">Apple ID 관리</a></li>
-                <li><a href="#">Apple Store 계정</a></li>
-                <li><a href="#">iCloud.com</a></li>
-            </ul>
-                </div>
-            </div>
-            <div class="ft_menu_list">
-            <input type="checkbox" id="f_m4" class="ft_menu">
-            <label for="f_m4" class="f_label m4_label">Apple Store</label>
-            <ul class="m4_list">
-                <li><a href="#">매장 찾기</a></li>
-                <li><a href="#">Genius Bar</a></li>
-                <li><a href="#">Today at Apple</a></li>
-                <li><a href="#">Apple 캠프</a></li>
-                <li><a href="#">Apple Store 앱</a></li>
-                <li><a href="#">리퍼 및 특가 제품</a></li>
-                <li><a href="#">금융 혜택</a></li>
-                <li><a href="#">Apple Trade In</a></li>
-                <li><a href="#">주문 상태</a></li>
-                <li><a href="#">쇼핑 도움말</a></li>
-            </ul>
-            </div>
-            <div class="ft_menu_list">
-                <div class="ft_menu_list_sb">
-            <input type="checkbox" id="f_m5" class="ft_menu">
-            <label for="f_m5" class="f_label m5_label">비즈니스</label>
-            <ul class="m5_list">
-                <li><a href="#">Apple과 비즈니스</a></li>
-                <li><a href="#">비즈니스를 위한 제품 쇼핑하기</a></li>
-            </ul>
-                </div>
-                <div class="ft_menu_list_sb">
-            <input type="checkbox" id="f_m6" class="ft_menu">
-            <label for="f_m6" class="f_label m6_label">교육</label>
-            <ul class="ul_2 m6_list">
-                <li><a href="#">Apple과 교육</a></li>
-                <li><a href="#">초중고용 제품 쇼핑하기</a></li>
-                <li><a href="#">대학 생활을 위한 제품 쇼핑하기</a></li>
-            </ul>
-                </div>
-            </div>
-            <div class="ft_menu_list">
-                <div class="ft_menu_list_sb">
-            <input type="checkbox" id="f_m7" class="ft_menu">
-            <label for="f_m7" class="f_label m7_label">Apple의 가치관</label>
-            <ul class="m7_list">
-                <li><a href="#">손쉬운 사용</a></li>
-                <li><a href="#">환경</a></li>
-                <li><a href="#">개인정보 보호</a></li>
-                <li><a href="#">협력업체에 대한 책임</a></li>                
-            </ul>
-                </div>
-                <div class="ft_menu_list_sb">
-            <input type="checkbox" id="f_m8" class="ft_menu">
-            <label for="f_m8" class="f_label m8_label">Apple 정보</label>
-            <ul class="ul_2 m8_list">
-                <li><a href="#">Newsroom</a></li>
-                <li><a href="#">Apple 리더십</a></li>
-                <li><a href="#">채용 안내</a></li>
-                <li><a href="#">윤리 및 규정 준수</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">일자리 창출</a></li>
-                <li><a href="#">Apple 연락처</a></li>
-            </ul>
-                </div>
-            </div>
-        </div>
-        <div id="foot2">
-            <p class="call">다양한 쇼핑 방법:<strong>Apple Store를 방문</strong>하거나, <strong>리셀러</strong>를 찾아보거나, 080-330-8877번으로 전화하세요.</p>
-            <div class="copy">
-                <p>Copyright &copy; 2021 Apple Inc. 모든 권리 보유.</p>
+    <footer id="end">
+        <ul class="main_list">
+            <li class="list1">쇼핑 및 알아보기
                 <ul>
-                    <li><a href="#">개인정보 처리 방침 |</a></li>
-                    <li><a href="#">웹 사이트 이용 약관 |</a></li>
-                    <li><a href="#">판매 및 환불 |</a></li>
-                    <li><a href="#">법적 고지 |</a></li>
-                    <li><a href="#">사이트맵 </a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
                 </ul>
-                <span class="ko">대한민국</span>
-            </div>
-        </div>
+            </li>
+            <li class="list2">계정
+                <ul>
+                    <li><a href="#">Apple ID 관리</a></li>
+                    <li><a href="#">Apple Store 계정</a></li>
+                    <li><a href="#">iCloud.com</a></li>
+                </ul>
+            </li>
+            <li class="list3">Apple Store
+                <ul>
+                    <li><a href="#">매장 찾기</a></li>
+                    <li><a href="#">Genius Bar</a></li>
+                    <li><a href="#">Today at Apple</a></li>
+                </ul>
+            </li>
+            <li class="list4">비즈니스
+                <ul>
+                    <li><a href="#">Apple과 비즈니스</a></li>
+                    <li><a href="#">비즈니스를 위한 제품 쇼핑하기</a></li>
+                </ul>
+            </li>
+            <li class="list5">Apple의 가치관
+                <ul>
+                    <li><a href="#">손쉬운 사용</a></li>
+                    <li><a href="#">교육</a></li>
+                    <li><a href="#">환경</a></li>
+                </ul>
+            </li>
+        </ul>
     </footer>
     <video class="ac-video-media-controller" crossorigin="anonymous" preload="true" x-webkit-airplay="" aria-hidden="true" src="blob:https://www.apple.com/f927796c-89b0-433a-9cea-e89651f2df42" data-original-aria-hidden="true"></video>
 </body>
