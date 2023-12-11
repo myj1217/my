@@ -7,11 +7,11 @@
     <style>
         *{ margin: 0; padding: 0; }
         a{ text-decoration: none; }
-        ul.pc_menu li{ list-style: none; }
+        ul li{ list-style: none; }
         nav {
             width: 100%; height: 44px;
             background-color: rgba(0, 0, 0, 0.8);
-            position: fixed; left: 0; top: 0;
+            position: fixed; left: 0; top: 0; z-index: 9999;
         }
         .pc_menu{
             width: 80%; margin: 0 auto;
@@ -169,10 +169,132 @@
             display: block; font-size: 11px; color: #86868b;
             position: absolute; right: 0; top: 5px;
         }
+        .mb_search, .mb_menu{ display: none; }
+        /* 반응형 시작 */
+        /* width가 718px 이하이면 */
+        @media(max-width:718px){
+            /* 기존 pc화면에 fix해놓았던 상단메뉴 제거 */
+            .pc_menu { display: none; }
+            .mb_menu{
+                width: 90%; margin: 0 auto;
+                display: flex; justify-content: space-between;
+                /* 자식들을 양쪽 끝과 가운데로 배치를 알아서 해줌 */
+            }
+            .mb_menu label{
+                background: url(./images/mb/menu_btn.png) no-repeat center center;
+                width: 20px; height: 46px; background-size: 100%;
+                display: block; cursor: pointer;
+            }
+            input[type="checkbox"]:checked ~ nav{
+                /* checkbox를 클릭했을 때 nav를 보여라 */
+                height: 100%; background-color: black;
+                transition: all 0.5s;
+            }
+            input[type="checkbox"]:checked ~ nav .pc_menu{
+                width: 85%; display: flex; flex-direction: column;
+                justify-content: flex-start; height: 100%; padding-top: 10px;
+            }
+            input[type="checkbox"]:checked ~ nav .pc_menu li {
+                width: 100%; border-bottom: 1px solid #ccc;
+                line-height: 48px;
+                /* flex-basis: 5%;  */
+                /* 'flex-basis: 5%' : 부모의 5%만큼 분배 */
+                /* 부모가 row이므로 width 700급을 원본으로 가져감 */
+                /* 반응형에서 px를 주는 건 굉장한 부담 */
+            }
+            input[type="checkbox"]:checked ~ nav .pc_menu li a {
+                font-size: 16px;
+            }
+            input[type="checkbox"]:checked ~ nav .mb_menu label{
+                background: url(./images/mb/close_btn.png) no-repeat center center;
+                transform: translateX(0) rotate(0deg);
+                transition: all 0.5s;
+                /* transition은 반드시 원본에다가 주어야 한다 */
+            }
+            input[type="checkbox"]:checked ~ nav .mb_menu label:hover{
+                transform: translateX(0) rotate(360deg);
+            }
+            /* 메뉴에서 애플모양, 돋보기, 스토어 글씨 삭제 */
+            nav .pc_menu li:first-child, .menu_search,
+            .menu_store{ display: none; }
+            input[type="checkbox"]:checked ~ nav .mb_search{
+                width: 100%; height: 50px;
+                margin: 0 auto; display: flex;
+                justify-content: center; align-items: flex-start;
+                /* 부모가 row 일 때 좌우, 부모가 columns일 때 상하 */
+                border-bottom: 1px solid#ccc;
+            }
+            input[type="checkbox"]:checked ~ nav input[type="text"]{
+                width: 95%; height: 35px; border-radius: 5px;
+                background: #515154 url(./images/mb/globalnav_search_image__cbllq1gkias2_small.svg) no-repeat left center;
+                border: none;
+            }
+            /* 2개씩 정렬되던 이미지를 모바일 화면에서는 1개씩 정렬되게 변경 */
+            .sam{
+                flex: 100%;
+                /* 부모한테 flex-wrap이 되어있어야만 이쁘게 아래로 정렬됨 */
+            }
+            footer{ background-color: #f5f5f7; }
+            #foot1{
+                display: flex; flex-direction: column;
+                width: 90%; margin: 30px 0;
+            }
+            /* 글자사이즈, 굵기, 밑줄, 배경이미지 */
+            .f_label{
+                font-size: 12px; font-weight: 700;
+                display: block; width: 100%;
+                border-bottom: 1px solid#d2d2d7;
+                background: url(./images/mb/plus_btn.png) no-repeat 98% center;
+                background-size: 10px; color: #6e6e73; padding: 10px 0;
+                /* background의 위치는 x축 다음이 y축 */
+                /* background 다음에 background-size를 써야함 */
+            }
+            .f_label:hover{
+                color: black; cursor: pointer;
+            }
+            .ft_menu_list ul, .ft_menu_list_sb ul{ display: none; height: 0; }
+            .ft_menu_list_sb ~ .ft_menu_list_sb{ padding-top: 0; }
+            /* 'height: auto' : 있는 만큼 */
+            #f_m1:checked ~ .m1_list, #f_m2:checked ~ .m2_list
+            , #f_m3:checked ~ .m3_list, #f_m4:checked ~ .m4_list
+            , #f_m5:checked ~ .m5_list, #f_m6:checked ~ .m6_list
+            , #f_m7:checked ~ .m7_list, #f_m8:checked ~ .m8_list{
+                display: block; height: auto;
+            }
+            #f_m1:checked ~ .m1_label, #f_m2:checked ~ .m2_label
+            , #f_m3:checked ~ .m3_label, #f_m4:checked ~ .m4_label
+            , #f_m5:checked ~ .m5_label, #f_m6:checked ~ .m6_label
+            , #f_m7:checked ~ .m7_label, #f_m8:checked ~ .m8_label{
+                background: url(./images/mb/close_btn_2.png) no-repeat 98% center;
+                background-size: 10px;
+            }
+            #f_m1:checked ~ .m1_list li a:hover, #f_m2:checked ~ .m2_list li a:hover
+            , #f_m3:checked ~ .m3_list li a:hover, #f_m4:checked ~ .m4_list li a:hover
+            , #f_m5:checked ~ .m5_list li a:hover, #f_m6:checked ~ .m6_list li a:hover
+            , #f_m7:checked ~ .m7_list li a:hover, #f_m8:checked ~ .m8_list li a:hover{
+                text-decoration: underline;
+            }
+            #foot2{ width: 90%; }
+            .call{ border-bottom: none; }
+            .copy{ flex-direction: column; }
+            .ko{ position: inherit; order: 0; }
+            /* 부모에게 상속받은 그대로 진행해라 (실무에서 많이 씀) */
+            .copy p{ order: 1; }
+            .copy ul{ order: 2; }
+        }
     </style>
 </head>
 <body>
+    <input type="checkbox" id="ch_menu">
     <nav>
+        <ul class="mb_menu">
+            <li><a href="#"><label for="ch_menu"></label></a></li>
+            <li><a href="#"><img src="./images/mb/globalnav_apple_image__b5er5ngrzxqq_small.svg"
+                width="17" height="48" alt=""></a></li>
+            <li><a href="#"><img src="./images/mb/globalnav_bag_image__yzte50i47ciu_small.svg"
+                width="17" height="48" alt=""></a></li>
+        </ul>
+        <div class="mb_search"><input type="text" placeholder="    apple.com 검색" name="search"></div>
         <ul class="pc_menu">
             <li><a href="#"><img src="./images/globalnav_apple_image__cxwwnrj0urau_large.svg" alt="logo"></a></li>
             <li><a href="#">스토어</a></li>
@@ -360,7 +482,7 @@
         <div id="foot2">
             <p class="call">다양한 쇼핑 방법:<strong>Apple Store를 방문</strong>하거나, <strong>리셀러</strong>를 찾아보거나, 080-330-8877번으로 전화하세요.</p>
             <div class="copy">
-                <p>Copyright &copy; 2021 Apple Inc. 모든 권리 보유.</p>
+                <p>Copyright &copy; 2023 Apple Inc. 모든 권리 보유.</p>
                 <ul>
                     <li><a href="#">개인정보 처리 방침 |</a></li>
                     <li><a href="#">웹 사이트 이용 약관 |</a></li>

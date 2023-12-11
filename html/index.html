@@ -8,31 +8,122 @@
     <meta property="og:url" content="http://myjhost.dothome.co.kr/">
     <meta property="og:image" content="http://myjhost.dothome.co.kr/images/logo.png">
     <meta property="og:description" content="스타벅스의 메뉴를 만드는 중입니다">
+    <style>
+        *{ margin: 0; padding: 0;}
+        a{ text-decoration: none; }
+        ul li{ list-style: none; }
+        .mb_menu{ display: none; }
+        #ch_menu{ display: none; }
+        .pc_menu{
+            display: flex;
+            width: 100%; height: 120px;
+            background: #f6f5ef;
+            left: 0; top: 0; z-index: 9999;
+        }
+        #logo{
+            width: 15%; height: 120px;
+            background: url(./images/logo.png) no-repeat center center;
+        }
+        .menu{
+            display: flex; flex-direction: column;
+            width: 80%;
+            align-items: flex-end;
+        }
+        .menu ul{
+            display: flex; flex-direction: row;
+            height: 40%;
+            align-items: center;
+        }
+        .menu > ul {
+            width: 80;
+        }
+        .menu ul li a{
+            font-size: 14px; color: #555555;
+            margin: 10px;
+        }
+        /* a태그에 마우스 올리면 밑줄 생김 */
+        .menu ul li a:hover{
+            text-decoration: underline;
+        }
+        .custom_menu li{
+            border-right: 1px solid #555555;
+        }
+        .menu nav ul{
+            display: flex; flex: 1;
+            height: 60%;
+            margin-top: 20px;
+        }
+        .menu nav ul li a{
+            font-size: 16px; color: #333333;
+            padding: 10px;
+        }
+
+        /* 반응형 */
+        @media(max-width:960px){
+            .pc_menu{ display: none; }
+            .mb_menu{
+                background-color: #f6f5ef;
+                width: 100%; height: 70px;
+                display: flex;
+                align-items: center; justify-content: center;
+            }
+            /* 로고 자리 정하기 */
+            .mb_menu > a{
+                width: 10%;
+                
+            }
+            /* 라벨 만들기 */
+            .mb_menu label{
+                background: url(./images/st_mb/btn_berger_m.png) no-repeat center center;
+                width: 28px; height: 26px; background-size: 100%;
+                display: block; cursor: pointer;
+            }
+            .mb_icon{
+                display: flex; flex-direction: column;
+                width: 80%; height: 70px;
+            }
+            
+        }
+    </style>
 </head>
 <body>
+    <input type="checkbox" id="ch_menu">
     <header>
-        <div id="logo">
-            <img src="images/logo.png" alt="스타벅스 로고">
-        </div>
-        <div class="menu">
-            <ul class="custom_menu">
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">My Starbucks</a></li>
-                <li><a href="#">Customer Service & Ideas</a></li>
-                <li><a href="#">Find a Store</a></li>
-                <li><a href="#"><img src="images/magnifier.png" alt="찾기"></a></li>
+        <div class="mb_menu">
+            <a href="#"><img src="./images/logo.png"
+                width="45" height="45" alt=""></a>
+            <ul class="mb_icon">
+                <li><a href="#"><img src="./images/st_mb/icon_user_m.png"
+                    width="25" height="30" alt=""></a></li>
+                <li><a href="#"><img src="./images/st_mb/icon_spot_m.png"
+                    width="24" height="32" alt=""></a></li>
+                <li><a href="#"><label for="ch_menu"></label></a></li>
             </ul>
-            <nav>
-                <ul>
-                    <li><a href="#">COFFEE</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">STORE</a></li>
-                    <li><a href="#">RESPONSIBILITY</a></li>
-                    <li><a href="#">STARBUCKS REWARDS</a></li>
-                    <li><a href="#">CORPORATE SALES</a></li>
-                    <li><a href="#">WHAT'S NEW</a></li>
+        </div>
+        <div class="pc_menu">
+            <div id="logo">
+                <a href="#"></a>
+            </div>
+            <div class="menu">
+                <ul class="custom_menu">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">My Starbucks</a></li>
+                    <li><a href="#">Customer Service & Ideas</a></li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#"><img src="images/magnifier.png" alt="찾기"></a></li>
                 </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li><a href="#">COFFEE</a></li>
+                        <li><a href="#">MENU</a></li>
+                        <li><a href="#">STORE</a></li>
+                        <li><a href="#">RESPONSIBILITY</a></li>
+                        <li><a href="#">STARBUCKS REWARDS</a></li>
+                        <li><a href="#">CORPORATE SALES</a></li>
+                        <li><a href="#">WHAT'S NEW</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 </body>
