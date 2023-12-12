@@ -10,58 +10,78 @@
     <meta property="og:description" content="스타벅스의 메뉴를 만드는 중입니다">
     <style>
         *{ margin: 0; padding: 0;}
+        /* 스크롤 시연을 위한 바디 height 설정 */
+        body{ height: 8000px; }
+        /* a태그 꾸밈과 ul태그 불릿기호 삭제 */
         a{ text-decoration: none; }
         ul li{ list-style: none; }
+        /* 모바일화면 숨김처리 */
         .mb_menu{ display: none; }
         #ch_menu{ display: none; }
+        /* a태그에 마우스 올리면 밑줄 생김 */
+        .all_menu ul li a:hover{ text-decoration: underline; }
+        /* 상단고정 타이틀 만들기 */
         .pc_menu{
-            display: flex;
+            position: fixed;
+            display: flex; justify-content: center;
             width: 100%; height: 120px;
             background: #f6f5ef;
             left: 0; top: 0; z-index: 9999;
         }
+        /* 로고 배경처리 */
         #logo{
-            width: 15%; height: 120px;
+            width: 120px; height: 120px;
             background: url(./images/logo.png) no-repeat center center;
         }
-        .menu{
+        /* 로고를 제외한 전체메뉴 타이틀 만들기 */
+        .all_menu{
             display: flex; flex-direction: column;
             width: 80%;
             align-items: flex-end;
         }
-        .menu ul{
+        /* 커스텀메뉴 타이틀 만들기 */
+        .custom_menu{
             display: flex; flex-direction: row;
             height: 40%;
             align-items: center;
         }
-        .menu > ul {
-            width: 80;
-        }
-        .menu ul li a{
-            font-size: 14px; color: #555555;
+        /* 커스텀메뉴 꾸미기 */
+        .custom_menu li a{
+            font-size: 12px; color: #555555;
             margin: 10px;
         }
-        /* a태그에 마우스 올리면 밑줄 생김 */
-        .menu ul li a:hover{
-            text-decoration: underline;
-        }
+        /* 커스텀메뉴 구분선 */
         .custom_menu li{
-            border-right: 1px solid #555555;
+            border-right: 1px solid #e5e5e5;
         }
-        .menu nav ul{
+        /* 메인메뉴 타이틀 만들기 */
+        .main_menu{
             display: flex; flex: 1;
-            height: 60%;
-            margin-top: 20px;
+            height: 60%; width: 100%;
+            align-items: center; justify-content: flex-end;
         }
-        .menu nav ul li a{
-            font-size: 16px; color: #333333;
-            padding: 10px;
+        /* 메인메뉴 꾸미기 */
+        .main_menu li a{
+            display: block;
+            font-size: 14px; color: #333333;
+            padding: 10px 12px 40px 12px;
+        }
+        /* 마우스 올렸을 때 초록버튼으로 바뀌는거 */
+        .main_menu li a:hover{
+            background-color:#2b2a29; color:#690; text-decoration:underline;
+        }
+        /* 고정되서 따라오는 광고 만들기 */
+        aside{
+            position: fixed; top: 150px; right: 10px;
+            display: flex; flex-direction: column;
         }
 
-        /* 반응형 */
+        /* 모바일 (반응형) */
         @media(max-width:960px){
             .pc_menu{ display: none; }
+            /* 모바일버전 상단고정메뉴 만들기 */
             .mb_menu{
+                position: fixed;
                 background-color: #f6f5ef;
                 width: 100%; height: 70px;
                 display: flex;
@@ -69,12 +89,18 @@
             }
             /* 로고 자리 정하기 */
             .mb_menu > a{
-                width: 
+                margin-left: 10px;
             }
             /* 아이콘 자리 정하기 */
             .mb_icon{
-                display: flex; flex-direction: column;
-                width: 80%; height: 70px;
+                display: flex;
+                width: 100%; height: 70px;
+                align-items: center; justify-content: flex-end;
+            }
+            /* 아이콘 사이 띄우기 */
+            .mb_icon li a{
+                display: flex;
+                margin: 15px;
             }
             /* 라벨 만들기 (마지막 아이콘) */
             .mb_menu label{
@@ -89,7 +115,7 @@
     <input type="checkbox" id="ch_menu">
     <header>
         <div class="mb_menu">
-            <a href="#"><img src="./images/logo.png"
+            <a href="#"><img src="./images/st_mb/logo.png"
                 width="45" height="45" alt=""></a>
             <ul class="mb_icon">
                 <li><a href="#"><img src="./images/st_mb/icon_user_m.png"
@@ -103,16 +129,15 @@
             <div id="logo">
                 <a href="#"></a>
             </div>
-            <div class="menu">
+            <div class="all_menu">
                 <ul class="custom_menu">
                     <li><a href="#">Sign In</a></li>
                     <li><a href="#">My Starbucks</a></li>
                     <li><a href="#">Customer Service & Ideas</a></li>
                     <li><a href="#">Find a Store</a></li>
-                    <li><a href="#"><img src="images/magnifier.png" alt="찾기"></a></li>
+                    <li><a href="#"><img src="images/st_mb/magnifier.png" alt="찾기"></a></li>
                 </ul>
-                <nav>
-                    <ul>
+                <ul class="main_menu">
                         <li><a href="#">COFFEE</a></li>
                         <li><a href="#">MENU</a></li>
                         <li><a href="#">STORE</a></li>
@@ -120,10 +145,13 @@
                         <li><a href="#">STARBUCKS REWARDS</a></li>
                         <li><a href="#">CORPORATE SALES</a></li>
                         <li><a href="#">WHAT'S NEW</a></li>
-                    </ul>
-                </nav>
+                </ul>
             </div>
         </div>
     </header>
+    <aside>
+        <a href="#"><img src="./images/st_mb/aside1.png"></a>
+        <a href="#"><img src="./images/st_mb/aside2.png"></a>
+    </aside>
 </body>
 </html>
