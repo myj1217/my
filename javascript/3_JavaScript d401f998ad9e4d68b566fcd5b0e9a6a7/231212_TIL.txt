@@ -1,0 +1,137 @@
+변수 = 변경되는 수 
+
+ECAM Script 2016년도에 정해짐.
+ES6-버전형 명칭
+ES5 - var
+ES6 - let, const
+
+
+(.)기준으로 오른쪽에 있는 키워드가 왼쪽의 객체에 접근한다.
+프로그래밍 언어에서 이름() 함수 
+
+# 변수를 선언할때
+let lastLoggedIn = '';   // 두번째, 세번째 시작하는 단어를 대문자로(camelCase)
+let last_logged_in = '';   // 단어 시작할때마다 언더하이픈을 사용(snake_case)
+
+# 자바스크립트의 타입
+string:문자열
+number:숫자
+boolean:불리언
+null:널
+undefined:정의되지 않음
+symbol:심볼_고유하고 변경할 수 없는값
+
+"로 시작하면 "끝나면 된다.
+'로 시작하면 '끝나면 된다.
+
+`[]` 대괄호는 인덱스 를 의미한다. 나중에 배울 배열 객체의 값을 가져올 수 있음.
+인덱스 번호는 `0`번부터 시작.
+
+// 빈 객체 생성하기
+// const car = new Object();
+const car = {}; // object literal(일반적인)
+car.color = 'blue';
+console.log(car);
+
+
+// 객체의 속성에 접근할 때 두가지 방법이 있다.
+const car={
+  wheels:4,
+  color:"red", 
+  'goes fast':true
+};
+// console.log(car.wheels);
+// console.log(car['color']);
+
+// 여러단어로 된 속성을 접근하려면 해당 이름을 따옴표로 묶어야 하기 때문에 
+// 대괄호 표기법으로만 접근할 수 있다.
+console.log(car["goes fast"]);
+console.log(car.goes fast);// error
+
+// 대괄호 표기법을 사용하는 또다른 경우는 
+// 키를 사용해서 객체의 속성에 접근할 때 이다.
+const car={
+  ferrari:"california",
+  porsche:"911",
+  bugatti:"veyron"
+};
+
+const select="ferrari";
+console.log(car[select]);
+
+var : 변수가 사용되는 범위가 전역, 또는 함수 내부 로컬 2가지만 존재한다. 
+let : 변수가 사용되는 범위가 전역, 함수 내부로컬 외에 코드 블록, 구문, 표현식 로컬로도 정의해 사용할 수 있다.
+let은 스코프가 존재하는데 이로 선언한 로컬 변수는 자신의 스코프(실행하거나 사용하는 범위) 블록과 선언된 블록의 하위 블록 구문, 표현식에서만 접근 가능하다. 
+
+변수 hoisting_끌어올리다 현상
+자바스크립트는 호이스팅(hoisting)을 지원하는데 이것은 변수를 어느 위치에서 선언하더라도 사용할 수 있는 것을 의미한다.
+var, let, const 로 선언한 변수 모두는 hoisting을 지원한다.
+
+
+
+
+// var는 재선언이 가능
+var name ="seon";
+var name ="hwa";
+console.log(name);
+
+// let 재선언 안됨, 재 할당은 가능 
+let name1 ="seon";
+name1 ="hwa1";
+console.log(name1); 
+
+// const 는 재선언, 재할당 불가능 
+const name2 = "seon";
+// name2 = "seon";  // error
+
+대부분의 프로그래밍언어가 '블록 레벨 스코프'라는 것을 따른다
+자바스크립트의 경우 
+var '함수 레벨 스코프'라는 것을 따른다.
+let, const '블록 레벨 스코프'라는 것을 따른다. 
+
+변수의 접근 가능 기준이 블록{ }or 함수
+
+var(함수 레벨 스코프) 예제
+function blockScopeExample() {
+  if (true) {
+    var y = 20;
+    console.log(y); // 20
+  }
+
+  console.log(y);
+}
+
+blockScopeExample();
+ console.log(y);   // 함수 범위를 벗어났기 때문에 error
+
+--------------------------------------
+let(블록 레벨 스코프) 예제
+function blockScopeExample() {
+  if (true) {
+    let y = 20;
+    console.log(y); // 20
+  }
+
+  console.log(y);   // error 블록 범위를 벗어났기 때문에 
+}
+
+blockScopeExample();
+ 
+
+---------------------------------------------------
+var str1 = 'var';
+let str2 = 'let';
+
+// console.log(this.str1);
+// // console.log(this);
+// console.log(this.str2);
+
+function run(){
+  console.log(this.str1);
+  console.log(this.str2);// window 접근 불가능
+  console.log(str1);
+  console.log(str2);
+}
+run();
+-----------------------------------------------------
+TDZ(Temporal Dead Zone)
