@@ -1,0 +1,257 @@
+string:문자열
+number:숫자
+boolean:불리언
+null:널
+undefined:정의되지 않음
+symbol:심볼_고유하고 변경할 수 없는값(es6에서 추가됨)
+
+// 여러개의 변수를 같은 값으로 초기화
+let ryon = apeach = con = ' ' ;
+
+// 객체 속성 값들을 배열[]로 초기화
+let {ryon, apeach, con} = family;
+
+
+let family = { ryon: '라이언', apeach: '어피치', con: '콘' };
+let { ryon, apeach } = family;
+
+let arrNames = ['라이언', '어피치', '콘'];
+let ['라이언',  '콘'] = arrNames;
+--------------------------------------------------------------
+
+function getName(){
+   return '자바스크립트';
+}
+
+let getName = undefined;
+getName = function getName(){
+   return '자바스크립트';
+}
+
+
+
+const car={
+  wheels:4,
+  color:"red",
+  drive:function(){
+    console.log("wroom wroom")
+  },
+};
+console.log(car.color);//red
+console.log(Object.keys(car)[0]);
+console.log(typeof Object.keys(car)[0]);
+console.log(typeof Object.values(car)[0]);
+car.drive()
+
+# 매개변수
+
+== 값만 같으면 true
+1=="1"   true
+!= 값이 다르면 true
+1 !="1"    false
+
+=== 값하고 타입도 같아야 true
+!== 값하고 타입이 모두 다르면 true
+1==="1"    false
+1!=="1"   false
+
+// Symbol 객체에서 for메서드를 이용하면 string이 같으면 true가 나오게 할 수 있다.
+const symbol1 = Symbol.for('id');
+const symbol2 = Symbol.for('id');
+console.log(symbol1 === symbol2);
+
+-------------------------------------------------------------------
+# 자동형 변환 규칙
++ : 문자열이 우선 
+-, *, / : 숫자열이 우선 
+
+console.log('3'+3);
+console.log(+'3'+3);   
+console.log('3'-3);   
+// Not a Number
+// NaN 원시데이터형 고유데이터타입. 숫자가 아님
+// NaN인지 체크할수 있도록 isNaN() 함수를 제공한다. 
+console.log('문자'-2);
+
+-------------------------------------------------------------------------
+# for문 
+
+let friends = [ {name : '라이언', age:5}, {name : '어피치', age:4}, {name : '콘', age:2}, {name : '무지', age:3}];
+
+i++
+i = i+1
+
+i--
+i = i-1
+
+
+for ~ of문
+for of 반복문은 ES6에 추가된 새로운 컬렉션 전용 반복 구문입니다.
+배열, 문자열, 맵(Map), 셋(Set) 객체에 사용할 수 있다.
+기본형 : 
+for(let 개별요소변수명 of 객체명){
+   // 반복 실행문
+}
+
+let friends = [
+  {name : '라이언', age:5},
+  {name : '어피치', age:4},
+  {name : '콘', age:2},
+  {name : '무지', age:3},
+];
+
+//for(let 개별요소변수명 of 객체명){
+for(let a of friends){
+  console.log('이름: '+ a.name + ', 나이: '+a.age );
+}
+
+
+for in 
+객체의 전체 속성 키를 나열하는데 사용하는 반복문이다. 
+기본형 :
+for(let 속성 in 객체){
+   // 속성 처리 구문
+}
+
+# forEach 문
+forEach 반복문은 오직 Array 객체에서만 사용가능한 메서드입니다.
+기본형 :
+배열.forEach(function (요소[, 인덱스]{
+   //요소 처리 실행문
+});
+
+
+function add(a,b){
+  return a+b;
+}
+console.log(add(1,2));
+
+//  화살표 함수 
+let add2 = (a,b) => a+b;
+console.log(add2(1,2));
+
+a =a+b      a += b    현재 a의 값에 b를 더한값을 새로운 a에 할당 // a =a+b
+a =a-b       a -= b     현재 a의 값에 b를 뺀값을 새로운 a에 할당
+
+
+삼항연산자
+조건 ? 값 : 값;
+
+let multiply = (a, b, ...args)=>{
+    //  result= 2
+  let result = a*b;
+  
+      // 초깃값   2 < 2
+  for(let i = 0; i < args.length; i++){
+    //    24    =    6 * 4
+    // result = result * args[i]
+    result *= args[i];
+  }
+  
+  return result;
+}
+
+console.log(multiply(1,2,3,4,5,6,7,8,9,10));
+
+function sum(a,b, ...args){
+  let result = 0;
+  if(a != undefined){result =a;}else{return 0;}//1
+  if(b != undefined){result +=b;}// result = result +b  //3
+    result += args.length > 0 ? args.reduce((subsum,arg)=>subsum+=arg) : 0;
+  return result;
+}
+
+console.log(sum(1,2,3,4,5));//15
+console.log(sum(1,2));//3
+console.log(sum(1));//1
+
+
+
+--------------------------------------------------
+function sum(a = 0, b = 0, ...args) {
+  let result = a + b;
+  args.forEach(function (arg) {
+    result += arg;
+  });
+  return result;
+}
+console.log(sum(1,2,3,4,5))
+
+-------------------------------------------------------
+const sum = (a = 0, b = 0, ...args) => {
+  let result = a + b;//3
+  args.forEach(arg => (result += arg));
+  return result;
+};
+
+
+console.log(sum(1,2,3,4,5))
+
+-----------------------------------------------------
+let multiply = (a, b, ...args)=>{
+    //  result= 2
+  let result = a*b;
+  
+      // 초깃값   2 < 2
+  for(let i = 0; i < args.length; i++){
+    //    24    =    6 * 4
+    // result = result * args[i]
+    result *= args[i];
+  }
+  
+  return result;
+}
+
+console.log(multiply(1,2,3,4));
+
+------------------------------------------------------------------------
+# 객체의 복사
+let car={
+  color:'red',
+};
+let secondCar = car;
+
+car.wheels = 4;
+secondCar.drive = 'fast';
+
+car.color='blue';
+
+console.log(car);
+console.log(secondCar);
+
+---------------------------------------------
+const car={
+  color:'red',
+};
+const secondCar = Object.assign({}, car);
+
+car.wheels=4;
+
+console.log(car);
+console.log(secondCar);
+---------------------------------------------------
+# 배열
+const fruits=['apple', 'banana','orange'];
+console.log(fruits[0]);
+console.log(fruits.length);
+
+//배열의 끝에 새 값을 추가
+fruits.push('pear');
+console.log(fruits);
+//배열의 시작에 새 값을 추가
+fruits.unshift('melon');
+console.log(fruits);
+//배열의 끝에서 값 하나를 제거
+fruits.pop();
+console.log(fruits);
+//배열의 시작에서 값 하나를 제거
+fruits.shift();
+console.log(fruits);
+
+---------------------------------
+let myInt=1;
+if(myInt ===1){
+  let mySecondInt = 2;
+  console.log(mySecondInt);   
+}
+console.log(mySecondInt); 

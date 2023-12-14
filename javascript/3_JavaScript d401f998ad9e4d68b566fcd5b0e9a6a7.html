@@ -677,20 +677,20 @@ blockquote {
 </p><h2 id="ad0984a4-1da1-46bc-b770-3fc91779ba04" class="">231212_TIL</h2><p id="bef7c1aa-9bfe-4012-bafd-509bd8e82a5c" class="">
 </p><p id="dfee457c-1d6e-4e52-a447-fb7db77610a4" class="">javascript는 쓸 때마다 매번 html에 script를 입력하는 것이 번거로우므로<br/>클라우드 사이트에서 시범코드를 실행해볼 예정임<br/></p><p id="bbec9658-e444-4ee4-a02a-5ecb483e446e" class="">
 </p><p id="22ec0d0a-2541-41cd-ad2a-c4e524cb36f6" class=""><a href="https://jsbin.com/?js,console">https://jsbin.com/?js,console</a></p><p id="75fff7ce-844d-45a3-8a1d-ed066bb88d76" class="">
-</p><pre id="45b9c99d-3533-4813-8a30-3ac3fcde6947" class="code"><code>const news = data;</code></pre><p id="9cf62bdb-cada-4929-8e45-8f6a6aa6c119" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="45b9c99d-3533-4813-8a30-3ac3fcde6947" class="code"><code class="language-JavaScript">const news = data;</code></pre><p id="9cf62bdb-cada-4929-8e45-8f6a6aa6c119" class="">
 </p><p id="8499a436-d116-422f-9707-139e420caac1" class="">변수 = 변경되는 수<br/>es6 버전부터 변경이 되는 값과 변경이 안되는 값이 나뉘기 시작함<br/></p><p id="244773e8-b9d7-4524-8fcf-3af5e2bdc40e" class="">
 </p><p id="2382edf9-4d64-4482-86ab-93c33dea0731" class="">ECAM Script 2016년도에 정해짐<br/>ES6 - 버전형 명칭<br/>ES5 - var<br/><br/><strong>ES6 - let(변수), const(상수)</strong><br/>ex) const news = data;<br/></p><p id="f894c030-aba2-4c63-b50a-3efe62ca70ee" class="">
 </p><p id="a1ea87ae-9c8b-4417-8429-4e3fa93879b3" class="">
-</p><pre id="e2cab6c5-8582-4775-8b71-8702adcf8f71" class="code"><code>const age = 26;
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e2cab6c5-8582-4775-8b71-8702adcf8f71" class="code"><code class="language-JavaScript">const age = 26;
 age = 28;
 console.log(age);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0a05d5fa-40b2-48b7-a830-7b07f3bbd554"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">Error</div></figure><ul id="3df7ec1b-38e3-4e5f-ae56-77932704825e" class="bulleted-list"><li style="list-style-type:disc">. : ‘.’을 기준으로 오른쪽에 있는 키워드가 왼쪽의 객체에 접근한다</li></ul><ul id="38833eb8-f02a-4557-b2ed-295e4fa8c2fb" class="bulleted-list"><li style="list-style-type:disc">() : 프로그래밍 언어에서 ‘이름()’ 형태를 띄고 있으면 함수다</li></ul><p id="4d8a3c08-3e31-4892-8845-7493831253b6" class="">
 </p><p id="1ab66ad8-0a34-4daf-a1ba-0d2f21474172" class="">Solution</p><ul id="b2f24df4-7817-4449-9691-ba77287dc134" class="bulleted-list"><li style="list-style-type:disc">const를 let으로 변경한다</li></ul><p id="eed8b9d8-3981-4756-b501-87bf4ac103ef" class="">또는</p><ul id="968882ba-d045-4d6a-80fb-14cbc830ef15" class="bulleted-list"><li style="list-style-type:disc">또는 ‘age = 28;’을 삭제한다</li></ul><p id="f98e7dc9-0a26-44cc-8221-75ba9fd4e4c2" class="">
 </p><p id="ffc30d89-eea3-4709-bf71-4585f949fee5" class="">실무에서는 const를 주로 씀 - 공간의 의미<br/>공간은 바뀌지 않는다<br/></p><p id="7001c0de-581c-40a6-a95b-cd26eacf04c4" class="">
 </p><p id="b4b87090-82d2-41f7-84a6-9720ec954f23" class="">그럼 let은 언제 씀?<br/>ex) 게시글 번호<br/></p><p id="52b5fc49-8da5-4d15-a81e-6e95f27c2e88" class="">
-</p><p id="575533c1-5586-4a9a-ac08-49840f2a02a5" class="">typescript</p><pre id="ea08a5f9-b963-4119-aee9-1c4a0ae9af58" class="code"><code>function log(message){
+</p><p id="575533c1-5586-4a9a-ac08-49840f2a02a5" class="">typescript</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ea08a5f9-b963-4119-aee9-1c4a0ae9af58" class="code"><code class="language-TypeScript">function log(message){
     console.log(message);
 }</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="20ed9d15-73bf-4b0c-8836-8cc536a24831"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">Error</div></figure><p id="648ee4e1-161f-47de-8298-eabf6db743d7" class="">typescript인데 type이 주어지지 않음</p><p id="80577057-e247-4f44-b9da-f5c108798c2a" class="">
-</p><pre id="ba2cee70-1154-4572-a50f-5debaae09374" class="code"><code>function log(message:string):number{
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ba2cee70-1154-4572-a50f-5debaae09374" class="code"><code class="language-TypeScript">function log(message:string):number{
     console.log(message);
     return 0;
 }</code></pre><p id="859b9dfa-5afd-4e82-a62f-67ba02f151ac" class="">숫자를 넣을거라고 했고 0인 숫자가 반환됨</p><p id="3e5d98a3-c4f5-403d-b5d2-c80020077cc2" class="">
@@ -698,20 +698,20 @@ console.log(age);</code></pre><figure class="block-color-gray_background callout
 </p><p id="e087fa69-f9c9-411b-a0a6-0bf3b53996aa" class="">방식이 다르면 충돌 일어남<br/>보통 회의로 정함<br/>보통 두단어, 세단어로 씀<br/></p><p id="1811bc07-f2f1-4b34-a27b-a030f11b6596" class="">
 </p><p id="ed76ad42-39e8-4832-ab6e-41be06995cbe" class="">
 </p><hr id="c3397aa9-3bf2-4639-9ac2-91c8f7c3d6bf"/><h3 id="544d46fb-1c53-40b1-b4ae-a1aba1a72dce" class="">Type</h3><table id="73bd47f4-3dad-47b2-9e02-18be97d743d5" class="simple-table"><tbody><tr id="ce20fa5a-1f21-43c2-92b4-5fa046204cfc"><td id="KY]@" class="">string</td><td id="SJy|" class="">문자열</td></tr><tr id="8a336f31-aaae-46c7-9662-59900b1abd53"><td id="KY]@" class="">number</td><td id="SJy|" class="">숫자</td></tr><tr id="36df148d-52ed-494e-b681-d9478fcdbae5"><td id="KY]@" class="">boolean</td><td id="SJy|" class="">불리언 (true or false)</td></tr><tr id="4c9e31b2-92f3-4551-a2d2-82dc7dd1f2ad"><td id="KY]@" class="">null</td><td id="SJy|" class="">널 = 객체 초기화</td></tr><tr id="f3c169c2-6bd3-4843-bc79-1db16d3eec78"><td id="KY]@" class="">undefined</td><td id="SJy|" class="">정의되지 않음</td></tr><tr id="f22a2546-6307-44b9-8aff-d06609ef94d3"><td id="KY]@" class="">symbol</td><td id="SJy|" class="">심볼_고유하고 변경할 수 없는 값</td></tr></tbody></table><p id="5af13ca2-e2a5-4eba-b41c-66909ba275f3" class="">boolean은 true or false</p><p id="1fb7f306-292f-462d-b519-626977173fed" class="">true = 1, false = 0</p><p id="ac2565ad-5457-43d0-9ce8-2f17482cafa0" class="">
-</p><pre id="4a8ef1c7-0b83-4bd1-bc80-e34811b7e2e8" class="code"><code>let subject;
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4a8ef1c7-0b83-4bd1-bc80-e34811b7e2e8" class="code"><code class="language-JavaScript">let subject;
 console.log(subject);
 
 let subject2;
 console.log(subject2);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d8b4f987-19c7-4b07-97be-32ad8f24e317"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">undefined</div></figure><p id="11bdf7c3-7cfb-4e4f-9822-cf6a166c044d" class="">
 </p><p id="7ff56c7f-1d10-4139-bec5-1c149f32a991" class="">null과 undefined의 의미는 전혀 다름</p><p id="6cd37d39-5756-44bd-a5aa-e86b07df15ab" class="">
-</p><pre id="9b92b564-475d-459d-b525-5f5d0c478beb" class="code"><code>const subject2;
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9b92b564-475d-459d-b525-5f5d0c478beb" class="code"><code class="language-JavaScript">const subject2;
 console.log(subject2);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0d99abd8-7fd7-4cac-8dae-abea033294c3"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">Error</div></figure><p id="e1c87051-1cf8-4240-ac4a-6bbf4960f050" class="">상수(const)는 변경도 안되는데 정의할 때 값을 안줄거면 왜 쓴거냐라고 에러뜬다</p><p id="8108d9b1-6437-4aa9-a628-786f3a787c31" class="">
 </p><p id="5a4c034b-4f71-4ea5-956e-66a5f54c448d" class="">ex) 리모컨</p><ul id="683736b5-819b-460b-b2b1-50c1b4660596" class="bulleted-list"><li style="list-style-type:disc">리모컨 전체 - object 객체</li></ul><ul id="6405a709-faca-4ef4-8f43-24cf24b36e6c" class="bulleted-list"><li style="list-style-type:disc">on/off - boolean 0과 1</li></ul><ul id="73f10437-c06f-4f7c-9095-736ca87ff1af" class="bulleted-list"><li style="list-style-type:disc">0~9 - number</li></ul><ul id="aa748ffa-50b1-42e9-a4b8-479534b7b363" class="bulleted-list"><li style="list-style-type:disc">#, * - String</li></ul><p id="a7551452-2506-46aa-8c24-03febd697983" class="">
 </p><p id="0d4adddf-8756-48e5-9c62-83ebc2bbd7fb" class="">javascript의 세계는 java와는 다른 세계임<br/>javascript는 얘로 뭐할건지 다 정의하고 들어가야됨 - type<br/></p><p id="93b3fea8-176d-41ed-9c79-8e4f2e8f9945" class="">
 </p><p id="d5b9adb9-685a-4360-a383-f5df42afe7e6" class="">
 </p><hr id="2bc21525-6980-4b2f-8271-a9c4d94b6341"/><h2 id="d9d66a84-70c8-4ce3-a23a-f638aa0c338e" class="">객체(Object)</h2><ul id="2be95fd5-9430-4c95-9f45-22987a0cd3fc" class="bulleted-list"><li style="list-style-type:disc">객체는 여러 속성의 모음을 저장하는데 사용한다</li></ul><ul id="8c7f2923-9bcf-4501-b156-ad6b5c74c018" class="bulleted-list"><li style="list-style-type:disc">javascript 내에서 객체는 <mark class="highlight-yellow_background"><strong>중괄호’{}’</strong></mark>로 묶는다</li></ul><p id="8fdd7e25-feed-4870-99ae-ddf3800ef518" class="">
 </p><p id="ae51084f-dd74-4ef1-a213-ac658dc36a05" class="">큰따옴표(”)로 시작하면 큰따옴표로 끝나기만 하면 된다<br/>또한, 작은따옴표(’)로 시작하면 작은따옴표(’)로 끝나기만 하면 된다<br/></p><p id="b8ce8dd8-301c-4f1d-8df7-0394912475f1" class="">vs java와의 차이<br/>java에서 큰따옴표는 String, 작은따옴표는 단일문자였다<br/></p><p id="a81dac7b-abf8-4cfa-b7c9-43ff63354e29" class="">
-</p><pre id="3def5cad-e629-4279-9399-d0fc47b845be" class="code"><code>const car = {
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3def5cad-e629-4279-9399-d0fc47b845be" class="code"><code class="language-JavaScript">const car = {
   wheels:4,
   color:&#x27;red&#x27;,
   drive:function(){
@@ -732,18 +732,18 @@ car.drive();</code></pre><figure class="block-color-gray_background callout" sty
 </p><h3 id="f5991779-3b81-4939-ba7f-a8479511a595" class="">인덱스(Index)</h3><ul id="c9c0bb88-574c-42f3-af4e-e62b371e878b" class="bulleted-list"><li style="list-style-type:disc">인덱스는 <mark class="highlight-yellow_background"><strong>대괄호’[]’로 표시</strong></mark>한다</li></ul><ul id="46240d84-3845-4e6f-88d5-0722b4ca9c22" class="bulleted-list"><li style="list-style-type:disc">배열 객체의 값을 가져올 수 있다 - 나중에 배울 예정</li></ul><ul id="7906418e-a1b5-4b17-9d71-b0a0b38abc1f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>인덱스 번호는 ‘0’번부터 시작</strong></mark>한다</li></ul><p id="f88114bf-3a7e-4b6a-bc0d-904f3220b112" class="">
 </p><p id="a02700e2-1561-4a01-bb74-a9b872bfa154" class="">
 </p><p id="d27fb61b-da9f-47c1-abea-1c407d46465d" class="">
-</p><pre id="0f908525-533e-4240-81ad-ef18f9855fcf" class="code"><code>const car = { wheels:4 };</code></pre><p id="175af126-0560-42bf-819b-2357bf9ac819" class="">왼쪽이 key, 오른쪽이 value</p><p id="974b3fc3-57fc-44cd-a613-0aa04ae62846" class="">ex) ‘wheels : 4’ 에서<br/>key는 wheels , value는 4 이다 <br/></p><p id="123ad343-8894-449c-8250-49aa62d26dcd" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0f908525-533e-4240-81ad-ef18f9855fcf" class="code"><code class="language-JavaScript">const car = { wheels:4 };</code></pre><p id="175af126-0560-42bf-819b-2357bf9ac819" class="">왼쪽이 key, 오른쪽이 value</p><p id="974b3fc3-57fc-44cd-a613-0aa04ae62846" class="">ex) ‘wheels : 4’ 에서<br/>key는 wheels , value는 4 이다 <br/></p><p id="123ad343-8894-449c-8250-49aa62d26dcd" class="">
 </p><p id="b99a32ae-19a2-4efd-82c5-e2383fa1ea02" class="">
 </p><p id="ee1a50ea-af87-4bf4-93d1-d818c38ab95e" class="">
-</p><h3 id="4adfd44b-6b34-4edf-8eeb-f2126b8b2644" class="">빈 객체를 생성하는 2가지 방법</h3><pre id="968e8f3f-ad4f-40dd-b422-916ec7292418" class="code"><code>// 빈 객체 생성하기
+</p><h3 id="4adfd44b-6b34-4edf-8eeb-f2126b8b2644" class="">빈 객체를 생성하는 2가지 방법</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="968e8f3f-ad4f-40dd-b422-916ec7292418" class="code"><code class="language-JavaScript">// 빈 객체 생성하기
 const car = new Object();
 const car = {};  // object literal (일반적인)</code></pre><p id="001e8932-aa86-484c-91fa-0756af9b956e" class="">보통 2번째 방식을 선호함 - object literal (일반적인)</p><p id="db56f8e6-7f3c-4814-a433-e35c472102a8" class="">
-</p><pre id="95c1ac76-6767-4f7d-adbb-fcc1f2186df0" class="code"><code>const car = {};
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="95c1ac76-6767-4f7d-adbb-fcc1f2186df0" class="code"><code class="language-JavaScript">const car = {};
 car.color = &#x27;blue&#x27;;
 console.log(car);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="92f9a561-5e2d-4025-9367-c396c2fd61b2"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[object Object] {<br/>color: &quot;blue&quot;<br/>}<br/></div></figure><p id="80a1a350-3605-41e4-8bdd-e18a06a6dda2" class="">
 </p><p id="c060828d-cfb8-471d-9dce-ba43df896b67" class="">
 </p><p id="ccc2131f-cd7c-4c35-bf61-c598e4d35e07" class="">
-</p><h3 id="4cd57fc4-e561-4b04-b2a4-b8d31e6fd365" class="">객체의 속성에 접근하는 2가지 방법</h3><pre id="560fcc57-a3b0-43bc-b8be-2654b5a36b20" class="code"><code>// 객체의 속성에 접근할 때 두가지 방법이 있다
+</p><h3 id="4cd57fc4-e561-4b04-b2a4-b8d31e6fd365" class="">객체의 속성에 접근하는 2가지 방법</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="560fcc57-a3b0-43bc-b8be-2654b5a36b20" class="code"><code class="language-JavaScript">// 객체의 속성에 접근할 때 두가지 방법이 있다
 const car = {
   wheels:4,
   color:&#x27;red&#x27;,
@@ -753,7 +753,7 @@ console.log(car[&#x27;color&#x27;]);</code></pre><figure class="block-color-gray
 </p><p id="5c4dbf79-2910-451a-9892-730085ebcb91" class="">접근연산자(.)를 사용하여 접근하거나,<br/>객체의 key값을 지정하여 value값을 알아낼 수 있다<br/></p><p id="e6bd6e05-aa63-438d-b9cd-3dd0cb12328d" class="">
 </p><p id="08cba0ae-fcf9-44de-910a-6cd747547dfc" class="">
 </p><p id="a4495647-619e-455b-a2d3-dbd41f3a933c" class="">
-</p><h3 id="86b52bbd-75f0-48d0-ab50-4b46849c30ed" class="">대괄호 표기법을 사용하는 경우</h3><pre id="34429aaf-2152-447f-9b34-bd0368272374" class="code"><code>const car = {
+</p><h3 id="86b52bbd-75f0-48d0-ab50-4b46849c30ed" class="">대괄호 표기법을 사용하는 경우</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="34429aaf-2152-447f-9b34-bd0368272374" class="code"><code class="language-JavaScript">const car = {
   &quot;goes fast&quot;:true
 };
 console.log(car.goes fast);
@@ -761,7 +761,7 @@ console.log(car.goes fast);
 </p><p id="c6fdcbf0-9345-4bd6-9c0c-5269d9e04abd" class="">여러단어(ex. car goes)로 된 속성을 접근하려면<br/>해당 이름을 따옴표로 묶어야 하기 때문에<br/>대괄호 표기법으로만 접근할 수 있다<br/></p><p id="61db13b4-4c4b-4012-896c-1e2ddd967da2" class="">
 </p><p id="86b4d614-f3dd-4a96-a337-0332645cccfe" class="">
 </p><p id="e5ef5db6-5256-4fa0-8167-faff21edd3cd" class="">
-</p><h3 id="533273f3-daa3-4ee9-bee1-3935997fd953" class="">대괄호 표기법을 사용하는 경우 2</h3><pre id="67046499-1e1f-4da8-a465-d6f400c3cf2a" class="code"><code>const car = {
+</p><h3 id="533273f3-daa3-4ee9-bee1-3935997fd953" class="">대괄호 표기법을 사용하는 경우 2</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="67046499-1e1f-4da8-a465-d6f400c3cf2a" class="code"><code class="language-JavaScript">const car = {
   ferrari:&quot;california&quot;,
   porsche:&quot;911&quot;,
   bugatti:&quot;veyron&quot;
@@ -775,7 +775,7 @@ console.log(car[select]);</code></pre><figure class="block-color-gray_background
 </p><p id="4e873117-8de4-417f-bc38-2c72a1beecdf" class="">
 </p><p id="0a433074-4548-4edf-a72d-03f0bf4d0bdd" class="">
 </p><hr id="44ad04d3-52de-4bc0-9a7a-68c2da7bec6a"/><h2 id="c38c8712-2eb1-4fbc-821b-b5bc5708894f" class="">변수</h2><p id="dff8effd-c13d-4bc4-9054-94ac3b79c059" class="">
-</p><h3 id="a66f76fa-1f4b-4359-bcb0-977e2982a14a" class="">var 와 let의 차이</h3><table id="ff3f2d2c-f6fb-44dd-9a02-a9ca67a46269" class="simple-table"><tbody><tr id="116b6fc8-456f-4dd3-b1f7-a22ffe2ed034"><td id="T&gt;;d" class="">var</td><td id="neRN" class="" style="width:586px">변수가 사용되는 범위가 전역 또는 함수 내부 로컬 2가지만 존재한다</td></tr><tr id="50f97fb7-60f5-4852-a140-a2b41f88c886"><td id="T&gt;;d" class="">let</td><td id="neRN" class="" style="width:586px">변수가 사용되는 범위가 전역, 함수 내부로컬 외에도 코드 블록, 구문, 표현식 로컬로도 정의해 사용할 수 있다</td></tr><tr id="3054c543-8c64-4c65-9e6f-bda5b8b8a6ea"><td id="T&gt;;d" class=""></td><td id="neRN" class="" style="width:586px">스코프가 존재하는데 이로 선언한 로컬 변수는 자신의 스코프(실행하거나 사용하는 범위) 블록과 선언된 블록의 하위 블록 구문, 표현식에서만 접근 가능하다</td></tr></tbody></table><pre id="ba143a24-d87d-4694-a470-7a10d24b9916" class="code"><code>function hi(){
+</p><h3 id="a66f76fa-1f4b-4359-bcb0-977e2982a14a" class="">var 와 let의 차이</h3><table id="ff3f2d2c-f6fb-44dd-9a02-a9ca67a46269" class="simple-table"><tbody><tr id="116b6fc8-456f-4dd3-b1f7-a22ffe2ed034"><td id="T&gt;;d" class="">var</td><td id="neRN" class="" style="width:586px">변수가 사용되는 범위가 전역 또는 함수 내부 로컬 2가지만 존재한다</td></tr><tr id="50f97fb7-60f5-4852-a140-a2b41f88c886"><td id="T&gt;;d" class="">let</td><td id="neRN" class="" style="width:586px">변수가 사용되는 범위가 전역, 함수 내부로컬 외에도 코드 블록, 구문, 표현식 로컬로도 정의해 사용할 수 있다</td></tr><tr id="3054c543-8c64-4c65-9e6f-bda5b8b8a6ea"><td id="T&gt;;d" class=""></td><td id="neRN" class="" style="width:586px">스코프가 존재하는데 이로 선언한 로컬 변수는 자신의 스코프(실행하거나 사용하는 범위) 블록과 선언된 블록의 하위 블록 구문, 표현식에서만 접근 가능하다</td></tr></tbody></table><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ba143a24-d87d-4694-a470-7a10d24b9916" class="code"><code class="language-JavaScript">function hi(){
   console.log(a);
   var a = 1;
 }
@@ -784,9 +784,9 @@ hi();</code></pre><figure class="block-color-gray_background callout" style="whi
 </p><p id="ab30e714-22ee-4687-a478-88148d6ae173" class="">왜 a를 선언하지도 않았는데 undefined이 출력되냐? - hoisting 때문</p><p id="d705ac79-399e-4905-b1dc-467eedda5625" class="">hoisting이 뭐냐?</p><p id="843155d7-3d8b-4cb7-8958-161fac3e94a8" class=""><br/>hoisting 현상 (직역: 끌어올리다)<br/></p><ul id="982d44ff-f369-4f14-8cdd-fe7612c7a38d" class="bulleted-list"><li style="list-style-type:disc">변수를 어느 위치에서 선언하더라도 사용할 수 있음을 의미한다 - 자바스크립트에서 지원</li></ul><ul id="3acbee6b-dfbf-45bf-84a8-877790bceccc" class="bulleted-list"><li style="list-style-type:disc">var, let, const로 선언한 변수 모두 hoisting을 지원한다</li></ul><p id="7a2e9da0-3f8e-4c94-b666-cac0beaa7487" class="">
 </p><p id="fb5a610a-cdb2-4fbd-9f83-1b66f89d2bff" class="">
 </p><p id="fd3c3eb2-0e13-4c2e-9264-2cc97fe3644b" class="">
-</p><h3 id="5275c8f7-9e29-4a4a-8d0c-8308efe1d4ad" class="">var 와 let의 차이 2</h3><pre id="4a637784-0adb-4e50-a219-d8be86d4ebc2" class="code"><code>var name1 = &quot;chul&quot;;
+</p><h3 id="5275c8f7-9e29-4a4a-8d0c-8308efe1d4ad" class="">var 와 let의 차이 2</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4a637784-0adb-4e50-a219-d8be86d4ebc2" class="code"><code class="language-JavaScript">var name1 = &quot;chul&quot;;
 var name1 = &quot;soo&quot;;
-console.log(name1);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="21586aa6-43b3-4b71-b231-696d920353dd"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“soo”</div></figure><pre id="88a958ab-1a62-425a-ab93-768a5cedf03e" class="code"><code>let name2 = &quot;chul&quot;;
+console.log(name1);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="21586aa6-43b3-4b71-b231-696d920353dd"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“soo”</div></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="88a958ab-1a62-425a-ab93-768a5cedf03e" class="code"><code class="language-JavaScript">let name2 = &quot;chul&quot;;
 let name2 = &quot;soo&quot;;  // name2 = &quot;soo&quot;; 로 변경하면 정상 출력 -&gt; &quot;soo&quot;
 console.log(name2);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ed394cee-3c0b-48a1-9eef-a8f9c45fe79d"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">Error</div></figure><p id="728e521a-484d-4150-92ff-84613e104942" class="">
 </p><ul id="8026c1a4-ca75-462e-a5b4-6c197a9b4a0c" class="bulleted-list"><li style="list-style-type:disc">var은 재선언이 가능하므로 통과됨 - 나중에 문제 발생 - 이래서 var 안씀</li></ul><ul id="66f4cd94-8898-42a6-804c-ebee5b36d97b" class="bulleted-list"><li style="list-style-type:disc">let은 재선언이 불가능하므로 통과되지 않음 (재할당은 가능) - 이래서 let 씀</li></ul><ul id="6c6bddff-27a0-41b3-bb74-5e66cc16c3ff" class="bulleted-list"><li style="list-style-type:disc">(번외편) const는 재선언, 재할당 불가능 - 상수이기 때문</li></ul><p id="f23bb094-50c9-4dde-bce4-91a4f646bba7" class="">
@@ -794,7 +794,7 @@ console.log(name2);</code></pre><figure class="block-color-gray_background callo
 </p><p id="22ca252a-3efe-4555-a2c1-67cc0748ea8a" class="">대부분의 프로그래밍 언어가 ‘블록 레벨 스코프’라는 것을 따른다<br/>javascript의 경우에는<br/>var는 ‘함수 레벨 스코프’라는 것을 따르고,<br/>let, const는 ‘블록 레벨 스코프’라는 것을 따른다<br/></p><p id="d6495150-3d6c-46af-ae72-4a02754d322e" class="">
 </p><p id="875701f6-56c6-4f5b-a72c-56a5ab8393a6" class="">변수의 접근 가능 기준은 블록’{}’ 또는 함수다</p><p id="c5b45f14-ad04-4a83-8f18-0dd3c5d8e872" class="">
 </p><p id="29b18f0e-1568-468c-a602-81f8a12240a1" class="">
-</p><h3 id="e6f0997d-e707-4a87-a8c0-d095788a1b63" class="">예제1</h3><pre id="c3bd92ef-7126-44bc-a533-48da608e7f36" class="code"><code>function blockScopeExample() {
+</p><h3 id="e6f0997d-e707-4a87-a8c0-d095788a1b63" class="">예제1</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c3bd92ef-7126-44bc-a533-48da608e7f36" class="code"><code class="language-JavaScript">function blockScopeExample() {
   if (true) {
     var y = 20;
     console.log(y);  // 통과
@@ -803,7 +803,7 @@ console.log(name2);</code></pre><figure class="block-color-gray_background callo
 }
 
 blockScopeExample();
-console.log(y);  // 에러 - 함수 범위를 벗어났기 때문</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d966f1f7-1a15-48c6-bbde-18969d522785"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">20<br/>20<br/>Error<br/></div></figure><pre id="bdadec29-83d2-42f8-aca2-c6f868964f80" class="code"><code>function blockScopeExample() {
+console.log(y);  // 에러 - 함수 범위를 벗어났기 때문</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d966f1f7-1a15-48c6-bbde-18969d522785"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">20<br/>20<br/>Error<br/></div></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bdadec29-83d2-42f8-aca2-c6f868964f80" class="code"><code class="language-JavaScript">function blockScopeExample() {
   if (true) {
     let y = 20;
     console.log(y);  // 통과
@@ -815,7 +815,7 @@ blockScopeExample();
 console.log(y);  // 에러</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a0996782-1c85-47b0-a5da-dcc97e3cfd84"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">20<br/>Error<br/></div></figure><p id="91d6b03f-099c-409a-9ef3-d346e0467fc4" class="">
 </p><p id="86b166da-81cb-4844-94ee-d931ecff2776" class="">(생활팁) javascript는 출력할 때 되는 애들은 나오고 안되는 애들부터 쭉 error로 나옴</p><p id="bcc6d7d5-dfb4-4dea-9f2c-0cc5d9184a39" class="">
 </p><p id="7130ec86-7e56-41b8-aff7-7e7c37da7f85" class="">
-</p><h3 id="658a5a9c-129d-4812-a128-184aec841495" class="">예제2-1</h3><pre id="5d5071e7-6fac-4fc4-afd7-f26d23fa2037" class="code"><code>var str1 = &#x27;var&#x27;;
+</p><h3 id="658a5a9c-129d-4812-a128-184aec841495" class="">예제2-1</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5d5071e7-6fac-4fc4-afd7-f26d23fa2037" class="code"><code class="language-JavaScript">var str1 = &#x27;var&#x27;;
 let str2 = &#x27;let&#x27;;
 
 console.log(this.str1);
@@ -823,7 +823,7 @@ console.log(this.str2);</code></pre><figure class="block-color-gray_background c
 </p><p id="00c5685f-efca-4dc5-a52e-6df4a87b7d42" class=""><mark class="highlight-yellow_background"><strong>this란?</strong></mark> - 자신을 감싸고 있는 객체</p><p id="2d814139-dd6e-4c53-9265-6a55457c77df" class="">
 </p><p id="d04313b9-2f16-46bf-a645-33a7d67f29aa" class="">Q. undefined가 나오는 이유?<div class="indented"><p id="a8ad2010-f4d4-4370-b0f1-76f7daf9e05d" class=""> - let은 객체에 접근하는 것이 불가능하기 때문</p></div></p><p id="8429a89a-a3bc-4e2d-94fa-7bcfc6066108" class="">Q. let은 객체에 접근하는 것이 왜 불가능하냐?<div class="indented"><p id="5b4248f7-20d4-4f72-b7a0-2ad8774bb459" class=""> - es6 문법부터 let과 const만 쓰게끔 했고<br/>   let과 const는 객체에 접근이 불가능하다<br/></p></div></p><p id="0a77a42f-fa46-4b7e-901b-c80ff29d3277" class="">Q. 왜 접근을 막아놓았냐?<div class="indented"><p id="533ae640-fdae-42aa-8d1d-1057d83316d9" class=""> - 보안에 취약하기 때문에</p></div></p><p id="1e9d0a21-1aec-4977-b14e-e93a4851cbd6" class="">Q. 왜 보안에 취약하냐?<div class="indented"><p id="b6d1c1cb-4f8e-4b7c-8f9c-37c53b891b78" class=""> - 객체에 접근이 가능했던 var 즉, es5 문법 시절에는<br/>   최상위 객체인 Windows 운영체제에 접근해서<br/>   변조 및 해킹에 위험에 취약했음<br/></p></div></p><p id="86363f85-8433-4e04-aec5-df4cfaea5398" class="">
 </p><p id="b68db022-3c9a-4255-ae88-5f2211b25554" class="">
-</p><h3 id="575bbcd1-a821-479b-a47c-fba864919381" class="">예제2-2</h3><pre id="3a06e74d-c378-421f-862e-8b853ba59916" class="code"><code>var str1 = &#x27;var&#x27;;
+</p><h3 id="575bbcd1-a821-479b-a47c-fba864919381" class="">예제2-2</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3a06e74d-c378-421f-862e-8b853ba59916" class="code"><code class="language-JavaScript">var str1 = &#x27;var&#x27;;
 let str2 = &#x27;let&#x27;;
 
 function run(){
@@ -835,7 +835,7 @@ function run(){
 
 run();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4181aedf-7300-4ccb-8e36-dbe4ba0bc5b2"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“var”<br/>undefined<br/>”var”<br/>”var”<br/></div></figure><p id="5aa7a1f8-cfb7-4b7c-9bda-8a62d35f9412" class="">
 </p><p id="79cee630-f34b-40eb-86eb-4c9e59a9b923" class="">
-</p><p id="3670fae1-5623-490e-b7cd-5ead5bb42eb9" class="">let의 hoisting</p><pre id="71d3f9f7-5375-40bd-b786-047cc04d2a77" class="code"><code>function hi(){
+</p><p id="3670fae1-5623-490e-b7cd-5ead5bb42eb9" class="">let의 hoisting</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="71d3f9f7-5375-40bd-b786-047cc04d2a77" class="code"><code class="language-JavaScript">function hi(){
   console.log(a);
   let a = 1;
 }
@@ -847,7 +847,7 @@ hi();</code></pre><figure class="block-color-gray_background callout" style="whi
 </p><p id="e59eb0fc-671b-497f-bc21-a3281dde1c03" class="">
 </p><hr id="a2bbcfa3-b891-4e2f-917f-0e896567ef05"/><h2 id="0c98b98d-06fa-4754-93d7-44ed291fe89e" class="">231213_TIL</h2><p id="e6e23ec7-b1bc-42c7-80dd-924f857b16b6" class="">
 </p><p id="df9fef44-61a1-494f-8b68-bceae40ccbae" class="">javascript에서 중괄호’{}’의 2가지 의미</p><ul id="5cb2294f-554c-4ec0-a050-7f72d5e16326" class="bulleted-list"><li style="list-style-type:disc">객체생성</li></ul><ul id="84c61ab4-fdab-49b0-9472-d230f055f90e" class="bulleted-list"><li style="list-style-type:disc">함수실행괄호</li></ul><p id="b7847e29-f279-4e7f-95ef-0460c10a0927" class="">
-</p><pre id="a1d0f943-fb67-44dc-90c8-adcc63e82110" class="code"><code>function run(){
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a1d0f943-fb67-44dc-90c8-adcc63e82110" class="code"><code class="language-JavaScript">function run(){
   var sum = 0;
   if(true) {
     let sum = sum + 10;
@@ -857,7 +857,7 @@ hi();</code></pre><figure class="block-color-gray_background callout" style="whi
 }
 run();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="da59106f-0789-42bb-98b4-7dc8c0a70be3"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">Error</div></figure><p id="84152609-07e9-4bbc-a3db-a90d963e4087" class="">
 </p><p id="f38f9ae1-afb7-4e6b-881c-c8ee55cbefda" class="">let은 초기선언이 되어야 한다</p><p id="0ed46148-b95d-4dfe-808f-92666c753ee5" class="">
-</p><p id="26c51de2-5b8c-4019-9c0d-af2b9484f119" class="">수정본</p><pre id="a7546733-d95f-4948-8980-034b5b0666d6" class="code"><code>function run(){
+</p><p id="26c51de2-5b8c-4019-9c0d-af2b9484f119" class="">수정본</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a7546733-d95f-4948-8980-034b5b0666d6" class="code"><code class="language-JavaScript">function run(){
   var sum = 0;
   if(true) {
     let sum = 0;
@@ -868,7 +868,7 @@ run();</code></pre><figure class="block-color-gray_background callout" style="wh
 }
 run();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fe8528d8-327e-4ceb-a5d5-1165f6db556b"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">10<br/>0<br/></div></figure><p id="96abe376-a9b3-416f-ac6a-5080cbcea035" class="">
 </p><p id="4d8e9628-6ab7-4b93-85b9-d81f63250869" class="">초기화를 해준 이후 연산이 가능하다</p><p id="5613034c-469b-4c03-b96e-d113d0f9ed77" class="">함수는 호출해야만 함수를 실행할 수 있다</p><p id="ba303301-9d08-419d-833d-0e364b55f525" class="">블록 스코프에서 부모에 있는 것은 자식도 사용할 수 있다</p><p id="4d46b80f-9b13-4c4f-8d4a-fd00b2927cd8" class="">전역변수, 지역변수</p><p id="704782a7-fb1d-4376-af03-7035c1f0081a" class="">
-</p><p id="858fee75-a4de-4ddf-97d3-3192040360ca" class=""><mark class="highlight-yellow_background"><strong>예제2-1 (중요)</strong></mark></p><pre id="d3a98303-3633-4d5f-858f-2b178e528b0c" class="code"><code>function run(){
+</p><p id="858fee75-a4de-4ddf-97d3-3192040360ca" class=""><mark class="highlight-yellow_background"><strong>예제2-1 (중요)</strong></mark></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d3a98303-3633-4d5f-858f-2b178e528b0c" class="code"><code class="language-JavaScript">function run(){
   let sum = 2;
   
   if(true) {
@@ -878,7 +878,7 @@ run();</code></pre><figure class="block-color-gray_background callout" style="wh
   console.log(sum);
 }
 run();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d8c9bb8a-eb46-413a-8254-b38ee717a241"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">12<br/>12<br/></div></figure><p id="954bc7dc-1861-42c8-9afc-063bad1ce04e" class="">
-</p><p id="d9805674-52ec-41c9-a996-649645d7fc3b" class=""><mark class="highlight-yellow_background"><strong>예제2-2 (중요)</strong></mark></p><pre id="d552ae1b-bad4-42ea-ba20-b2a80314c79e" class="code"><code>function run(){
+</p><p id="d9805674-52ec-41c9-a996-649645d7fc3b" class=""><mark class="highlight-yellow_background"><strong>예제2-2 (중요)</strong></mark></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d552ae1b-bad4-42ea-ba20-b2a80314c79e" class="code"><code class="language-JavaScript">function run(){
   let sum = 2;
   
   if(true) {
@@ -891,51 +891,51 @@ run();</code></pre><figure class="block-color-gray_background callout" style="wh
 run();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d4c267b1-eed8-4f73-a87e-46c51ab796cd"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">11<br/>2<br/></div></figure><p id="e6f042e1-3a85-48c7-a247-a859675c0246" class="">
 </p><p id="d1c069c2-5860-45f1-a880-352b37dda46e" class=""><strong><mark class="highlight-yellow_background">예제 2-1과 2-2의 차이점을 아는 것이 중요함</mark></strong></p><p id="7212db88-4353-435f-b336-f854b37eca91" class="">
 </p><p id="d49eb1da-1ff2-4e04-86e7-0272a23d02cd" class="">
-</p><p id="4dfcebb9-fd9f-4f9f-b58e-deddad0c03c3" class="">예제3-1</p><pre id="9aae147f-c196-4eb1-ab79-3d8481473f16" class="code"><code>// 여러개의 변수를 같은 값으로 초기화
+</p><p id="4dfcebb9-fd9f-4f9f-b58e-deddad0c03c3" class="">예제3-1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9aae147f-c196-4eb1-ab79-3d8481473f16" class="code"><code class="language-JavaScript">// 여러개의 변수를 같은 값으로 초기화
 let ryon = apeach = con = ‘’;</code></pre><p id="21ace6de-53b4-4c37-b6e1-005f58f447d0" class="">
-</p><p id="8d18a474-7d5d-477d-8d35-3cb0a6a1fd78" class="">예제3-2</p><pre id="879ec070-ba8c-4fda-8a5f-877ee675270f" class="code"><code>// 객체 속성 값들을 배열로 초기화
+</p><p id="8d18a474-7d5d-477d-8d35-3cb0a6a1fd78" class="">예제3-2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="879ec070-ba8c-4fda-8a5f-877ee675270f" class="code"><code class="language-JavaScript">// 객체 속성 값들을 배열로 초기화
 let {ryon, apeach, con} = family;  // 비구조 할당
 let arrNames = [&#x27;라이언&#x27;, &#x27;어피치&#x27;, &#x27;콘&#x27;];
-let {ryon, apeach, con} = arrNames;</code></pre><p id="ebbb676a-4955-4b9b-9a40-30d7df7baf5d" class="">오른쪽에 있는 값을 왼쪽에 있는 것에 저장한다</p><pre id="21caf0b0-9efe-4f92-89dc-42406d1b8d44" class="code"><code>let family = { ryon: &#x27;라이언&#x27;, apeach: &#x27;어피치&#x27;, con: &#x27;콘&#x27; };
-let { ryon, apeach, con } = family;</code></pre><pre id="75122cbb-3a81-45f8-bd3b-195b16526168" class="code"><code>let arrNames = [&#x27;라이언&#x27;, &#x27;어피치&#x27;, &#x27;콘&#x27;];
+let {ryon, apeach, con} = arrNames;</code></pre><p id="ebbb676a-4955-4b9b-9a40-30d7df7baf5d" class="">오른쪽에 있는 값을 왼쪽에 있는 것에 저장한다</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21caf0b0-9efe-4f92-89dc-42406d1b8d44" class="code"><code class="language-JavaScript">let family = { ryon: &#x27;라이언&#x27;, apeach: &#x27;어피치&#x27;, con: &#x27;콘&#x27; };
+let { ryon, apeach, con } = family;</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="75122cbb-3a81-45f8-bd3b-195b16526168" class="code"><code class="language-JavaScript">let arrNames = [&#x27;라이언&#x27;, &#x27;어피치&#x27;, &#x27;콘&#x27;];
 let [&#x27;라이언&#x27;, &#x27;콘&#x27;] = arrNames;</code></pre><p id="39ffe699-e705-46a6-b16e-1bb1a23634b1" class="">
-</p><p id="959b50c1-4b5b-4c13-8753-bd97eddb8278" class="">예제4-1</p><pre id="67266e99-71eb-471b-b56b-dda441ecde9a" class="code"><code>function getName(){
+</p><p id="959b50c1-4b5b-4c13-8753-bd97eddb8278" class="">예제4-1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="67266e99-71eb-471b-b56b-dda441ecde9a" class="code"><code class="language-JavaScript">function getName(){
   return &#x27;라이언&#x27;;
 }
 
-getName();</code></pre><p id="f1dffcb5-6afb-4c97-a4f0-0bb3511fb03a" class="">return : 반환</p><p id="aaac0e39-a271-4135-a55b-6a1db7cda4c2" class="">함수는 변수다</p><p id="f8433b7d-8a8b-461a-a5e1-49e396f5fd58" class="">예제4-2</p><pre id="f240d487-c052-43f5-83fc-87f5513ca5eb" class="code"><code>let getName = undefined;
+getName();</code></pre><p id="f1dffcb5-6afb-4c97-a4f0-0bb3511fb03a" class="">return : 반환</p><p id="aaac0e39-a271-4135-a55b-6a1db7cda4c2" class="">함수는 변수다</p><p id="f8433b7d-8a8b-461a-a5e1-49e396f5fd58" class="">예제4-2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f240d487-c052-43f5-83fc-87f5513ca5eb" class="code"><code class="language-JavaScript">let getName = undefined;
 getName = function getName(){
   return &#x27;자바스크립트&#x27;;
 }
 console.log(getName);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d6a7a8d7-5649-4b82-bcc7-aeccea6c5985"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">function getName(){<br/>return &#x27;자바스크립트&#x27;;<br/>}<br/></div></figure><p id="e9442388-31b6-49ff-8c47-338ad659579c" class="">키가 getName , 값이 function getName~ 즉, 함수다</p><p id="71286b6a-43cc-4e35-9826-627f18310f7d" class="">
 </p><p id="b445f0ad-079b-4b8a-a12d-93cf47d636e8" class="">
 </p><h3 id="55c365f8-e12d-4429-b500-9f976c5bbfeb" class="">매개변수</h3><p id="1ccdfb72-9a3f-483d-8230-a971411afe4a" class="">
-</p><p id="d817dc9c-3654-4778-9c22-bbf41b074551" class="">예제1-1</p><pre id="4c685a6d-b4c7-4a4c-b6f8-c884457b9216" class="code"><code>function showMessage(message, from){
+</p><p id="d817dc9c-3654-4778-9c22-bbf41b074551" class="">예제1-1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4c685a6d-b4c7-4a4c-b6f8-c884457b9216" class="code"><code class="language-JavaScript">function showMessage(message, from){
   console.log(`${message} by ${from}`);
 }
 showMessage(&#x27;hi&#x27;);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13c7c419-e1cb-41c9-8bf7-2d7ccbf514a3"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;hi by undefined&quot;</div></figure><p id="a33c875e-2aa9-46bd-bd06-607d2efd5186" class="">
 </p><p id="c342a105-997f-4df6-a703-a53382c5e4b8" class="">``: 백틱 (쉬프트 안누르고 물결)</p><p id="56596ef9-3a66-4c3b-9163-6ba75ab81560" class="">백틱이라는 기호를 만들어서 변수와 텍스트를 이어서 쭉 쓰도록 함</p><p id="a2299d76-d685-44d8-bf5c-034cac23e468" class="">
 </p><p id="520dbb1d-829a-4db8-ac5d-cf31173e2924" class="">${}: 딸라 중괄호</p><p id="1e3ee668-94e6-49c3-ac4b-c95494850a1b" class="">변수임을 구별하기 위해 사용하는</p><p id="69738a32-c43d-40a1-8860-593a485bf038" class="">
 </p><p id="ecb6f7dd-1cf4-44c4-bfc6-8539bc624293" class="">매개변수란? 바깥에 있는 값을 안으로 전달할 때 쓰임</p><p id="f12be1ff-ed53-46ab-9200-36a1e12366f8" class="">두개를 입력해야 하는데 하나만 입력할 경우 앞에 것만 들어감</p><p id="017c459c-13eb-4bfd-ba87-d6b5c91af7c1" class="">매개 값은 쉼표로 구분</p><p id="8ddcff4c-2471-4bf3-ba7f-2ba332a1ecc5" class="">
-</p><p id="f2df02e7-9f53-41e8-be5d-90fc1bc4fa24" class="">예제1-2</p><pre id="db8f617a-faa1-4ca8-ab61-d50f6fe71ac0" class="code"><code>function showMessage(aaa, from=&#x27;script&#x27;){
+</p><p id="f2df02e7-9f53-41e8-be5d-90fc1bc4fa24" class="">예제1-2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="db8f617a-faa1-4ca8-ab61-d50f6fe71ac0" class="code"><code class="language-JavaScript">function showMessage(aaa, from=&#x27;script&#x27;){
   console.log(`${aaa} by ${from}`);
 }
 showMessage(&#x27;hello&#x27;);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f4eb895e-4647-46b6-9e1d-bba68524faf8"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;hello by script&quot;</div></figure><p id="b6c02952-238e-4bb4-a100-dfa6b46b65fb" class="">
 </p><p id="f8acfa71-b574-4483-9bb6-697080aa018b" class="">밖에서 안으로 들여올 때는 매개변수</p><p id="e11c5394-0453-40a5-9886-d4317741d80d" class="">안에서 밖으로 내보낼 때는 return</p><p id="89b280dc-e2e3-4f5a-9eb6-86ef1ad06cc2" class="">
 </p><p id="f2cfac25-cc7c-4d9b-9dbd-bd3ace363fd1" class="">
 </p><h3 id="71563013-cfa2-4c56-a639-25c21f2e89d0" class="">Symbol</h3><p id="03b1f7b8-3d7b-44bb-b138-8921abd3b03f" class="">
-</p><p id="39e54878-544e-41d9-bef4-7258499c704a" class="">예제1</p><pre id="32efa74b-d032-461b-b1b6-5e080d5e6754" class="code"><code>let symbol1 = Symbol(&#x27;key&#x27;);
+</p><p id="39e54878-544e-41d9-bef4-7258499c704a" class="">예제1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="32efa74b-d032-461b-b1b6-5e080d5e6754" class="code"><code class="language-JavaScript">let symbol1 = Symbol(&#x27;key&#x27;);
 let symbol2 = Symbol(&#x27;key&#x27;);
 
 console.log(typeof(symbol1));
 console.log(symbol1 == symbol2);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0968ad5b-154f-4448-ae66-2e83bcbe941e"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;symbol&quot;<br/>false<br/></div></figure><p id="52b0ff7c-c96f-4ce5-8518-016d9ca826bc" class="">
 </p><p id="7ddea9cb-b3c3-42e4-9c71-189dbcb67403" class="">심볼이란? - 고유하고 변경할 수 없는 값</p><p id="6d633f4f-46ec-403c-ba9b-d2a01c02e095" class="">
 </p><p id="24b3a3cd-f407-4b25-a809-d0c90a9ec6c1" class="">같은 값이더라도 다른 객체로 인식해야 될 때가 있다</p><p id="fbaf84d6-ae29-4f74-964a-42d6b9bd8a8c" class="">무조건 하나 즉, 유일하기 때문에 어떤 값을 넣어도 충돌이 발생하지 않는다</p><p id="3d915fec-ac5a-433d-b695-b1e943d035fa" class="">일반적인 프로젝트보다는 은행과 같은 보안과 관련된 곳에서 사용할 가능성이 있다</p><p id="aa1c3ac9-f4d5-40ce-bdc4-16bf815e6f27" class="">
-</p><p id="b9f412ce-7c4a-4a4c-be1e-bde772ba3a98" class="">예제2-1</p><pre id="8c2ea0bb-eaff-43a1-9b51-c363a1155824" class="code"><code>const symbol1 = Symbol(&#x27;id&#x27;);
+</p><p id="b9f412ce-7c4a-4a4c-be1e-bde772ba3a98" class="">예제2-1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8c2ea0bb-eaff-43a1-9b51-c363a1155824" class="code"><code class="language-JavaScript">const symbol1 = Symbol(&#x27;id&#x27;);
 const symbol2 = Symbol(&#x27;id&#x27;);
 
 console.log(symbol1 === symbol2);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0d6d7bc4-0b42-4201-a4af-1b6f58241a7f"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">false</div></figure><p id="0b317b83-09e5-4c25-85c5-550ea7ad0843" class="">
-</p><p id="c7476c58-6988-4f2b-8904-f43d7a218947" class="">예제2-2</p><pre id="4ac3bc9e-7b97-47f9-9c45-fa3678111ecd" class="code"><code>// Symbol 객체에서 for 메서드를 이용하면 string이 같으면 true가 나오게 할 수 있다.
+</p><p id="c7476c58-6988-4f2b-8904-f43d7a218947" class="">예제2-2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4ac3bc9e-7b97-47f9-9c45-fa3678111ecd" class="code"><code class="language-JavaScript">// Symbol 객체에서 for 메서드를 이용하면 string이 같으면 true가 나오게 할 수 있다.
 const symbol1 = Symbol.for(&#x27;id&#x27;);
 const symbol2 = Symbol.for(&#x27;id&#x27;);
 
@@ -945,14 +945,14 @@ console.log(symbol1 === symbol2);</code></pre><figure class="block-color-gray_ba
 </p><p id="a26ca9bf-9614-42cd-815d-d8828115e699" class="">if (!true) {} : if 괄호 안에 있는 결과물이 !true 즉, false면 실행하라</p><p id="d5e11539-5cf4-4fba-bba7-1064f6428f94" class="">
 </p><p id="72a015a5-fe9f-4ec3-83b2-d7b3221a00b8" class="">
 </p><h3 id="8732c754-ad4d-4310-aefc-b09f9840a003" class="">자동형 변환규칙</h3><p id="81c376d1-c7eb-4e79-b27e-2196273304ba" class="">+ : 문자열이 우선</p><p id="06906b75-acc7-491e-b6bd-646eba921e24" class="">-, *, / : 숫자열이 우선</p><p id="40372e30-8e27-4a6d-9138-d10d17e96d06" class="">
-</p><pre id="a0f0f920-6875-41e6-b220-8db758fdef86" class="code"><code>console.log(&#x27;3&#x27;+3);  // 자동 변환
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a0f0f920-6875-41e6-b220-8db758fdef86" class="code"><code class="language-JavaScript">console.log(&#x27;3&#x27;+3);  // 자동 변환
 console.log(+&#x27;3&#x27;+3);  // 명시적
 console.log(&#x27;3&#x27;-3);
 console.log(&#x27;문자&#x27;-2);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0fc56d75-3785-4528-88ba-95b064aa98de"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;33&quot;<br/>6<br/>0<br/>NaN<br/></div></figure><p id="fc22449c-0e2f-43c6-98d6-b487d657d35e" class="">
 </p><p id="b4c5595f-58a2-47e6-90fb-0e0859f10454" class="">NaN : Not a Number - 숫자가 될 수 없다 - 원시 데이터형 고유 데이터타입 - 숫자가 아님</p><p id="fbf51e0b-1f49-4999-8cd4-0ff5ea5f2219" class="">isNaN() 함수</p><p id="f529df1d-76ca-42a4-9a1e-918101faf8ca" class="">
 </p><p id="6539f0d1-11b9-4709-8391-29d513ac7266" class="">
 </p><h3 id="f7569133-f230-4371-b048-49cd71a3a0f7" class="">for문</h3><p id="54cd6ab7-0085-4bb9-8923-95e570764e8a" class="">
-</p><p id="d3902eb1-129c-4a1e-b11f-13d552b06edb" class="">예제1-1</p><pre id="eda8a38a-f83c-4100-8e6a-a07a2e83c8e6" class="code"><code>let friends = [
+</p><p id="d3902eb1-129c-4a1e-b11f-13d552b06edb" class="">예제1-1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="eda8a38a-f83c-4100-8e6a-a07a2e83c8e6" class="code"><code class="language-JavaScript">let friends = [
   {name:&#x27;라이언&#x27;, age:5},
   {name:&#x27;어피치&#x27;, age:4},
   {name:&#x27;콘&#x27;, age:2},
@@ -964,7 +964,7 @@ for(let i=0; i&lt;friends.length; i++) {
 }</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="817245fc-4f55-432f-a7cd-2be8bf30fc26"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;이름: 라이언, 나이: 5&quot;<br/>&quot;이름: 어피치, 나이: 4&quot;<br/>&quot;이름: 콘, 나이: 2&quot;<br/>&quot;이름: 무지, 나이: 3&quot;<br/></div></figure><p id="2a47b589-e948-4901-b108-b9c1cef3db59" class="">
 </p><p id="3240f1db-8db2-4baf-a2b5-4c98c2189c8f" class="">
 </p><h3 id="a069ab14-c225-40b5-93b0-6a955f7ebea5" class="">for ~ of 문</h3><ul id="ec2bc31d-db18-4cbc-afc8-24c514d66651" class="bulleted-list"><li style="list-style-type:disc">ES6에 추가된 새로운 컬렉션 전용 반복 구문</li></ul><ul id="e4d440a6-6f72-41ed-827d-19fd14ee05dc" class="bulleted-list"><li style="list-style-type:disc">배열, 문자열, 맵(Map), 셋(Set) 객체에 사용</li></ul><ul id="063c2576-4a91-4c56-9d92-1dbece3326a8" class="bulleted-list"><li style="list-style-type:disc">기본형 :<br/>for (let 개별요소변수명 of 객체명) {<br/>        // 반복 실행문<br/>}<br/></li></ul><ul id="83835bea-3c03-4d26-91eb-4d34564deb1f" class="bulleted-list"><li style="list-style-type:disc">실무에서 많이 씀</li></ul><p id="c2c72d6a-55f5-43e2-86a7-f49e8c793a74" class="">
-</p><p id="e49bb621-8090-407e-ba9f-31dc438431ad" class="">예제1-2</p><pre id="f9287551-1b0b-4e0f-aaf0-45cb2de6f4ac" class="code"><code>let friends = [
+</p><p id="e49bb621-8090-407e-ba9f-31dc438431ad" class="">예제1-2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f9287551-1b0b-4e0f-aaf0-45cb2de6f4ac" class="code"><code class="language-JavaScript">let friends = [
   {name:&#x27;라이언&#x27;, age:5},
   {name:&#x27;어피치&#x27;, age:4},
   {name:&#x27;콘&#x27;, age:2},
@@ -977,13 +977,13 @@ for(let i of friends) {
 </p><p id="3318eaf7-28c1-4e23-80e3-dc8b587b15d9" class="">length를 굳이 쓰지 않아도 알아서 개수를 계산해서 보여줌</p><p id="8e55b385-06ab-4b49-843f-c03824b7b39f" class="">대신 두번째부터 출력 - 이런거 안됨 - 원래꺼 사용함</p><p id="34bab501-bf7b-46b2-a647-83bf96e90321" class="">
 </p><p id="2421b5c8-4d5a-428e-9353-c0a5d2c92368" class="">
 </p><h3 id="a4f02937-4802-4cd9-9b1f-55f36e8e2a55" class="">for in</h3><ul id="c045f636-71a8-47a0-b477-6ccffd4936e7" class="bulleted-list"><li style="list-style-type:disc">객체의 전체 속성 키를 나열하는데 사용하는 반복문</li></ul><ul id="04733e80-3d94-41f3-ae93-ff6296324d4e" class="bulleted-list"><li style="list-style-type:disc">기본형 : <br/>for (let 속성 in 객체) {<br/>        // 속성 처리 구문<br/>}<br/></li></ul><p id="72e0f995-b156-4e33-a802-bfda0161b356" class="">
-</p><p id="c4242000-8be0-40e9-aafe-51162f374da2" class="">예제1-3</p><pre id="27cbcbf1-d0cf-48e7-bb39-706bc1d8ad8e" class="code"><code>let ryon = {name:&#x27;라이언&#x27;, age:5, gender:&#x27;male&#x27;};
+</p><p id="c4242000-8be0-40e9-aafe-51162f374da2" class="">예제1-3</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="27cbcbf1-d0cf-48e7-bb39-706bc1d8ad8e" class="code"><code class="language-JavaScript">let ryon = {name:&#x27;라이언&#x27;, age:5, gender:&#x27;male&#x27;};
 for(let prop in ryon){
   console.log(&#x27;속성: &#x27;+ prop +&#x27;, 값:&#x27; + ryon[prop]);
 }</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bc0991c3-b61f-4345-b863-91f54ac56f96"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;속성: name, 값: 라이언&quot;<br/>&quot;속성: age, 값: 5&quot;<br/>&quot;속성: gender, 값: male&quot;<br/></div></figure><p id="eb87eca3-c525-4eb9-9af1-e7133fe97bf5" class="">
 </p><p id="466efe54-0f9d-4091-aeb6-10f5c43737da" class="">객체에만 가능 - 배열에 하면 이상하게 나옴</p><p id="59151462-8039-4d30-b1d8-60d12fdfd0c4" class="">
 </p><p id="ad40a152-1cdb-4357-8673-acba99631fa5" class="">
-</p><h3 id="3319ef45-3e81-4131-adf5-c0c606f278f5" class="">for each 문</h3><ul id="3ad0eda0-82af-4f6f-879b-fac98b4ae390" class="bulleted-list"><li style="list-style-type:disc">오직 <mark class="highlight-yellow_background"><strong>Array 객체에서만 사용가능</strong></mark>한 메서드 - Array.prototype.forEach()</li></ul><ul id="dd012463-93dd-4a02-8c5f-7dda10927b5a" class="bulleted-list"><li style="list-style-type:disc">기본형:<br/>배열.forEach(function (요소[, 인덱스]{<br/>        // 요소 처리 실행문<br/>});<br/></li></ul><p id="42864bb0-5b25-4bcc-9f4e-9180d3220b59" class="">팁) 대괄호로 표기된 애들은 필수가 아닌 선택<div class="indented"><p id="e823014e-1616-4f2b-be09-07edae5e0260" class="">MDN에 검색해보면 어떤 애들한테 쓸 수 있는건지 알 수 있음</p></div></p><pre id="23056a0e-4f6b-4f07-a81a-d47cd5320026" class="code"><code>let friends = [
+</p><h3 id="3319ef45-3e81-4131-adf5-c0c606f278f5" class="">for each 문</h3><ul id="3ad0eda0-82af-4f6f-879b-fac98b4ae390" class="bulleted-list"><li style="list-style-type:disc">오직 <mark class="highlight-yellow_background"><strong>Array 객체에서만 사용가능</strong></mark>한 메서드 - Array.prototype.forEach()</li></ul><ul id="dd012463-93dd-4a02-8c5f-7dda10927b5a" class="bulleted-list"><li style="list-style-type:disc">기본형:<br/>배열.forEach(function (요소[, 인덱스]{<br/>        // 요소 처리 실행문<br/>});<br/></li></ul><p id="42864bb0-5b25-4bcc-9f4e-9180d3220b59" class="">팁) 대괄호로 표기된 애들은 필수가 아닌 선택<div class="indented"><p id="e823014e-1616-4f2b-be09-07edae5e0260" class="">MDN에 검색해보면 어떤 애들한테 쓸 수 있는건지 알 수 있음</p></div></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="23056a0e-4f6b-4f07-a81a-d47cd5320026" class="code"><code class="language-JavaScript">let friends = [
   {name:&#x27;라이언&#x27;, age:5},
   {name:&#x27;어피치&#x27;, age:4},
   {name:&#x27;콘&#x27;, age:2},
@@ -994,7 +994,7 @@ friends.forEach(function(fr,idx){
   console.log(&#x27;이름: &#x27;+ fr.name + &#x27;, 나이: &#x27; + fr.age);
 });</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="00adf03a-e834-468b-8b96-6b2826af60d3"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;이름: 라이언, 나이: 5&quot;<br/>&quot;이름: 어피치, 나이: 4&quot;<br/>&quot;이름: 콘, 나이: 2&quot;<br/>&quot;이름: 무지, 나이: 3&quot;<br/></div></figure><p id="45312fee-2f8f-4cee-9a99-fcf360b002cc" class="">
 </p><p id="597b7929-bfff-4877-b0f3-b6bfca99a046" class="">
-</p><h3 id="aab41cc1-0210-4629-843f-3da4a249c0ef" class="">함수의 Parameter</h3><pre id="bb852793-1878-4d6b-9bd8-660b07ab036e" class="code"><code>// 인자는 실제 함수를 호출하는 시점에서 함수 호출과 함께 함수로 넘어가는 값(들)이다
+</p><h3 id="aab41cc1-0210-4629-843f-3da4a249c0ef" class="">함수의 Parameter</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bb852793-1878-4d6b-9bd8-660b07ab036e" class="code"><code class="language-JavaScript">// 인자는 실제 함수를 호출하는 시점에서 함수 호출과 함께 함수로 넘어가는 값(들)이다
 function sum(a=0, b=0){ // a=0 과 같이 기본값 설정 가능
   return a+b;
 }
@@ -1003,13 +1003,13 @@ console.log(sum(4));
 console.log(sum());</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ae30d621-eb19-4a1f-8ac0-aea41be7118f"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">9<br/>4<br/>0<br/></div></figure><p id="3f99e758-0084-4b43-a097-b227a4b62e9a" class="">
 </p><p id="80e664c9-6259-4254-ba08-6fed0536e635" class="">여기서 4와 5에 해당하는 것을 인자라고 한다 - 값을 매기는 것</p><p id="9f21f1fa-c458-4683-a26d-094545c4e3b5" class="">
 </p><p id="7c1375b5-431f-448a-b00c-69e931423d45" class="">
-</p><p id="3e668d17-6d59-466d-82e0-bb6455d854b0" class="">spread/rest</p><pre id="a8440c47-e54a-4abc-903e-a7b14424a2a8" class="code"><code>function res(...args) {
+</p><p id="3e668d17-6d59-466d-82e0-bb6455d854b0" class="">spread/rest</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a8440c47-e54a-4abc-903e-a7b14424a2a8" class="code"><code class="language-JavaScript">function res(...args) {
   console.log(args);
 }
 res(1,2,3,4);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="81904880-ba81-480b-8b13-997fb63ce4f0"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[1, 2, 3, 4]</div></figure><p id="60d63f26-580d-4b18-b9f0-d9e440de609e" class="">
 </p><p id="3f20cca1-c30b-418d-9633-0be5fdcf3f88" class="">…args : 점 3개로 배열 객체를 만들어버릴 수 있다</p><p id="020addd3-d224-48a5-8fa0-7d2d871f4535" class="">
 </p><p id="f3d39128-1356-4ec8-8c30-e02bab56a96b" class="">
-</p><p id="d1c39f51-a400-4f30-98c8-bfd1599f39da" class=""><mark class="highlight-yellow_background"><strong>rest 2 (중요)</strong></mark></p><pre id="b0a17cd4-e92a-494f-ba74-7de5536147bf" class="code"><code>let rest2 = (arg1, arg2, ...args)=&gt;{
+</p><p id="d1c39f51-a400-4f30-98c8-bfd1599f39da" class=""><mark class="highlight-yellow_background"><strong>rest 2 (중요)</strong></mark></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b0a17cd4-e92a-494f-ba74-7de5536147bf" class="code"><code class="language-JavaScript">let rest2 = (arg1, arg2, ...args)=&gt;{
   console.log([arg1, arg2, args]);
 }
 rest2(1,2,3,4);
@@ -1018,17 +1018,17 @@ rest2(1);</code></pre><figure class="block-color-gray_background callout" style=
 </p><p id="da347470-f632-4f3b-bff9-397a720d64e1" class="">
 </p><p id="0e82c8c5-f347-4f2f-acfe-60d528d47746" class="">
 </p><p id="d97fbf10-7960-460d-8d7a-f3b65deaab00" class="">
-</p><pre id="0b36b8b1-7b15-44db-a73b-49f1db81ed84" class="code"><code>function add(a,b){
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0b36b8b1-7b15-44db-a73b-49f1db81ed84" class="code"><code class="language-JavaScript">function add(a,b){
   return a+b;
 }
-console.log(add(1,2));</code></pre><p id="b8f51d67-7d86-412b-adc2-e65753d131cb" class="">이것을 화살표 함수로 변환하면</p><pre id="44025ef9-645e-4466-a388-9acb23f5b104" class="code"><code>// 화살표 함수
+console.log(add(1,2));</code></pre><p id="b8f51d67-7d86-412b-adc2-e65753d131cb" class="">이것을 화살표 함수로 변환하면</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="44025ef9-645e-4466-a388-9acb23f5b104" class="code"><code class="language-JavaScript">// 화살표 함수
 let add = (a,b) =&gt; a+b;
 console.log(add(1,2));</code></pre><p id="ebd30f82-9115-453b-8e03-67cf0212fbfe" class="">결과는 같다</p><p id="1fb1d536-5b49-44d7-98aa-cc16ed4e516e" class="">
 </p><p id="04b9f0f6-2303-42ed-b3b8-447c10d3c3bb" class="">화살표 함수는 람다식과 같음</p><p id="386afbc7-e49f-43ef-8682-202e5960db76" class="">
 </p><p id="b4a79293-f196-4916-b60d-6c95a326b42e" class="">
 </p><p id="9b9240cb-d17b-4443-96f6-666836ef4029" class="">줄여서 쓰는 것들</p><ul id="41c45612-4e98-49fe-a17c-b179fcab8da4" class="bulleted-list"><li style="list-style-type:disc">a = a + b   →   a += b   : 현재 a의 값에 b를 더한 값을 새로운 a에 할당</li></ul><ul id="f96a90fb-cfaf-492d-b0fa-da85231977e6" class="bulleted-list"><li style="list-style-type:disc">a = a - b   →   a -= b   : 현재 a의 값에 b를 뺀 값을 새로운 a에 할당</li></ul><p id="404d48ef-6e23-4a5a-81d7-10652e24afb7" class="">
 </p><p id="7e86623f-c312-42ac-91b1-6c2dffacd3e8" class="">
-</p><p id="7d840e43-60be-435f-8fa8-b924fbbd6e8d" class=""><strong><mark class="highlight-yellow_background">연습문제1</mark></strong></p><pre id="ffbfc31f-02e3-441c-b536-0ef5605a88e0" class="code"><code>function sum(a,b, ...args){
+</p><p id="7d840e43-60be-435f-8fa8-b924fbbd6e8d" class=""><strong><mark class="highlight-yellow_background">연습문제1</mark></strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ffbfc31f-02e3-441c-b536-0ef5605a88e0" class="code"><code class="language-JavaScript">function sum(a,b, ...args){
   let result = 0;
   if(a != undefined){result = a;}else{return 0;}
   if(b != undefined){result += b;}
@@ -1045,7 +1045,7 @@ console.log(sum(1));  // 1</code></pre><figure class="block-color-gray_backgroun
 </p><p id="92bedeab-ed0c-4d06-93cc-b827ca83386c" class="">
 </p><p id="c60c3679-557f-4905-a792-571fdf870a1d" class=""><mark class="highlight-yellow_background"><strong>조건 ? 값 : 값;</strong></mark>  -  if문을 연산자로 나타낸 것 <strong><mark class="highlight-yellow_background">(삼항연산자)</mark></strong></p><p id="351bcc40-0d77-418c-97a3-4952c06ae551" class="">
 </p><p id="3d8918e8-ffa4-4d4a-80dd-518ce0f88f77" class="">
-</p><h3 id="63dc4e04-7cde-4ba1-bea4-1c49fc3b7b06" class=""><mark class="highlight-yellow_background">reduce 메서드</mark></h3><pre id="d7ae8608-cb15-494b-98f8-5d457c13544a" class="code"><code>function sum(a,b, ...args){
+</p><h3 id="63dc4e04-7cde-4ba1-bea4-1c49fc3b7b06" class=""><mark class="highlight-yellow_background">reduce 메서드</mark></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d7ae8608-cb15-494b-98f8-5d457c13544a" class="code"><code class="language-JavaScript">function sum(a,b, ...args){
   let result = 0;
   if(a != undefined){result = a;}else{return 0;}
   if(b != undefined){result += b;}
@@ -1056,7 +1056,7 @@ console.log(sum(1,2,3,4,5));
 console.log(sum(1,2));
 console.log(sum(1));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bd087e5e-9238-48c3-a266-cb1abde6c3fc"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">15<br/>3<br/>1<br/></div></figure><p id="632ac53c-0b42-455f-93bf-d349875b338f" class="">
 </p><p id="21e97bb9-a365-4598-b2a8-bd5701c45a61" class="">reduce() 메서드는 배열의 각 요소에 대해 주어진 리듀서 (reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.</p><p id="f9f93e7e-3d6e-429e-a70c-21577e40fd3a" class=""><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce</a></p><p id="35e84c24-b66a-4b0c-9a69-baa906f16d64" class="">후에 react 배울 때 reducer 에 대해서 깊게 다룰 예정이다</p><p id="7075a4b7-ef69-4458-8463-5597cb746066" class="">
-</p><p id="41e0bc18-5c23-49e6-92e2-2a20ebc08571" class="">for each 정리</p><pre id="f3c2220f-5fed-4c6f-b16a-e7e0dba379e5" class="code"><code>function sum(a=0, b=0, ...args){
+</p><p id="41e0bc18-5c23-49e6-92e2-2a20ebc08571" class="">for each 정리</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f3c2220f-5fed-4c6f-b16a-e7e0dba379e5" class="code"><code class="language-JavaScript">function sum(a=0, b=0, ...args){
   let result = a + b;
   args.forEach(function(arg){
     result += arg;
@@ -1065,23 +1065,23 @@ console.log(sum(1));</code></pre><figure class="block-color-gray_background call
 }
 console.log(sum(1,2,3,4,5));</code></pre><p id="6da971a9-a72f-4909-aa75-3a837143e917" class="">
 </p><p id="2a2fad4d-d363-4854-a927-3535777dcbea" class="">ES6 문법에서는 이렇게 간단하게 표현할 수 있다 (하나하나 undefined으로 찾는 방식 x)<br/>간편하지만 문법을 모르면 아예 이해하지 못하므로<br/>하나하나 확실히 배워가는게 좋다<br/></p><p id="a70e51a5-c0aa-4308-a428-8a6b351da6a3" class="">
-</p><p id="03fb20fa-f2f3-43e7-9a92-7707f912b15e" class="">이걸 화살표 함수로 정리하면</p><pre id="f2747019-6535-452e-bb57-1315252dec06" class="code"><code>function sum(a=0, b=0, ...args){
+</p><p id="03fb20fa-f2f3-43e7-9a92-7707f912b15e" class="">이걸 화살표 함수로 정리하면</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f2747019-6535-452e-bb57-1315252dec06" class="code"><code class="language-JavaScript">function sum(a=0, b=0, ...args){
   let result = a + b;
   args.forEach(arg =&gt; (result += arg));
   return result;
 }
 console.log(sum(1,2,3,4,5));</code></pre><p id="085407f0-eafc-4479-a248-c1ed700a153f" class="">이렇게 더 간단해진다</p><p id="50456183-cdd1-4825-bb4c-c3bcecb5e9d7" class="">
-</p><p id="17756950-4d0d-45e9-8216-daf0f8aa1e1b" class="">이걸 reduce로 한번 더 정리하면</p><pre id="d1a87db5-6779-453b-9261-7e51a5c70c36" class="code"><code>const sum = (a=0, b=0, ...args) =&gt; {
+</p><p id="17756950-4d0d-45e9-8216-daf0f8aa1e1b" class="">이걸 reduce로 한번 더 정리하면</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d1a87db5-6779-453b-9261-7e51a5c70c36" class="code"><code class="language-JavaScript">const sum = (a=0, b=0, ...args) =&gt; {
 		return [a, b, ...args].reduce((acc, val) =&gt; acc + val, 0);  // 0자리 : 초기값
 };
 console.log(sum(1,2,3,4,5));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3f33d310-2593-4315-9739-ad0d910e041e"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">15</div></figure><p id="97c5de75-2f8d-4097-b283-2b6cbf2fe4d0" class="">
 </p><p id="90619a99-3e1b-43ad-b223-9848d20cfcfb" class="">이렇게 단 세줄로 요약할 수도 있다</p><p id="af750d70-9e26-4c85-8d82-3a11f4426123" class="">여기서, reduce에서는 위와 같이 초기값을 설정해줄 수 있다<br/>그럼 초기값을 응용해보자<br/></p><p id="a6c3c9a1-478c-45f4-aaed-bb077350e9d5" class="">
-</p><pre id="ab7d8d0d-cc98-48db-be31-db71b5d436dd" class="code"><code>const sum = (a=0, b=0, ...args) =&gt; {
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ab7d8d0d-cc98-48db-be31-db71b5d436dd" class="code"><code class="language-JavaScript">const sum = (a=0, b=0, ...args) =&gt; {
 		return [a, b, ...args].reduce((acc, val) =&gt; acc + val, 100); // 초기값 : 100
 };
 console.log(sum(1,2,3,4,5));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bc4190cc-e185-46db-ad4d-a2a89a68b95a"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">115</div></figure><p id="6f35aa7e-9cf5-4603-be1e-ca8843a586de" class="">
 </p><p id="979e7d3f-eca4-49a9-afd6-3b5ddbbba20c" class="">
-</p><p id="13cd9642-dbe8-4bd1-b4b8-3ccbbb019a78" class=""><mark class="highlight-yellow_background"><strong>연습문제2</strong></mark></p><pre id="d9bb42fe-3602-4bc8-9adb-987f747e2239" class="code"><code>let multiply = (a, b, ...args) =&gt; {
+</p><p id="13cd9642-dbe8-4bd1-b4b8-3ccbbb019a78" class=""><mark class="highlight-yellow_background"><strong>연습문제2</strong></mark></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d9bb42fe-3602-4bc8-9adb-987f747e2239" class="code"><code class="language-JavaScript">let multiply = (a, b, ...args) =&gt; {
   let result = a * b;
   for(let i=0; i&lt;args.length; i++) {
     result *= args[i];
@@ -1090,7 +1090,7 @@ console.log(sum(1,2,3,4,5));</code></pre><figure class="block-color-gray_backgro
 }
 console.log(multiply(1,2,3,4));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e0d21d5e-e4fb-44e6-b720-d903a9df24ce"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">24</div></figure><p id="27c83327-726a-46ea-8a1c-85b1b59e24c7" class="">
 </p><p id="23458a55-569c-401f-b2c7-3c7bbb2a02f5" class="">
-</p><h3 id="6f18e3ac-c4d8-43fb-a4ff-4e730d444497" class="">객체의 복사</h3><pre id="d6d1a9c5-ef4c-423d-b12c-8ff2ff982006" class="code"><code>let car={
+</p><h3 id="6f18e3ac-c4d8-43fb-a4ff-4e730d444497" class="">객체의 복사</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d6d1a9c5-ef4c-423d-b12c-8ff2ff982006" class="code"><code class="language-JavaScript">let car={
   color:&#x27;red&#x27;,
 };
 let secondCar = car;  // secondCar 는 car 가 가리키는 객체에 대한 참조를 가지게 된다.
@@ -1103,7 +1103,7 @@ console.log(car);
 console.log(secondCar);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="34b6ba11-92b6-4f2f-95f5-cf0664e550cc"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[object Object] {<br/>color: &quot;red&quot;,<br/>drive: &quot;fast&quot;,<br/>wheels: 4<br/>}<br/>[object Object] {<br/>color: &quot;red&quot;,<br/>drive: &quot;fast&quot;,<br/>wheels: 4<br/>}<br/></div></figure><p id="c381239b-df09-4566-80d3-f543d062255f" class="">
 </p><p id="84b93838-96dd-44a5-9329-89981a7378c0" class="">‘오른쪽에 있는 값을 왼쪽에 반영한다’<br/>→ 이 메커니즘만 잘 기억하고 있으면 된다<br/></p><p id="52e2be78-aca9-4acd-8924-2c85097f4f5a" class="">실무에서는 이렇게 쓰면 안된다는 것을 보여주기 위함<br/>→ 원본이 같이 바뀌는건 좋지 않음 (불변성 위반)<br/></p><p id="b520feec-41b3-4e50-b992-e91983a775a5" class="">
 </p><p id="5e4a00da-81f7-4daf-a01c-954e61ef8f80" class="">그래서 우리는 <mark class="highlight-yellow_background"><strong>assign</strong></mark>을 사용할 것이다</p><p id="39dc720d-d709-4285-9203-905992e63ff5" class="">assign() 메서드는 출처 객체들의 모든 열거 가능한 자체 속성을 복사해 대상 객체에 붙여넣는다<br/>그 후, 대상 객체를 반환한다<br/></p><p id="b4a5d65c-5791-41be-b035-c2b79abbab59" class="">
-</p><h3 id="6873b0f6-36b8-43e6-93ab-9056b7c50d98" class=""><mark class="highlight-yellow_background"><strong>assign (☆매우 중요함★)</strong></mark></h3><pre id="27b49e55-ffd7-4551-9287-0d1abe690c15" class="code"><code>const car = {
+</p><h3 id="6873b0f6-36b8-43e6-93ab-9056b7c50d98" class=""><mark class="highlight-yellow_background"><strong>assign (☆매우 중요함★)</strong></mark></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="27b49e55-ffd7-4551-9287-0d1abe690c15" class="code"><code class="language-JavaScript">const car = {
   color:&#x27;red&#x27;
 };
 const secondCar = Object.assign({}, car);
@@ -1113,7 +1113,7 @@ console.log(car);
 console.log(secondCar);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9df4bb25-4819-4775-8b2f-aa2a16e0861e"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[object Object] {<br/>color: &quot;red&quot;,<br/>wheels: 4<br/>}<br/>[object Object] {<br/>color: &quot;red&quot;<br/>}<br/></div></figure><p id="1fd19655-911b-4dd6-9fa2-030d6579bb80" class="">
 </p><p id="2d6a22a6-0728-4026-998c-f144a7beaf8f" class="">assign의 작동 메커니즘<br/>: 비어져있는 객체를 만들고 그 안에 car를 넣고 그것을 secondCar에 보낸다<br/></p><p id="9fef8ded-4779-4cae-92c3-1ad3beb8c104" class="">assign(a, b)<br/>a : b를 감쌀 객체 , b : 복사할 내용<br/></p><p id="ade9b9cc-8051-4d08-a785-13ced8a78692" class="">
 </p><p id="2a260028-586e-4b7a-b1fb-656ed00157a8" class="">
-</p><h2 id="b32b8fc0-94b7-4306-8392-da04a6f2f868" class="">Array(배열)</h2><pre id="785b5f9f-18f9-4901-b325-e2587c48af0f" class="code"><code>const fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;];
+</p><h2 id="b32b8fc0-94b7-4306-8392-da04a6f2f868" class="">Array(배열)</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="785b5f9f-18f9-4901-b325-e2587c48af0f" class="code"><code class="language-JavaScript">const fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;];
 console.log(fruits[0]);
 console.log(fruits.length);
 
@@ -1133,9 +1133,451 @@ console.log(fruits);
 fruits.shift();
 console.log(fruits);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bfb37baf-e297-45fb-8de7-0ca75cb6f219"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;apple&quot;<br/>3<br/>[&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;, &quot;pear&quot;]<br/>[&quot;melon&quot;, &quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;, &quot;pear&quot;]<br/>[&quot;melon&quot;, &quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]<br/>[&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]<br/></div></figure><p id="aa387349-5bfb-4088-b8e6-9f19cf8bb38a" class="">
 </p><p id="80784c45-28af-4578-8639-def06ea64dad" class="">
-</p><p id="75924fb9-8436-4b9b-90cf-b6d008f099c1" class="">연습문제</p><pre id="92c058bf-56a1-4699-86a4-fd7813919fdc" class="code"><code>let myInt = 1;
+</p><p id="75924fb9-8436-4b9b-90cf-b6d008f099c1" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="92c058bf-56a1-4699-86a4-fd7813919fdc" class="code"><code class="language-JavaScript">let myInt = 1;
 if (myInt === 1){
   let mySecondInt = 2;
   console.log(mySecondInt);
 }
-console.log(mySecondInt);</code></pre></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+console.log(mySecondInt);</code></pre><p id="e2a5f856-8289-4a57-8eaa-2c0b826eff34" class="">
+</p><p id="63059632-0637-4d7c-aefd-41fc25e181f9" class="">
+</p><figure id="da1d0b9c-2637-4527-83a3-6690cc3265eb"><div class="source"><a href="3_JavaScript%20d401f998ad9e4d68b566fcd5b0e9a6a7/231213_%25EC%25A0%2595%25EB%25A6%25AC.txt">231213_정리.txt</a></div></figure><p id="eb633fcb-44f6-4d84-a929-26064060a24b" class="">
+</p><hr id="a5c33413-0910-426b-88a7-fbd73c4312b2"/><p id="27b4bf47-d8b1-4baf-a53d-187d7fd1cf24" class="">231214_TIL</p><p id="6ff32bd8-a51d-4aae-8cac-faaae9742cf8" class="">
+</p><h2 id="728c517e-8f19-4601-a79f-e654f3a374c2" class="">this</h2><ul id="2d1404d2-e0db-48de-9ce2-a9a54d2cc079" class="bulleted-list"><li style="list-style-type:disc">자신을 감싸고 있는 객체를 가리킴</li></ul><ul id="475323df-508e-4bb5-b254-b38244dfdc20" class="bulleted-list"><li style="list-style-type:disc">프로그래밍 전반적으로 이 원리를 많이 씀</li></ul><ul id="d6d73d1d-74dc-4b20-8055-918b6f4034dc" class="bulleted-list"><li style="list-style-type:disc">지금 확실하게 알아두면 계속해서 도움이 될 예정</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="36073c24-d90b-4551-92e1-68a86f596adb" class="code"><code class="language-JavaScript">const myCar = {
+  color:&#x27;red&#x27;,
+  logColor:function(){
+		console.log(this);
+    console.log(this.color);
+  },
+};
+myCar.logColor();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a7327523-f420-407e-afa3-fe3dd04a81fc"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[object Object] {<br/>color: &quot;red&quot;,<br/>logColor: function(){<br/>window.runnerWindow.proxyConsole.log(this);<br/>window.runnerWindow.proxyConsole.log(this.color);<br/>}<br/>}<br/>&quot;red&quot;<br/></div></figure><p id="3c2517b8-5fb8-457c-be69-e9db820474c4" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b91639ea-708e-42af-8333-f09cc34a0823" class="code"><code class="language-JavaScript">function logThis(){
+  console.log(this);
+}
+logThis();</code></pre><p id="78991388-374f-4b29-ae00-54f1ad36eee7" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="736e94aa-aa3a-49a6-be17-17d0f5f57d71" class="code"><code class="language-JavaScript">// 엄격한 규칙을 적용해 전역 객체 값을 window 대신에 undefined로 설정하는 규칙이 지정된다.
+&#x27;use strict&#x27;;
+
+const myCar = {
+  color:&#x27;red&#x27;,
+  logColor:function(){
+    console.log(this.color);
+  },
+};
+
+const unboundGetColor = myCar.logColor;
+console.log(unboundGetColor());</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4d2fd550-9d84-49eb-8c94-2ecf09581216"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">undefined<br/>undefined<br/></div></figure><p id="dbd4ad3c-29a3-4d17-970b-710741d249a0" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ed2e4ddb-ec41-41ad-a359-bd59fd6f7177" class="code"><code class="language-JavaScript">const myCar = {
+  color:&#x27;red&#x27;,
+  logColor:function(){
+    console.log(this.color);
+  },
+};
+console.log(myCar);</code></pre><p id="fcfbe89d-406c-4bed-a66e-547498f52b7f" class="">
+</p><p id="adc1eaed-f277-4b3f-8645-57b7d60c2b10" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="550b2373-fb2c-4d9e-92fc-f0da65e43d47" class="code"><code class="language-JavaScript">const myCar = {
+  color:&#x27;red&#x27;,
+  logColor:function(){
+    console.log(this.color);
+  },
+};
+
+const unboundGetColor = myCar.logColor;
+console.log(unboundGetColor());
+
+const boundGetColor = unboundGetColor.bind(myCar);
+console.log(boundGetColor());</code></pre><p id="b139431a-562e-412d-9864-7e090a8762ea" class="">
+</p><p id="de6e5045-d480-447b-91b9-e193ae334ab8" class="">bind란?<br/>Function.prototype.bind() = 메서드가 function 즉, 함수다<br/><br/></p><p id="01358149-bda6-4af5-a8f5-196c2e369a8c" class="">Ctrl + L : 구글 콘솔창에서 내용 지우기</p><p id="f1867e0d-2e9e-48b5-9456-e9de3d21c4d0" class="">
+</p><p id="829008e1-3076-46a6-9090-e9a06fbf95ee" class="">
+</p><p id="5d3d6c2e-437b-4f65-b934-108dbd686404" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e24fbdf0-27da-406b-bb3b-665b76624427" class="code"><code class="language-JavaScript">&#x27;use strict&#x27;;
+let person = {
+  name : &#x27;sun&#x27;,
+  who : function(){
+  console.log(this);
+  }
+};
+person.who();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="eb368b36-3013-4997-90ce-45f819267a31"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">{name: &#x27;sun&#x27;, who: ƒ}</div></figure><p id="2ae71570-bed0-4181-9662-89dce286a3b9" class="">
+</p><p id="b5fbf3bb-9180-42f1-87d9-97e765b53141" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e0c1f6c4-5a8b-418c-8b88-094f967a6b6b" class="code"><code class="language-HTML">&lt;body&gt;
+  &lt;button id=&quot;btn&quot;&gt;hello&lt;/button&gt;
+&lt;/body&gt;</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="18c2f71e-3416-4a76-ba58-ef6fc4ce284c" class="code"><code class="language-JavaScript">let person = {
+  name : &#x27;sun&#x27;,
+  who : function(){
+  console.log(this);
+  }
+};
+person.who();
+
+let btn = document.getElementById(&#x27;btn&#x27;); // html body에서 id가 btn인 것을 
+btn.addEventListener(&#x27;click&#x27;,person.who);  // 클릭을 하면 person에 접근해서 who를 출력해라</code></pre><p id="a1d854fc-90e1-47ea-9fe8-344a3454c81d" class="">
+</p><p id="bd56f55a-927c-4684-8bb5-a59bd5967a37" class="">document는 html에서 body 영역을 뜻한다<br/>getElementById(’btn’)<br/></p><p id="96fcbb4e-53a3-4639-b2ea-63a8bc6f19d8" class="">
+</p><p id="b7066112-4aff-458b-8aa2-c3198c2dead3" class="">person에 접근하지 않으면 who를 출력할 수 없다</p><p id="5b4c9250-73b6-4c07-8d2b-f5d7d910b90e" class="">
+</p><p id="956a91bc-9f66-42c6-8019-2598a4de5e0b" class="">
+</p><h3 id="1abffc8b-1b76-4819-82c3-b788eed2e147" class="">const</h3><p id="7b5c4284-fff6-46b3-aed9-0910c6ad3572" class="">재선언, 재할당 안됨</p><p id="096a9bda-873a-4b27-a803-786be9f5220c" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a2a6d78d-f8ee-4fb3-b33d-7b2768d0ed88" class="code"><code class="language-JavaScript">const person = {
+  name: &#x27;jia&#x27;,
+  age:25,
+};
+
+person = {  // 재할당 개념
+  age:35
+}
+
+console.log(person.age);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="69975e1d-4fec-4eaa-a25b-4bfdac9da1ee"><div style="font-size:1.5em"><span class="icon">⛔</span></div><div style="width:100%">error</div></figure><p id="2babbfc5-05a0-40dc-8b1d-30dd16187fbe" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e40bc0cb-07e0-4caa-a534-8ddd023d6585" class="code"><code class="language-JavaScript">const person = {
+  name: &#x27;jia&#x27;,
+  age:25,
+};
+
+person.age = 35;
+
+console.log(person.age);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8d99a476-7e63-42b3-8f0d-fdf12d3e4d5a"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">35</div></figure><p id="e10f5e9b-0fc9-40e2-8484-6c2ddeae9cd1" class="">
+</p><p id="38524ae0-171a-4ace-8f75-6fca6f426604" class="">속성을 바꿀 수는 있다<br/>하지만, 객체 자체는 바꾸지 못한다<br/></p><p id="17d90316-b624-40f0-bf7f-0d2c97aa2206" class="">즉, const는 변수 전체는</p><p id="c6e763aa-c887-42a1-bcd7-2bc75f00fdc9" class="">
+</p><h3 id="6e50172c-5576-48a1-a7c7-84ae91b8895d" class="">freeze</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="382cc30f-0439-46e2-86d3-2696b65bb2e8" class="code"><code class="language-JavaScript">const person = {
+  name: &#x27;chulsoo&#x27;,
+  age:25,
+};
+
+person.age = 15;
+console.log(person.age);
+
+Object.freeze(person);  // 15 그대로 얼림
+person.age = 30;
+console.log(person.age);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ca129b6a-90f4-4662-ab71-146bb4f18a6e"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">15<br/>15<br/></div></figure><p id="fb22de4f-b7e8-413d-85fe-e7bb961123a0" class="">
+</p><p id="a8ed449c-906a-4fdb-b0c0-c32f3e8ad4f4" class="">Object.freeze() 메서드는 객체를 동결한다<br/>동결된 객체는 더 이상 변경될 수 없다<br/>괄호 안에는 객체를 넣어야한다<br/></p><p id="9f5b98d7-2f68-4bbd-b4fe-606261d886b9" class="">
+</p><p id="68dd74f5-8567-4af9-8220-9ba24c11ac96" class="">
+</p><p id="de35c49d-a451-4d94-a4e4-83bd6ad45881" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9e8a4853-32ad-4a7d-95a6-5efb97d6d6ab" class="code"><code class="language-JavaScript">let x = 100;
+if (x &gt; 50){
+	let x = 10;
+	console.log(x);
+}
+console.log(x);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f44c1525-9a5b-4d77-b121-bd21dd19daae"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">10<br/>100<br/></div></figure><p id="cd445c90-0d1a-4405-a45e-32810da440d9" class="">
+</p><p id="c089d75b-8658-4ded-a39c-8c275160310d" class="">화살표함수</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ce118caf-6cf9-4888-bfef-2b64b4d730c2" class="code"><code class="language-JavaScript">const greeting = function(name) {
+	return &quot;hello &quot; + name;
+};
+console.log(greeting(&#x27;seon&#x27;));
+
+const greeting2 = name =&gt; `hello ${name}`;  // 한 줄이면 실행괄호 안씀
+console.log(greeting2(`react`));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="42495033-090c-427c-8d10-ddc223426c79"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;hello seon&quot;<p id="35afa0d8-acc7-4db7-8ee2-44c3a5e9f607" class="">&quot;hello react&quot;</p></div></figure><p id="0be0018e-d580-4732-ae5a-8ead0a53ea75" class="">
+</p><p id="d849e0e8-645c-4a95-9758-b7d457619fbf" class="">매개변수가 아예 없거나 2개 이상일 때 실행괄호()를 써야함</p><p id="ccb8a261-3d89-4934-9c8e-d6f3444dca58" class="">이어쓰기 보다는 백틱을 활용하여 쓴다</p><p id="5cc51a6c-8977-487d-91cb-5f9b65e906ce" class="">
+</p><p id="7fb8f35f-3132-4080-b43e-eb5f70760cf7" class="">개념 복습 예제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c1fca24a-be0c-48b0-86f6-556e58e0431c" class="code"><code class="language-JavaScript">const person1 = {
+  age:10,
+  grow:function(){
+    this.age++;
+      console.log(this.age);
+  },
+};
+person1.grow();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="689a0011-30df-4b81-b531-ae8f0025e55f"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">11</div></figure><p id="4b99ef5c-f078-44d0-af4f-117f49359af5" class="">화살표함수로 바꾸면</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d314c21e-ef58-4ad8-be34-719d98c9c67c" class="code"><code class="language-JavaScript">const person1 = {
+  age:10,
+  grow:()=&gt;{
+    this.age++;
+    console.log(this.age);
+  },
+};
+person1.grow();</code></pre><p id="3a98e60a-a689-4222-88a7-bff1aa179ed3" class="">
+</p><p id="f5ecc9fb-44b2-4d57-b7c4-b84f414f8b6a" class="">가리키는 대상이 다르다 - 기준이 다름</p><p id="c2f9d3d9-adb5-4b7b-8317-a60fb2ad562d" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="85327a85-a53a-43a2-8316-be3977e16138" class="code"><code class="language-HTML">&lt;body&gt;
+  &lt;div class=&quot;box open&quot;&gt;
+    this is a box
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="64221b5f-8b3a-41a5-92ee-cb87d532e926" class="code"><code class="language-CSS">.opening {background-color:red;}</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a03ccb21-8f58-4b22-bdb6-54754965f682" class="code"><code class="language-JavaScript">const box = document.querySelector(&quot;.box&quot;);  // class명이 box인 것을 찾아라
+box.addEventListener(&quot;click&quot;,function(){
+  this.classList.toggle(&quot;opening&quot;);  // this : box
+																		 // 화살표함수로 변경 시 this : windows
+  setTimeout(function(){
+    this.classList.toggle(&quot;opening&quot;);  // this : setTimeout
+  },500);  // 500ms = 0.5s
+});</code></pre><p id="fd1c9cae-cc47-4604-933e-a4e216304222" class="">
+</p><ul id="8eb3b5b4-07b1-4860-889a-3f4b52861c59" class="bulleted-list"><li style="list-style-type:disc">document.qurerySelector : 앞으로 많이 사용할 메서드다</li></ul><ul id="527f19cc-e9c5-4560-a1c5-4ebfe8285668" class="bulleted-list"><li style="list-style-type:disc">setTimeout : 비동기, global function</li></ul><p id="7df7d715-90a5-40ca-8261-b4dac2257e31" class="">
+</p><p id="911496bf-b098-4de4-983c-cddf322f05be" class="">존재여부가 true인지 false인지 받아낸다<br/>opening이 있으면 true 없으면 false<br/></p><p id="0c6a2712-4aba-45a9-bb0f-fa15a692da7c" class="">
+</p><p id="150d5efe-da12-4880-8531-dd72cab99ce0" class="">classList는 확인만 한다<br/>생성하고 없애는 건 toggle이 한다<br/>toggle이 해당 내용이 없으면 만들고 해당 내용이 있으면 지운다<br/></p><p id="7e1fb3e5-e02f-446c-b373-1d8f63b9c771" class="">
+</p><p id="c3bc63a4-847b-4063-9e46-c2b59af6dc6b" class="">복습 예제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4edd3585-4621-4327-bfa7-735f3d8407a9" class="code"><code class="language-JavaScript">const showWinner = (...args) =&gt; {
+  const winner = args[0];
+  console.log(`${winner} was the winner`);
+};
+
+showWinner(&quot;jinsu&quot;, &quot;mina&quot;, &quot;jihun&quot;);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="37305272-7d7c-4ffa-8f3a-c1951d6b770a"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;jinsu was the winner&quot;</div></figure><p id="81cd2c08-2ffa-45fd-b8c1-41d25f4eeebf" class="">
+</p><p id="b7c32e68-31fe-40b2-bbd4-8a1c4af75ef7" class="">…args : 한번에 담는게 효율적이기 때문에 후에 react에서도 많이 쓸 예정</p><p id="d32470fc-7ad9-4f7c-9f2a-f6244de1e7ef" class="">
+</p><h3 id="b7b5a0ee-26a6-42d8-8b7d-766f9b6fcce7" class="">map</h3><p id="70af6c31-a5e1-496c-8722-42bd28d760ad" class="">map 함수 활용 예제1</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="53e52413-8283-4395-8c69-d42260df37a4" class="code"><code class="language-JavaScript">let arr = [1,2,3];
+let func = arr.map(n =&gt; n + 1);
+console.log(func);
+console.log(arr);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="95a0f6a9-5cd6-4890-b023-89ec17f28faf"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[2, 3, 4]<br/>[1, 2, 3]<br/></div></figure><p id="8b6d3c52-0856-488c-adf2-b314cff081d3" class="">
+</p><p id="a1926d74-4bf6-42af-9f2d-3a2013d9fab4" class="">map 메서드는 일괄적으로 값을 변경하고 할 때 쓰인다<br/>기존 것에 덮어쓰는 방식이 아니라 <br/><strong><mark class="highlight-yellow_background">새롭게 반환</mark></strong>하는 방식이다</p><p id="9cf16e34-49e8-4eb7-a9e4-597df0b7a0de" class="">
+</p><p id="f5d0c31f-6450-4ef7-9070-c3f1419856e4" class="">map 함수 활용 예제2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0892f66d-27c5-42e3-9456-a8c02db3efbc" class="code"><code class="language-JavaScript">const people = [
+  {name: &#x27;minseon&#x27;, age: 22, },
+  {name: &#x27;seoyeon&#x27;, age: 24, },
+  {name: &#x27;yeonju&#x27;, age: 23, }
+];
+const markup = `&lt;ul&gt;${people.map(person =&gt; `&lt;li&gt; ${person.name}&lt;/li&gt;`)}&lt;/ul&gt;`;
+console.log(markup);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="12f32930-8ee4-4e99-9679-209055533261"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;&lt;ul&gt;&lt;li&gt; minseon&lt;/li&gt;,&lt;li&gt; seoyeon&lt;/li&gt;,&lt;li&gt; yeonju&lt;/li&gt;&lt;/ul&gt;&quot;</div></figure><p id="f5bbf284-2116-4f27-a788-0c197b1c49f4" class="">
+</p><p id="a21e83cf-e9cb-46dc-92bb-8214399d0fb2" class="">연습문제 - 삼항연산자 활용</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="905265f2-b631-4c09-977b-ea0483907684" class="code"><code class="language-CSS">const isDiscounted = false;
+
+function getPrice(){
+  console.log(isDiscounted ? &quot;$10&quot; : &quot;$20&quot;);
+};
+getPrice();</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="86c872f3-9b21-4a03-97b9-05c4cc1afb08"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;$20&quot;</div></figure><p id="d353a899-7e28-4d74-a958-6fe720eb5fb6" class="">
+</p><p id="bbaa5235-fbeb-4f0d-8773-cf91939dd5b3" class="">연습문제 - 삼항연산자 활용 2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="56aa470b-8267-401f-b543-e8cfc6b5c73c" class="code"><code class="language-JavaScript">const artist = {
+  name: &quot;bts&quot;,
+  age: 25,
+  song: &#x27;Dynamite&#x27;,
+};
+
+const text = `&lt;div&gt;&lt;p&gt; ${artist.name} is ${artist.age} years old ${artist.song ? `and wrote the song ${artist.song}` : ``}&lt;/p&gt;&lt;/div&gt;`;
+
+console.log(text);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="75a6fd7f-29d0-49fc-b325-1484cf83ef66"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;&lt;div&gt;&lt;p&gt; bts is 25 years old and wrote the song Dynamite&lt;/p&gt;&lt;/div&gt;&quot;</div></figure><p id="02e3c983-5458-42e5-b25d-987292093ece" class="">
+</p><p id="83ce4feb-5a6f-4764-bd9b-07be1ac7a665" class="">false의 종류 : false ‘’ undefined 0 null</p><p id="f073a88e-336f-4e54-8d27-09e707061313" class="">
+</p><h3 id="c62b9aff-e403-49f9-b9bc-ef665866da60" class="">join</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c884046c-cf34-4a0a-833d-f53cf8a5f7ea" class="code"><code class="language-JavaScript">const groceries = {
+		meat:&quot;pork chop&quot;,
+		veggie:&quot;salad&quot;,
+		fruit:&quot;apple&quot;,
+		others:[&#x27;mushrooms&#x27;, &#x27;instant noodles&#x27;, &#x27;instant soup&#x27;],
+};
+
+function groceryList(others){
+		return `
+			${others.map(other =&gt; `&lt;span&gt;${other}&lt;/span&gt;`).join(&#x27;\n&#x27;)}
+		`;
+}
+
+const markup=`
+&lt;div&gt;
+		&lt;p&gt;${groceries.meat}&lt;/p&gt;
+		&lt;p&gt;${groceries.veggie}&lt;/p&gt;
+		&lt;p&gt;${groceries.fruit}&lt;/p&gt;
+		&lt;p&gt;${groceryList(groceries.others)}&lt;/p&gt;
+&lt;/div&gt;
+`;
+
+console.log(markup);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a2419d96-0565-477b-830c-ea74047c2c85"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;<br/>&lt;div&gt;<br/>    &lt;p&gt;pork chop&lt;/p&gt;<br/>    &lt;p&gt;salad&lt;/p&gt;<br/>    &lt;p&gt;apple&lt;/p&gt;<br/>    &lt;p&gt;<br/>        &lt;span&gt;mushrooms&lt;/span&gt;<br/>        &lt;span&gt;instant noodles&lt;/span&gt;<br/>        &lt;span&gt;instant soup&lt;/span&gt;<br/>    &lt;/p&gt;<br/>&lt;/div&gt;<br/>&quot;<br/></div></figure><p id="ed6071df-4faa-4bb5-b01b-dd6c9bcc23fe" class="">
+</p><p id="0b97c116-f514-44bc-bf7d-2205f37ec5b3" class=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">MDN - join</a></p><p id="65472d7d-a387-4508-aabe-efcb1eb6226e" class="">
+</p><p id="fd95fc2b-ef7f-4428-b8c5-029c162d0f66" class="">join<br/>: 새 문자열을 만들고 반환한다<br/></p><p id="a59ec8dc-10f0-401d-8866-e65190f38c7d" class="">
+</p><p id="f826d0f2-1d02-4b98-98dd-8a0b8b6b1ff7" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="329d438c-3502-4849-9f53-142bc4599e77" class="code"><code class="language-JavaScript">let person = &quot;HyeEun&quot;;
+let age = 21;
+
+function myTag(strings, personName, personAge) {
+  let str = strings[1];
+  let ageStr;
+  
+  personAge &gt; 50 ? ageStr = &quot;grandpa&quot; : ageStr = &quot;youngster&quot;;
+  return personName + str + ageStr;
+}
+
+let sentence = myTag`That ${person} is a ${age}!`;
+console.log(sentence);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="978f361e-988e-456c-bea0-8a611183cfcd"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;HyeEun is a youngster&quot;</div></figure><figure id="3fcce987-244e-47eb-8403-223e4e7647d5" class="image"><a href="3_JavaScript%20d401f998ad9e4d68b566fcd5b0e9a6a7/Untitled.png"><img style="width:1316px" src="3_JavaScript%20d401f998ad9e4d68b566fcd5b0e9a6a7/Untitled.png"/></a></figure><p id="07b16979-e277-492c-9706-1353a78670de" class="">
+</p><p id="8a09ea6e-34b6-4b74-a504-0acfd1de2018" class="">‘That ‘ → strings[0]</p><p id="f51aa064-4d6f-4fbd-9a6b-50162255d1a6" class="">‘ is a ’ → strings[1]</p><p id="2d2e924f-f90f-484d-a0ba-d10f5596e561" class="">‘!’ → strings[2]</p><p id="b8929178-cb13-40d4-b3c0-c2381c9f0899" class="">
+</p><p id="e8571edb-a3ec-430f-85f8-1e8c5368f97a" class="">
+</p><h3 id="cad9f06e-1275-4cec-bea9-6e8f95002252" class="">indexOf</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c586924d-add5-4e1f-b8e3-9a524b72d0ac" class="code"><code class="language-JavaScript">const str = &quot;this is a short sentence&quot;;
+console.log(str.indexOf(&quot;short&quot;));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ce913b00-801f-4a83-bae5-4791c4b66812"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">10</div></figure><p id="153c6a85-58d4-436b-894e-8116e8f24413" class="">
+</p><p id="b1b21653-610f-4507-9f45-fa9d8f83c045" class="">‘short란 글자는 10번째부터 시작해’라는 뜻이다</p><p id="35139c36-db8b-4b00-858e-28d84eb3d159" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a41af498-488c-461f-ad59-0064b4a2e0fb" class="code"><code class="language-JavaScript">const str = &quot;this is a short sentence&quot;;
+console.log(str.indexOf(&quot;javascript&quot;));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="40f46bb4-c4ee-4d03-bb94-6c83585bc1da"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">-1</div></figure><p id="2c8ab23c-ffad-4b83-a84c-d09bee55b011" class="">
+</p><p id="0ed46930-666e-4d74-9fa9-acca0145d81b" class="">찾는 값이 없으면 -1을 출력한다</p><p id="a9640b87-c935-48c0-8351-bef88ef688a8" class="">
+</p><p id="5ef1048c-7dd8-49c8-a64f-cf8d03d5f2bb" class="">
+</p><h3 id="07ed2446-7b3a-420e-9f8d-9d055a45f2db" class="">slice</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="09715360-f714-4bcf-b7e5-8c139d9088ad" class="code"><code class="language-JavaScript">const str1 = &quot;pizza, orange, cereals&quot;;
+console.log(str1.slice(7,13));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1fc740ac-412a-46f3-aa0b-f0c2174e5176"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“orange”</div></figure><p id="0198fd3a-2943-4412-9247-1b72315e3172" class="">
+</p><p id="fcc47ab1-d32b-4f63-a8db-39f194371db4" class="">7번째 문자부터 12(13-1)번째 문자까지 가져와라</p><p id="649dd68b-b20c-4647-ad18-0d5a213ba692" class="">부분적으로 잘라서 가져올 때 쓰임</p><p id="f9093f8b-1e82-4904-a1a7-d0d1d142d445" class="">
+</p><p id="c759823d-a217-45c1-9553-eac951732e1e" class="">
+</p><h3 id="dfddc931-4f42-46b2-9d16-035fbf1ad01b" class="">toUpperCase</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bb4e4b61-964e-4c95-a58c-c2ee94a63df1" class="code"><code class="language-JavaScript">const str2 = &quot;i ate an apple&quot;;
+console.log(str2.toUpperCase());</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="97f37800-feee-448a-a33b-4c1f747344de"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;I ATE AN APPLE&quot;</div></figure><p id="564ddc1e-5685-4bfa-8db5-c065cf511389" class="">
+</p><p id="132eaad3-e2d7-4c51-ab37-8d3d666bf647" class="">일괄적으로 대문자로 바꿔준다</p><p id="22d145ab-40bd-4ef0-aac3-2dfc11b4d4be" class="">toLowerCase : 전부 소문자로 변경</p><p id="f3dcb15e-3efe-4ad2-a06b-d3f8bb1e44d1" class="">
+</p><p id="0b869c8c-5ec6-43d0-bf17-b4f7dbcf238d" class="">
+</p><h3 id="6e8c5367-1487-44ec-9afe-a0223883508c" class="">startsWith</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a499b9c6-f0f8-437d-b91f-799416146422" class="code"><code class="language-JavaScript">const cod=&quot;ABCDEFG&quot;;
+console.log(cod.startsWith(&quot;ABB&quot;));
+console.log(cod.startsWith(&quot;abc&quot;));
+console.log(cod.startsWith(&quot;ABC&quot;));
+console.log(cod.startsWith(&quot;DEF&quot;, 3));  // index[3]이 &quot;DEF&quot;로 시작하냐</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e9feea05-0325-4b07-8e7e-363050167bb6"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">false<br/>false<br/>true<br/>true<br/></div></figure><p id="632c9821-d0fa-4175-b1e0-9cd616237272" class="">
+</p><p id="10f57e78-4804-4ec3-a7eb-760999fe46f7" class="">~로 시작하냐</p><p id="0fe78ac9-859b-4f4c-a0ad-38b7347aee77" class="">
+</p><h3 id="e93e0d6a-4b34-4e72-bcef-151ea2e2bc0d" class="">endswith</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2185b9b4-a334-425c-937a-067853caf36f" class="code"><code class="language-JavaScript">// 매개변수로 전달한 문자로 끝나는지 확인
+const cod=&quot;ABCDEFG&quot;;
+console.log(cod.endsWith(&quot;DDD&quot;));
+
+const cod=&quot;ABCDEFGHI&quot;;
+console.log(cod.endsWith(&quot;EF&quot;,6));
+
+// 매개변수의 값이 문자열에 포함되어있는지 확인
+const cod=&quot;ABCDEF&quot;;
+console.log(cod.includes(&quot;ABC&quot;));
+
+// 반복 
+let hello=&quot;Hi&quot;;
+console.log(hello.repeat(10));</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a5e5f259-8a1c-4bc0-af2c-e31e122893ed"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">false<br/>true<br/>true<br/>&quot;HiHiHiHiHiHiHiHiHiHi&quot;<br/></div></figure><p id="0d443f41-42e9-4142-93af-4fbb7ad82bf3" class="">
+</p><p id="6e972781-b15d-4178-a50d-ddf542ebbf35" class="">
+</p><p id="087bebcb-8caa-43f4-a09d-ab6774f38226" class="">연습문제 - &quot;NaNaNaNaNaNaNaNa BatMan&quot;를 출력하라.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ee9ed2e-6a2a-4ed1-9f58-9b7b6bad3320" class="code"><code class="language-JavaScript">let str = &quot;Na&quot;;
+let bat = &quot;BatMan&quot;;
+
+// console.log(str.repeat(8)+&#x27; &#x27;+bat);
+let batman = `${str.repeat(8)} ${bat}`;
+console.log(batman);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c24ec65f-831c-450e-a0da-5c38fd084b1f"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;NaNaNaNaNaNaNaNa BatMan&quot;</div></figure><p id="5d9558f4-772e-419e-ad35-e55ad7daab85" class="">
+</p><p id="0176766d-2481-4b7e-9df4-3ec087a601b8" class="">
+</p><p id="59aed83c-9cd0-4681-b851-bef7c67d04d2" class="">연습문제 - destructuring 디스트럭처링 문법</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fed87e08-a90d-4bae-94e3-e2a15b8b5b3f" class="code"><code class="language-JavaScript">const person = {
+		first:&quot;hyery&quot;,
+		last:&quot;yoon&quot;,
+};
+const {first, last} = person;</code></pre><p id="9fe079ab-9662-411e-8612-2f2caf2f02ec" class="">
+</p><p id="d782629f-d54f-425b-b6aa-985fc13aadde" class="">값을 일괄적으로 쓸어올 때 쓰는 문법</p><p id="54b7d4fe-be12-4938-a96f-3b6118a90fcb" class="">react에서 숨쉬듯 쓸 예정</p><p id="bcae7db1-0800-411a-85ec-b309a6358850" class="">Destructuring assignment : 비구조 할당</p><p id="a18a90be-2fa0-4faf-b649-994e9aa5d9d2" class="">
+</p><p id="a54a24c6-ced2-4c68-8c29-5e7378bb9ad6" class="">배열에서도 사용할 수 있음</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a480d085-4997-439d-aaf1-51887eaea194" class="code"><code class="language-JavaScript">const array = [1,2];
+// const one = array[0];
+// const two = array[1];
+
+const [one,two] = array;</code></pre><p id="5b9b0ed4-9062-43d4-af21-4c0ab12a2256" class="">
+</p><p id="140332f5-a3e1-48a0-a793-f59e8609c2a8" class="">실무에서는 값이 수백수천가지이므로 하나하나 할당해줄 수가 없음 - 매우 비효율적</p><p id="34d089b9-12df-48c0-86d9-090fab7e4584" class="">
+</p><p id="d5f6b874-c11f-461c-bc1f-691fac9b6af7" class="">연습문제 - …aray</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2a7fa079-bbbb-4049-b536-fe0246256169" class="code"><code class="language-JavaScript">const snack = [&quot;pizza&quot;, &quot;ice cream&quot;, &quot;cake&quot;, &quot;cookie&quot;, &quot;Chocolate&quot;];
+</code></pre><p id="8c663bc4-152b-45a8-ac42-0a23daf3eb3d" class="">
+</p><p id="1cc32dbc-d0a7-432f-9192-8435300e0e38" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="72e32b2f-bc52-45d2-988e-73c2cfeab130" class="code"><code class="language-JavaScript">const person = {
+  name:&quot;hyeri&quot;,
+  last:&quot;yoon&quot;,
+  links:{
+    social:{
+      youtube:&quot;https://www.youtube.com/&quot;,
+    },
+    facebook:&quot;https://www.facebook.com/&quot;,
+  },
+};
+
+const {youtube} = person.links.social;
+console.log(youtube);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dace979d-495a-4e57-9bf4-eff2c5e67088"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;https://www.youtube.com/&quot;</div></figure><p id="fd6e6fe5-d437-452c-ac63-ca2e6e2d773d" class="">
+</p><p id="5a24f986-ce6e-409e-a19c-18cdf765b68c" class="">이렇게도 쓸 수가 있다</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2932e341-ed70-48c1-a80e-41fe4a2e9457" class="code"><code class="language-JavaScript">const person = {
+  name:&quot;hyeri&quot;,
+  last:&quot;yoon&quot;,
+  links:{
+    social:{
+      youtube:&quot;https://www.youtube.com/&quot;,
+    },
+    facebook:&quot;https://www.facebook.com/&quot;,
+  },
+};
+
+const {youtube:yb} = person.links.social;
+console.log(yb);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5ad056f7-3eb8-42c8-a655-98f53e438791"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;https://www.youtube.com/&quot;</div></figure><p id="1d19dfb5-237b-4ccb-bcff-dda7d301541e" class="">
+</p><p id="f0b4c862-5ebf-4248-9e39-544b967bcd84" class="">
+</p><p id="a2af5699-f01e-41e6-b5fb-2d7c64427378" class="">교차</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="08888720-c15a-4ce7-a0e2-6ba633490141" class="code"><code class="language-JavaScript">let hungry = &quot;yes&quot;;
+let full = &quot;no&quot;;
+
+[hungry, full] = [full, hungry];
+console.log(hungry, full);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d6faac66-8c67-43bb-b55a-2dd3167a4dbd"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;no&quot;<br/>&quot;yes&quot;<br/></div></figure><p id="17cf1116-1f32-4252-8a2d-7cfc6a4662d8" class="">
+</p><p id="9d46bac8-7f45-4776-8a37-2ad2cd316069" class="">순서만 바뀌는게 아니라 값 자체가 바뀌는 것이다<br/>원래는 값을 서로 바꾸는 과정이 귀찮은 과정이었지만<br/>이제 손쉽게 바꿀 수 있다<br/></p><p id="bb485c99-6a72-4878-8711-862dc03e8fe6" class="">
+</p><p id="5615281c-26ab-41c8-b7d8-69fa600ab9c1" class="">
+</p><p id="65b34dd8-9c7c-4dc3-a3f2-d0d98710b9ca" class="">연습문제 - 디스트럭처리 문법</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a074af4c-2d3b-4caa-98be-c2ac33d1f734" class="code"><code class="language-JavaScript">let arr = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;];
+
+const [one, two, three] = arr;
+
+console.log(one);
+console.log(two);
+console.log(three);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a27784b5-088e-4e68-9656-36bcb9bc6ccc"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;one&quot;<p id="d7c0424c-fda6-46bd-9241-e3464b4374e2" class="">&quot;two&quot;</p><p id="3f36f4e4-131a-4c36-89eb-ddddc156c2a6" class="">&quot;three&quot;</p></div></figure><p id="ecef0fc9-e1e6-4871-8ede-e4daca716632" class="">
+</p><p id="032d39f1-f89c-4d85-b708-7cc011f7c373" class="">무슨 타입인지부터 확인하는 것이 중요</p><p id="fe9d1685-a06f-4827-8310-4a8698f7a4a3" class="">객체면 중괄호, 배열이면 대괄호를 사용한다</p><p id="da7ba6ab-3d9c-49c0-9737-4585136fc875" class="">
+</p><p id="f4d458e9-3ca8-4a73-b659-022c18f01dc3" class="">
+</p><p id="179c5a90-3886-4c63-b876-5a6255f1d99c" class="">연습문제 - for of 문</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bef4b638-f988-4edc-876d-a09e1ace9505" class="code"><code class="language-JavaScript">// Q. 다음 코드를 보고 예상되는 결과물을 적으시오. 
+
+const fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;];
+for (const fruit of fruits) {
+  console.log(fruit);
+}</code></pre><p id="3aaff29f-2c79-40fc-b438-751034528315" class="">
+</p><p id="8ff0c6b6-bfca-4fd4-9a71-c1693210416a" class="">Solution</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c64d0a96-4759-4e19-84bc-2ee275647e97"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;apple&quot;<br/>&quot;banana&quot;<br/>&quot;orange&quot;<br/></div></figure><p id="6248cce2-9583-4437-bbdd-8d6e5d9272d2" class="">
+</p><p id="d3ce5fa0-e0fc-4ffb-bebc-23627a9f1935" class="">연습문제 - for of 문 2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ecedefc3-b72d-403f-9ce9-d736713a3535" class="code"><code class="language-JavaScript">// Q. for of 문을 사용하여 다음 결과물이 출력되도록 코드를 추가하시오.
+
+let friends = [
+  {name:&#x27;라이언&#x27;, age:5},
+  {name:&#x27;어피치&#x27;, age:4},
+  {name:&#x27;콘&#x27;, age:2},
+  {name:&#x27;무지&#x27;, age:3}
+];
+
+// 코드를 추가하시오.
+// 코드를 추가하시오. 
+// 코드를 추가하시오.</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2c499cc5-9470-44ed-9ccb-664549ddbe61"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;이름: 라이언, 나이: 5&quot;<br/>&quot;이름: 어피치, 나이: 4&quot;<br/>&quot;이름: 콘, 나이: 2&quot;<br/>&quot;이름: 무지, 나이: 3&quot;<br/></div></figure><p id="7c8749cc-d2b8-4a56-b6f7-8d69abc73de3" class="">
+</p><p id="7e9b17bc-5e9e-402c-b6e4-72d800c36596" class="">Solution</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b0e4aca9-224a-4a12-b076-6842f55a8ac9" class="code"><code class="language-JavaScript">let friends = [
+  {name:&#x27;라이언&#x27;, age:5},
+  {name:&#x27;어피치&#x27;, age:4},
+  {name:&#x27;콘&#x27;, age:2},
+  {name:&#x27;무지&#x27;, age:3}
+];
+
+for(const friend of friends) {
+  console.log(`이름: ${friend.name}, 나이: ${friend.age}`);
+}</code></pre><p id="0f8c152a-975b-43ff-9ec4-7a4ac70c4fb0" class="">
+</p><p id="64b9b3fb-d965-42f0-817c-59841d0f238a" class="">
+</p><p id="d0136516-e10d-4c5f-9c28-3341e2705476" class="">예제 - from</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="adb4159d-cb35-475f-a65d-83a73cabd17b" class="code"><code class="language-HTML">&lt;!-- html --&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;fruits&quot;&gt;
+    &lt;p&gt;Apple&lt;/p&gt;
+    &lt;p&gt;Banana&lt;/p&gt;
+    &lt;p&gt;Orange&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d51263ea-2727-4ad0-952e-2c60367eb9df" class="code"><code class="language-JavaScript">// javascript
+
+const fruits = Array.from(document.querySelectorAll(&quot;.fruits p&quot;));
+// Array.from() : 반복가능한 객체를 배열로 변환
+const fruitNames = fruits.map(fruit =&gt; fruit.textContent);
+// textContent : 텍스트로 변환해주는 메서드
+console.log(fruitNames);</code></pre><p id="1393f095-8158-4f7b-a09a-752c47e9ad93" class="">
+</p><p id="0b21779e-d635-4688-a259-dcf69d033b32" class="">
+</p><p id="69edb6e0-225c-49b5-a810-82593bd443f9" class="">from 예제2</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e4cf7a00-14eb-4cc3-a1e0-1e99f20f2c33" class="code"><code class="language-JavaScript">const apple = &quot;APPLE&quot;;
+const myArr = Array.from(apple);
+console.log(myArr);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ba521801-d166-4784-8b7b-751f35298846"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[&quot;A&quot;, &quot;P&quot;, &quot;P&quot;, &quot;L&quot;, &quot;E&quot;]</div></figure><p id="0f22078d-a7db-4cbd-bd0b-1aa071abd12e" class="">
+</p><p id="96294fed-623b-4b4a-ae30-ad39e462fb98" class="">
+</p><p id="43e47f27-dcaa-4017-9d35-4eefc9116b4a" class="">find 예제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="db7194a8-e320-466a-a30a-fe391669fad7" class="code"><code class="language-JavaScript">// 조건에 일치하는 첫번째 원소를 반환
+const array = [1,2,3,4,5];
+let found = array.find(e =&gt; e&gt;3);
+console.log(found);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="744b83bc-019c-49ad-a8d8-cf2c7cabdb37"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">4</div></figure><p id="52a5d833-6d19-49bb-9ab5-a0820688a1a9" class="">
+</p><p id="c75fa951-744f-46ac-b318-abe750f58fc9" class="">
+</p><p id="40fd7105-4f24-459b-a777-72239c7305f0" class="">findIndex 예제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b2b17ca5-8251-4e3b-8e97-cba503882e59" class="code"><code class="language-JavaScript">// 첫번째로 일치하는애의 인덱스 번호를 반환
+const greetings = [&quot;hello&quot;,&quot;hi&quot;,&quot;byebye&quot;,&quot;goodbye&quot;,&quot;hi&quot;];
+let foundIndex = greetings.findIndex(e =&gt; e === &quot;hi&quot;);
+console.log(foundIndex);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0993ec52-0d03-4733-a7f3-207dc288d8e3"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">1</div></figure><p id="25674ec3-1454-4a80-85a5-8b1b83ff73c0" class="">
+</p><p id="ddd541fe-a6dc-4023-a68a-57eb45cc9c7f" class="">
+</p><p id="a0be602b-c4f0-4241-aad9-f60bccbb98d8" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6375f362-63da-48fb-8ec0-0d35e6e59924" class="code"><code class="language-JavaScript">// Q. 다음 결과물이 출력되도록 코드를 추가하시오.
+
+// 코드를 입력하시오.
+const menu = [...veggie, &quot;pasta&quot;, ...meat];
+console.log(menu);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a85cd02a-c8b8-4347-ac2b-2c4055945d98"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;, &quot;pasta&quot;, &quot;pork&quot;, &quot;beef&quot;, &quot;chicken&quot;]</div></figure><p id="9a59ee0a-3bd6-4db4-afed-9f6033753e56" class="">
+</p><p id="9c0677fe-d9dc-44f2-9e7c-06c0a5b4c4f4" class="">Solution</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="068c2d55-60d8-41b3-b56c-a2e4d5f15e5f" class="code"><code class="language-JavaScript">const veggie = [&#x27;tomato&#x27;, &#x27;cucumber&#x27;, &#x27;beans&#x27;];
+const meat = [&#x27;pork&#x27;, &#x27;beef&#x27;, &#x27;chicken&#x27;];
+const menu = [...veggie, &quot;pasta&quot;, ...meat];
+console.log(menu);</code></pre><p id="d9c5cd16-d2a3-457a-b638-e35244845fc0" class="">
+</p><p id="f7731c6a-cce4-4e52-b671-d72fb77ab004" class="">
+</p><p id="45c182b8-2b2e-44ef-8bf4-3fa46248bc4d" class="">연습문제 - array, push, 참조, spread(…)</p><p id="5a23f1db-8a26-4be5-9efc-8e76634ba820" class="">Q. 두 코드의 결과가 차이점이 발생하는 이유?</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="905b10e4-4ab9-4bb9-b86b-b265e4dc85c1" class="code"><code class="language-JavaScript">const veggie = [&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;];
+const newVeggie = veggie;
+veggie.push(&quot;peas&quot;);
+console.log(veggie);
+console.log(newVeggie);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1ed62c80-d67d-462b-ad4f-3cf1a14c6a3d"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;, &quot;peas&quot;]<br/>[&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;, &quot;peas&quot;]<br/></div></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="519d0d54-edcf-48b4-a548-380637a98030" class="code"><code class="language-JavaScript">const veggie = [&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;];
+const newVeggie = [...veggie];
+veggie.push(&quot;peas&quot;);
+console.log(veggie);
+console.log(newVeggie);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="924b7a7e-4114-4ea8-956c-6639edeb6c62"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;, &quot;peas&quot;]<br/>[&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;]<br/></div></figure><p id="df301092-1e9f-418f-9910-47e15775fb1e" class="">첫번째 코드의 경우 참조의 형태 즉, 둘이 같은 것으로 간주하고 같은 방향으로 나아간다</p><p id="1dc40832-c59f-4ee5-8098-4aff34886c57" class="">두번째 코드의 경우 값만 받는 형태기 때문에 결과값을 같이 공유하지 않는다</p><p id="295f8590-78d9-4bef-8abe-d4f17a118164" class="">
+</p><p id="d665d1ba-ecf8-43d4-9a81-bf323f1769fc" class="">
+</p><p id="c33fc8ee-04b7-46e3-9dd5-27a0e1be93c0" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a3ec5fd1-4a3f-4db6-8fa7-8222c7082a3f" class="code"><code class="language-JavaScript">const name = [&quot;jinsu&quot;, &quot;kim&quot;];
+function greet(first, last){
+  console.log(`hello ${first} ${last}`);
+}
+
+greet(...name);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c8506cf1-1421-4502-aa2a-84fdecebe312"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">&quot;hello jinsu kim”</div></figure><p id="1b670f53-69d6-4a77-a09d-05d3fc21ea07" class="">
+</p><p id="9608933c-b221-4a5c-807d-6e963335aeb4" class="">연습문제 심화버전</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9ead7c0a-95ec-46b9-a8c6-2b8f9d4eab21" class="code"><code class="language-JavaScript">let person = {
+  name: &quot;Sia&quot;,
+  surname: &quot;Shin&quot;,
+  age: 20,
+};
+let clone = {...person};
+console.log(clone);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="314efee6-b7a1-4312-b8f8-18e97ef74c7c"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[object Object] {<br/>age: 20,<br/>name: &quot;Sia&quot;,<br/>surname: &quot;Shin&quot;<br/>}<br/></div></figure><p id="a087d0b7-e602-477a-ae0f-1b6f01d6f99c" class="">
+</p><p id="d09ba6a6-8112-4cf4-9312-7196b01aef28" class="">배열에서 너무 편하게 쓰고 있어서</p><p id="82a2112a-b5c2-4bfe-b96f-c7ee1db15c90" class="">2018버전부터 도입된 객체스프레드이다</p><p id="c9393934-d65d-4552-9ae0-b4c8c35b7765" class="">이제 객체에서도 사용가능하다</p><p id="7fd08b3a-d2e4-4142-b31a-60fc02dd515e" class="">
+</p><p id="3278f4f1-41f8-428f-a692-2da75dfcaaa4" class="">
+</p><p id="57cb7af1-8afa-4d5b-b1af-954104212c31" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4e85c95f-752b-41f1-b2e1-7f2d059a33d4" class="code"><code class="language-JavaScript">// Q. 아래 결과물이 출력되도록 코드를 추가하시오.
+
+const foods = [&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;, &quot;pasta&quot;, &quot;pork&quot;, &quot;beef&quot;, &quot;chicken&quot;];
+
+// 코드를 작성하시오.
+
+console.log(diet);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b90399b9-97e3-4f38-9cf8-4a6041fa1849"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">[&quot;beans&quot;, &quot;pasta&quot;, &quot;pork&quot;, &quot;beef&quot;, &quot;chicken&quot;]</div></figure><p id="355172ef-25bd-4a67-a819-34ee0840aefe" class="">
+</p><p id="39224c9c-7ece-4695-99e5-371a0f765e09" class="">Solution</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5a05e2ca-6438-41c8-8b0e-4e202db25ecc" class="code"><code class="language-JavaScript">const foods = [&quot;tomato&quot;, &quot;cucumber&quot;, &quot;beans&quot;, &quot;pasta&quot;, &quot;pork&quot;, &quot;beef&quot;, &quot;chicken&quot;];
+
+const [fir, sec, ...diet] = foods;
+
+console.log(diet);</code></pre><p id="ac762668-28b0-4e4f-99b8-6c138adf698c" class="">
+</p><p id="3ec967d9-899b-44b9-b462-4e9c96d427d8" class="">
+</p><p id="cc204791-d584-42cb-b979-c6381653d784" class="">연습문제</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f9f6f091-35b0-43a1-bebd-cfda414b2fd7" class="code"><code class="language-JavaScript">const name = &quot;myname&quot;;
+const person = {
+  [name]:&quot;jane&quot;  // 대괄호&#x27;[]&#x27;를 해야 만 String값을 키값으로 사용할 수 있다
+};
+console.log(person.myname);</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5beb2ef4-1ea6-4070-b799-9aef9ad7c81b"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">“jane”</div></figure><p id="d4f168e9-e760-48e8-aa77-d9533432b128" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
