@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+      #grandfather,#grandfather_c {
+        border: 1px solid green;
+        padding: 20px;
+      margin-top:100px;
+      }
+
+      #father,#father_c {
+        border: 1px solid red;
+        padding: 20px;
+      }
+      #me,#me_c {
+        border: 1px solid blue;
+        padding: 20px;
+      }
+  </style>
+</head>
+<body>
+  
+ <div id="grandFather">
+    부모의 부모
+   <div id="father">
+    부모
+     <div id="me">
+    자식        
+   </div>
+ </div>
+ </div>
+
+  <div id="grandFather_c">
+    부모의 부모
+   <div id="father_c">
+    부모
+     <div id="me_c">
+    자식        
+   </div>
+ </div>
+ </div>
+  <script>
+    function showElement() {
+  alert(this.textContent);
+ // 이벤트를멈출시  event.stopPropagation();
+}
+
+  el = document.getElementById("grandFather");
+  el.addEventListener('click', showElement, false);
+
+    el1 = document.getElementById("father");
+  el1.addEventListener('click', showElement, false);
+
+    el2 = document.getElementById("me");
+  el2.addEventListener('click', showElement, false);
+  //e.stopPropagation();
+
+    elc = document.getElementById("grandFather_c");
+  elc.addEventListener('click', showElement, true);
+
+    el1c = document.getElementById("father_c");
+  el1c.addEventListener('click', showElement, true);
+
+    el2c = document.getElementById("me_c");
+  el2c.addEventListener('click', showElement, true);
+
+
+   
+
+  </script>
+</body>
+</html>

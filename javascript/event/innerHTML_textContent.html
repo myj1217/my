@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li><a href="https://www.naver.com">네이버</a></li>
+        <li><a href="https://www.naver.com">네이버</a></li>
+        <li><a href="https://www.naver.com">네이버</a></li>
+    </ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var list = document.getElementById('list');
+            console.log(list.innerHTML);
+            console.log(list.textContent);
+        })
+    </script>
+</body>
+</html>
