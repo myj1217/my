@@ -14,7 +14,7 @@ const FinalLocation = () => {
       },
       (error) => console.log(error)
     );
-    // 지도를 담을 영역의 DOM 래퍼런스
+    // 지도를 표시할 div
     const container = document.getElementById("map");
     // 지도의 중심좌표
     const options = {
@@ -23,13 +23,16 @@ const FinalLocation = () => {
     };
     // 지도 생성 및 객체 리턴
     const map = new kakao.maps.Map(container, options);
-    //마커가 표시 될 위치
-    let markerPosition = new kakao.maps.LatLng(
+
+    // 마커 시작
+
+    // 마커가 표시 될 위치
+    const markerPosition = new kakao.maps.LatLng(
       location.latitude,
       location.longitude
     );
     // 마커를 생성
-    let marker = new kakao.maps.Marker({
+    const marker = new kakao.maps.Marker({
       position: markerPosition,
     });
     // 마커를 지도 위에 표시

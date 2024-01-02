@@ -1,12 +1,16 @@
 import "./App.css";
 import Header from "./Header";
-import FinalLocation from "./components/FinalLocation";
+import Map from "./components/map";
+// import LocationList from "./components/LocationList";
+// import FinalLocation from "./components/FinalLocation";
 
 function App() {
   return (
     <div>
       <Header />
-      <FinalLocation />
+      {/* <FinalLocation /> */}
+      {/* <LocationList /> */}
+      <Map />
     </div>
   );
 }
