@@ -31,5 +31,16 @@ export default function Map() {
     });
   };
 
-  return <div id="map" style={{ width: "800px", height: "450px" }}></div>;
+  return (
+    <div
+      id="map"
+      style={{
+        width: "80%",
+        height: "450px",
+        position: "relative",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    ></div>
+  );
 }
