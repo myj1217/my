@@ -1,8 +1,8 @@
 import { MdLocationPin, MdPhone } from "react-icons/md";
 import cn from "classnames";
 
-const TodoListItem = ({ todo }) => {
-  const { title, address, tel, checked } = todo;
+const TodoListItem = ({ lib }) => {
+  const { title, address, tel, checked } = lib;
   return (
     <div className="TodoListItem">
       <div className={cn("checkbox", { checked })}>
@@ -20,7 +20,6 @@ const TodoListItem = ({ todo }) => {
             : "현재 해당 도서를 보유하고 있지 않습니다."}
         </div>
       </div>
-      <div className="remove"></div>
     </div>
   );
 };

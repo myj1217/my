@@ -37,7 +37,6 @@ export default function Map() {
       style={{
         width: "80%",
         height: "450px",
-        position: "relative",
         marginLeft: "auto",
         marginRight: "auto",
       }}
