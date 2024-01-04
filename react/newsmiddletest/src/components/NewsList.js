@@ -3,6 +3,7 @@ import NewsItem from "./NewsItem";
 import styled from "styled-components";
 import axios from "../../node_modules/axios/index";
 
+//div의 스타일 주기 1 rem 16px
 const NewsListBlock = styled.div`
   box-sizing: border-box;
   padding-bottom: 3rem;
@@ -16,44 +17,41 @@ const NewsListBlock = styled.div`
   }
 `;
 
-const NewsList = ({ category }) => {
+const NewsList = () => {
   const [articles, setArticles] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // 시작하거나 업데이트할 때 쓰는 훅
     // async를 사용하는 함수 따로 선언
     const fetchData = async () => {
+      // 페이지가 불러와질 때 비동기로 받야아한다.
       setLoading(true);
-      // try 하는 동안 error가 발생하면 catch 실행
       try {
-        const query = category === "all" ? "" : `&category=${category}`;
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=8c6d66c5304d4a7c9aa376e4994df1f7`
+          "http://data4library.kr/api/srchBooks?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=날씨가&exactMatch=true&pageNo=1&pageSize=10&format=json"
         );
-        // string은 작은 따옴표('') , 변수를 포함할 때는 백틱(``)
-        setArticles(response.data.articles);
+        setArticles(response.data.response.docs);
+        // 받아온 데이터를 업데이트하라
+        console.log(response.data.response.docs);
       } catch (e) {
         console.log(e);
       }
       setLoading(false);
     };
     fetchData();
-  }, [category]);
+  }, []);
 
-  //대기중일때
   if (loading) {
-    return <NewsListBlock>대기 중...</NewsListBlock>;
+    return <NewsListBlock>대기중...</NewsListBlock>;
   }
-  //아직 articles 값이 설정되지 않았을때
   if (!articles) {
     return null;
   }
-
-  //articles 값이 유효할 때
   return (
     <NewsListBlock>
       {articles.map((article) => (
-        <NewsItem key={article.url} article={article} />
+        <NewsItem key={article.doc.loan_count} article={article} />
       ))}
     </NewsListBlock>
   );
