@@ -5,14 +5,10 @@ const App = () => {
   const [data, setData] = useState(null);
   const onClick = async () => {
     try {
-      const date = new Date();
-      const yd = new Date(date.setDate(date.getDate() - 1));
-      console.log(yd);
       const response = await axios.get(
-        "http://data4library.kr/api/hotTrend?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&searchDt=2024-01-04&format=json"
+        "http://data4library.kr/api/srchBooks?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=$트렌드&exactMatch=true&pageNo=1&pageSize=10&format=json"
       );
       setData(response.data);
-      console.log(response.data.response.results[0].result.docs);
     } catch (e) {
       console.log(e);
     }

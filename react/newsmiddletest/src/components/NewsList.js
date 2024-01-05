@@ -44,7 +44,12 @@ const NewsList = ({ search, category }) => {
           );
           setArticles(response.data.response.results[0].result.docs);
         }
-        // 받아온 데이터를 업데이트하라
+        if (category === "libSrch") {
+          const response = await axios.get(
+            `http://data4library.kr/api/extends/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&format=json`
+          );
+          setArticles(response.data.response.libs.lib);
+        }
       } catch (e) {
         console.log(e);
       }

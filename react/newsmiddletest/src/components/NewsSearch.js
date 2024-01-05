@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const NewsSearchBlock = styled.div`
   .searchbar {
+    font-family: "GmarketSansMedium";
     border: 1px solid black;
     position: relative;
     max-width: 500px;
@@ -26,6 +27,9 @@ const NewsSearchBlock = styled.div`
       transform: translateY(-50%);
     }
   }
+  .nosearchbar {
+    display: none;
+  }
 `;
 
 const NewsSearch = ({ category }) => {
@@ -44,7 +48,7 @@ const NewsSearch = ({ category }) => {
   return (
     <>
       <NewsSearchBlock>
-        <div className="searchbar">
+        <div className={category === "srchBooks" ? "searchbar" : "nosearchbar"}>
           <input
             type="text"
             name="bookname"

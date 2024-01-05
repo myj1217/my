@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 const NewsItemBlock = styled.div`
   display: flex;
-
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  &:nth-child(even) {
+    background: #f8f9fa;
+  }
   .thumbnail {
     margin-right: 1rem;
     img {
@@ -28,7 +32,7 @@ const NewsItemBlock = styled.div`
     }
   }
   & + & {
-    margin-top: 3rem;
+    border-top: 1px solid #dee2e6;
   }
 `;
 
