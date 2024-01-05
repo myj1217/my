@@ -1,12 +1,12 @@
 import React from "react";
-import NewsList from "./components/NewsList";
 import NewsSearch from "./components/NewsSearch";
+import Categories from "./components/Categories";
 
 const App = () => {
   return (
     <div>
+      <Categories />
       <NewsSearch />
-      <NewsList />
     </div>
   );
 };

@@ -17,7 +17,7 @@ const NewsListBlock = styled.div`
   }
 `;
 
-const NewsList = () => {
+const NewsList = ({ search }) => {
   const [articles, setArticles] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -28,19 +28,19 @@ const NewsList = () => {
       // 페이지가 불러와질 때 비동기로 받야아한다.
       setLoading(true);
       try {
+        // const query = search === "" ? "날씨가" : search;
         const response = await axios.get(
-          "http://data4library.kr/api/srchBooks?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=날씨가&exactMatch=true&pageNo=1&pageSize=10&format=json"
+          `http://data4library.kr/api/srchBooks?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${search}&exactMatch=true&pageNo=1&pageSize=10&format=json`
         );
         setArticles(response.data.response.docs);
         // 받아온 데이터를 업데이트하라
-        console.log(response.data.response.docs);
       } catch (e) {
         console.log(e);
       }
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [search]);
 
   if (loading) {
     return <NewsListBlock>대기중...</NewsListBlock>;
@@ -51,7 +51,7 @@ const NewsList = () => {
   return (
     <NewsListBlock>
       {articles.map((article) => (
-        <NewsItem key={article.doc.loan_count} article={article} />
+        <NewsItem key={article.doc.bookDtlUrl} article={article} />
       ))}
     </NewsListBlock>
   );
