@@ -3,7 +3,6 @@ import NewsItem from "./NewsItem";
 import styled from "styled-components";
 import axios from "../../node_modules/axios/index";
 
-//div의 스타일 주기 1 rem 16px
 const NewsListBlock = styled.div`
   box-sizing: border-box;
   padding-bottom: 3rem;
@@ -17,22 +16,34 @@ const NewsListBlock = styled.div`
   }
 `;
 
-const NewsList = ({ search }) => {
+const NewsList = ({ search, category }) => {
   const [articles, setArticles] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // 시작하거나 업데이트할 때 쓰는 훅
-    // async를 사용하는 함수 따로 선언
     const fetchData = async () => {
-      // 페이지가 불러와질 때 비동기로 받야아한다.
       setLoading(true);
       try {
-        // const query = search === "" ? "날씨가" : search;
-        const response = await axios.get(
-          `http://data4library.kr/api/srchBooks?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${search}&exactMatch=true&pageNo=1&pageSize=10&format=json`
-        );
-        setArticles(response.data.response.docs);
+        if (category === "srchBooks") {
+          const response = await axios.get(
+            `http://data4library.kr/api/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${search}&exactMatch=true&pageNo=1&pageSize=10&format=json`
+          );
+          setArticles(response.data.response.docs);
+        }
+        if (category === "hotTrend") {
+          const date = new Date();
+          const yd = new Date(date.setDate(date.getDate() - 1));
+          const mm =
+            yd.getMonth() + 1 < 10
+              ? `0${yd.getMonth() + 1}`
+              : yd.getMonth() + 1;
+          const dd = yd.getDate() < 10 ? `0${yd.getDate()}` : yd.getDate();
+          const dateConvert = `${yd.getFullYear()}-${mm}-${dd}`;
+          const response = await axios.get(
+            `http://data4library.kr/api/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&searchDt=${dateConvert}&format=json`
+          );
+          setArticles(response.data.response.results[0].result.docs);
+        }
         // 받아온 데이터를 업데이트하라
       } catch (e) {
         console.log(e);
@@ -40,7 +51,7 @@ const NewsList = ({ search }) => {
       setLoading(false);
     };
     fetchData();
-  }, [search]);
+  }, [search, category]);
 
   if (loading) {
     return <NewsListBlock>대기중...</NewsListBlock>;
@@ -51,7 +62,7 @@ const NewsList = ({ search }) => {
   return (
     <NewsListBlock>
       {articles.map((article) => (
-        <NewsItem key={article.doc.bookDtlUrl} article={article} />
+        <NewsItem key={article.doc.isbn13} article={article} />
       ))}
     </NewsListBlock>
   );

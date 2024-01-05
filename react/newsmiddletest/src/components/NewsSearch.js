@@ -28,14 +28,13 @@ const NewsSearchBlock = styled.div`
   }
 `;
 
-const NewsSearch = () => {
+const NewsSearch = ({ category }) => {
   const [search, setSearch] = useState("");
   const onChange = (e) => {
     setSearch(e.target.value);
   };
   const onClick = () => {
     setSearch("");
-    console.log(search);
   };
   const onKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -57,7 +56,7 @@ const NewsSearch = () => {
           <button onClick={onClick}>지우기</button>
         </div>
       </NewsSearchBlock>
-      <NewsList search={search} />
+      <NewsList search={search} category={category} />
     </>
   );
 };

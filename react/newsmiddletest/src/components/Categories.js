@@ -1,13 +1,14 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const categories = [
   {
-    name: "search",
+    name: "srchBooks",
     text: "도서검색",
   },
   {
-    name: "recommend",
-    text: "추천도서",
+    name: "hotTrend",
+    text: "인기도서",
   },
 ];
 
@@ -22,8 +23,7 @@ const CategoriesBlock = styled.div`
   }
 `;
 
-// styled 라이브러리 때문에 가능한 것
-const Category = styled.div`
+const Category = styled(NavLink)`
   font-size: 1.125rem;
   cursor: pointer;
   white-space: pre;
@@ -51,14 +51,14 @@ const Category = styled.div`
   }
 `;
 
-const Categories = ({ onSelect, category }) => {
+const Categories = () => {
   return (
     <CategoriesBlock>
       {categories.map((c) => (
         <Category
           key={c.name}
-          active={category === c.name}
-          onClick={() => onSelect(c.name)}
+          className={({ isActive }) => (isActive ? "active" : undefined)}
+          to={c.name === "srchBooks" ? "/srchBooks" : `/${c.name}`}
         >
           {c.text}
         </Category>

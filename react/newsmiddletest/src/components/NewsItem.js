@@ -42,17 +42,12 @@ const NewsItem = ({ article }) => {
     isbn13,
     publication_year,
   } = article.doc;
-  //   이미지가 가장 마지막에 불러와질 가능성 농후
+
   return (
     <NewsItemBlock>
-      {/* NewsItemBlock이 div 태그가 됨 = 부모가 됨 */}
       {bookImageURL && (
-        // 그래서 이미지가 기준이 됨. 이미지가 불려왔다면 ~
         <div className="thumbnail">
           <a href={bookDtlUrl} target="_blank" rel="noopener noreferrer">
-            {/* _blank : 새 창으로 열기 */}
-            {/* noopener :  */}
-            {/* noreferrer : 내 정보가 타사이트에도 전달 */}
             <img src={bookImageURL} alt="thumbnail" />
           </a>
         </div>
