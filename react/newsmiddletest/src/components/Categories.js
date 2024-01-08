@@ -14,6 +14,10 @@ const categories = [
     name: "libSrch",
     text: "신착도서",
   },
+  {
+    name: "bookBlkt",
+    text: "장바구니",
+  },
 ];
 
 const CategoriesBlock = styled.div`

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+// import Blanket from "./Blanket";
 
 const NewsItemBlock = styled.div`
   display: flex;
@@ -17,8 +18,18 @@ const NewsItemBlock = styled.div`
       object-fit: cover;
     }
   }
+  .index {
+    display: block;
+    width: 120px;
+    height: 160px;
+    p {
+      font-size: 48px;
+      text-align: center;
+    }
+  }
   .contents {
     h2 {
+      width: 510px;
       margin: 0;
       a {
         color: black;
@@ -30,13 +41,24 @@ const NewsItemBlock = styled.div`
       margin-top: 0.5rem;
       white-space: normal;
     }
+    button {
+      display: block;
+      margin: 0;
+      padding: 5px 10px;
+      margin-top: 0.5rem;
+      white-space: normal;
+      color: black;
+    }
   }
   & + & {
     border-top: 1px solid #dee2e6;
   }
 `;
 
-const NewsItem = ({ article }) => {
+const NewsItem = ({ article, index }) => {
+  const [data, setData] = useState(null);
+  // const [newValue, setNewValue] = useState(null);
+  const newValue = { ...article.doc };
   const {
     bookname,
     authors,
@@ -46,9 +68,20 @@ const NewsItem = ({ article }) => {
     isbn13,
     publication_year,
   } = article.doc;
+  const onClick = () => {
+    alert("장바구니에 추가되었습니다.");
 
+    setData(newValue);
+    // setData(article);
+    console.log(data);
+    console.log(bookname);
+    console.log(newValue);
+  };
   return (
     <NewsItemBlock>
+      <div className="index">
+        <p>{index + 1}</p>
+      </div>
       {bookImageURL && (
         <div className="thumbnail">
           <a href={bookDtlUrl} target="_blank" rel="noopener noreferrer">
@@ -63,10 +96,38 @@ const NewsItem = ({ article }) => {
           </a>
         </h2>
         <p>{authors}</p>
-        <p>출판사: {publisher}</p>
-        <p>출판연월: {publication_year}</p>
+        <p>
+          출판: {publisher}, {publication_year}
+        </p>
         <p>ISBN: {isbn13}</p>
+        <button onClick={onClick}>대출하기</button>
       </div>
+      {/* <div className={category === "bookBlkt" ? "blktlist" : "noblktlist"}>
+        <div className="index">
+          <p>{index + 1}</p>
+        </div>
+        {bookImageURL && (
+          <div className="thumbnail">
+            <a href={bookDtlUrl} target="_blank" rel="noopener noreferrer">
+              <img src={bookImageURL} alt="thumbnail" />
+            </a>
+          </div>
+        )}
+        <div className="contents">
+          <h2>
+            <a href={bookDtlUrl} target="_blank" rel="noopener noreferrer">
+              {bookname}
+            </a>
+          </h2>
+          <p>{authors}</p>
+          <p>
+            출판: {publisher}, {publication_year}
+          </p>
+          <p>ISBN: {isbn13}</p>
+          <button onClick={onClick}>대출하기</button>
+        </div>
+      </div> */}
+      {/* <Blanket data={data} /> */}
     </NewsItemBlock>
   );
 };
