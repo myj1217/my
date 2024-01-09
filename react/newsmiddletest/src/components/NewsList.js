@@ -33,7 +33,6 @@ const NewsList = ({ search, category }) => {
             `http://data4library.kr/api/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${search}&exactMatch=true&pageNo=1&pageSize=10&format=json`
           );
           setArticles(response.data.response.docs);
-          // setLists(response.data.response.docs);
         }
         if (category === "hotTrend") {
           const date = new Date();
