@@ -2,9 +2,9 @@ import React, { useCallback, useState } from "react";
 import Categories from "../components/Categories";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import NewsInsert from "../components/NewsInsert";
+import BookData from "../components/BookData";
 
-const NewsInsertBlock = styled.div`
+const BookPageBlock = styled.div`
   .searchbar {
     font-family: "GmarketSansMedium";
     border: 1px solid black;
@@ -34,42 +34,48 @@ const NewsInsertBlock = styled.div`
   }
 `;
 
-const NewsPage = () => {
+const BookPage = () => {
   const params = useParams();
   const category = params.category || "srchBooks";
-  const [search, setSearch] = useState("");
+  const [srchValue, setSrchValue] = useState("");
 
   const onChange = useCallback((e) => {
-    setSearch(e.target.value);
+    setSrchValue(e.target.value);
+  }, []);
+
+  const onClick = useCallback((e) => {
+    setSrchValue("");
   }, []);
 
   const onSubmit = useCallback(
     (e) => {
-      setSearch(search);
+      setSrchValue(srchValue);
       e.preventDefault();
     },
-    [search]
+    [srchValue]
   );
 
   return (
     <>
       <Categories />
-      <NewsInsertBlock>
+      <BookPageBlock>
         <form
           className={category === "srchBooks" ? "searchbar" : "nosearchbar"}
           onSubmit={onSubmit}
         >
           <input
-            value={search}
+            value={srchValue}
             placeholder="책제목을 입력하세요."
             onChange={onChange}
           />
-          <button type="submit">검색</button>
+          <button type="submit" onClick={onClick}>
+            초기화
+          </button>
         </form>
-      </NewsInsertBlock>
-      <NewsInsert category={category} search={search} />
+      </BookPageBlock>
+      <BookData category={category} srchValue={srchValue} />
     </>
   );
 };
 
-export default NewsPage;
+export default BookPage;

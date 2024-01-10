@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import NewsSearch from "./NewsSearch";
+import BookSetting from "./BookSetting";
 
-const NewsListBlock = styled.div`
+const BookDataBlock = styled.div`
   box-sizing: border-box;
   padding-bottom: 3rem;
   width: 768px;
@@ -19,7 +19,7 @@ const NewsListBlock = styled.div`
   }
 `;
 
-const NewsInsert = ({ category, search }) => {
+const BookData = ({ category, srchValue }) => {
   const [books, setBooks] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -29,7 +29,7 @@ const NewsInsert = ({ category, search }) => {
       try {
         if (category === "srchBooks") {
           const response = await axios.get(
-            `http://data4library.kr/api/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${search}&exactMatch=true&pageNo=1&pageSize=10&format=json`
+            `http://data4library.kr/api/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${srchValue}&exactMatch=true&pageNo=1&pageSize=10&format=json`
           );
           setBooks(response.data.response.docs);
         }
@@ -47,28 +47,22 @@ const NewsInsert = ({ category, search }) => {
           );
           setBooks(response.data.response.results[0].result.docs);
         }
-        if (category === "libSrch") {
-          const response = await axios.get(
-            `http://data4library.kr/api/extends/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&format=json`
-          );
-          setBooks(response.data.response.libs);
-        }
       } catch (e) {
         console.log(e);
       }
       setLoading(false);
     };
     fetchData();
-  }, [search, category]);
+  }, [srchValue, category]);
 
   if (loading) {
-    return <NewsListBlock>대기중...</NewsListBlock>;
+    return <BookDataBlock>대기중...</BookDataBlock>;
   }
   if (!books) {
     return null;
   }
 
-  return <NewsSearch category={category} books={books} />;
+  return <BookSetting category={category} books={books} />;
 };
 
-export default NewsInsert;
+export default BookData;

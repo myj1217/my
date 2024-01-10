@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NewsItemBlock = styled.div`
+const BlktItemBlock = styled.div`
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -53,7 +53,7 @@ const NewsItemBlock = styled.div`
   }
 `;
 
-const NewsItem = ({ book, index, onInsert }) => {
+const BlktItem = ({ blkt, index, onRemove }) => {
   const {
     bookname,
     authors,
@@ -62,9 +62,9 @@ const NewsItem = ({ book, index, onInsert }) => {
     publisher,
     isbn13,
     publication_year,
-  } = book.doc;
+  } = blkt.doc;
   return (
-    <NewsItemBlock>
+    <BlktItemBlock>
       <div className="index">
         <p>{index + 1}</p>
       </div>
@@ -86,10 +86,10 @@ const NewsItem = ({ book, index, onInsert }) => {
           출판: {publisher}, {publication_year}
         </p>
         <p>ISBN: {isbn13}</p>
-        <button onClick={() => onInsert(isbn13)}>대출하기</button>
+        <button onClick={() => onRemove(isbn13)}>대출취소</button>
       </div>
-    </NewsItemBlock>
+    </BlktItemBlock>
   );
 };
 
-export default NewsItem;
+export default BlktItem;

@@ -1,7 +1,7 @@
-import BlktItem from "./BlktItem";
+import BookItem from "./BookItem";
 import styled from "styled-components";
 
-const BlktsListBlock = styled.div`
+const BookListBlock = styled.div`
   box-sizing: border-box;
   padding-bottom: 3rem;
   width: 768px;
@@ -17,18 +17,18 @@ const BlktsListBlock = styled.div`
   }
 `;
 
-const BlktList = ({ category, blkts, onRemove }) => {
+const BookList = ({ category, books, onInsert }) => {
   return (
-    <BlktsListBlock>
-      {blkts.map((blkt, index) => (
-        <BlktItem
-          blkt={blkt}
-          key={blkt.doc.isbn13}
-          onRemove={onRemove}
+    <BookListBlock>
+      {books.map((book, index) => (
+        <BookItem
+          book={book}
+          key={book.doc.isbn13}
+          onInsert={onInsert}
           index={index}
         />
       ))}
-    </BlktsListBlock>
+    </BookListBlock>
   );
 };
-export default BlktList;
+export default BookList;

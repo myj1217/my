@@ -1,6 +1,7 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 import NewsList from "./NewsList";
 import styled from "styled-components";
+import BlktList from "./BlktList";
 
 const NewsSearchBlock = styled.div`
   .noshow {
@@ -9,23 +10,22 @@ const NewsSearchBlock = styled.div`
 `;
 
 const NewsSearch = ({ category, books }) => {
-  const [blkts, setBlkts] = useState(books);
-  console.log(books);
-  console.log(blkts);
+  const [blkts, setBlkts] = useState([]);
+  const clones = books;
 
-  // 장바구니
-  const nextId = useRef(0);
   const onInsert = useCallback(
-    (books) => {
-      console.log(books);
-      // const blkt = books.concat("id: nextId.current");
-      const blkt = {
-        ...books,
-        id: nextId.current,
-      };
-      setBlkts(blkts.concat(blkt));
-      // console.log(blkts);
-      nextId.current += 1;
+    (isbn13) => {
+      const addBlkts = clones.filter((clone) => clone.doc.isbn13 === isbn13);
+      setBlkts(blkts.concat(addBlkts));
+      console.log(blkts);
+    },
+    [blkts, clones]
+  );
+
+  const onRemove = useCallback(
+    (isbn13) => {
+      setBlkts(blkts.filter((blkt) => blkt.doc.isbn13 !== isbn13));
+      console.log(blkts);
     },
     [blkts]
   );
@@ -35,9 +35,9 @@ const NewsSearch = ({ category, books }) => {
       <div className={category !== "bookBlkt" ? "show" : "noshow"}>
         <NewsList category={category} books={books} onInsert={onInsert} />
       </div>
-      {/* <div className={category === "bookBlkt" ? "show" : "noshow"}>
-        <NewsList category={category} blkts={blkts} onInsert={onInsert} />
-      </div> */}
+      <div className={category === "bookBlkt" ? "show" : "noshow"}>
+        <BlktList category={category} blkts={blkts} onRemove={onRemove} />
+      </div>
     </NewsSearchBlock>
   );
 };

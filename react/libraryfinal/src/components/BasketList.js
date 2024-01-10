@@ -1,7 +1,7 @@
-import BlktItem from "./BlktItem";
+import BasketItem from "./BasketItem";
 import styled from "styled-components";
 
-const BlktsListBlock = styled.div`
+const BasketListBlock = styled.div`
   box-sizing: border-box;
   padding-bottom: 3rem;
   width: 768px;
@@ -17,18 +17,18 @@ const BlktsListBlock = styled.div`
   }
 `;
 
-const BlktList = ({ category, blkts, onRemove }) => {
+const BasketList = ({ category, baskets, onRemove }) => {
   return (
-    <BlktsListBlock>
-      {blkts.map((blkt, index) => (
-        <BlktItem
-          blkt={blkt}
-          key={blkt.doc.isbn13}
+    <BasketListBlock>
+      {baskets.map((basket, index) => (
+        <BasketItem
+          basket={basket}
+          key={basket.doc.isbn13}
           onRemove={onRemove}
           index={index}
         />
       ))}
-    </BlktsListBlock>
+    </BasketListBlock>
   );
 };
-export default BlktList;
+export default BasketList;

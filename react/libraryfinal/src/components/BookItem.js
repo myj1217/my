@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NewsItemBlock = styled.div`
+const BookItemBlock = styled.div`
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -53,7 +53,7 @@ const NewsItemBlock = styled.div`
   }
 `;
 
-const NewsItem = ({ book, index, onInsert }) => {
+const BookItem = ({ book, index, onInsert }) => {
   const {
     bookname,
     authors,
@@ -64,7 +64,7 @@ const NewsItem = ({ book, index, onInsert }) => {
     publication_year,
   } = book.doc;
   return (
-    <NewsItemBlock>
+    <BookItemBlock>
       <div className="index">
         <p>{index + 1}</p>
       </div>
@@ -88,8 +88,8 @@ const NewsItem = ({ book, index, onInsert }) => {
         <p>ISBN: {isbn13}</p>
         <button onClick={() => onInsert(isbn13)}>대출하기</button>
       </div>
-    </NewsItemBlock>
+    </BookItemBlock>
   );
 };
 
-export default NewsItem;
+export default BookItem;
