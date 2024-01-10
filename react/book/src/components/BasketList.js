@@ -17,16 +17,15 @@ const BasketListBlock = styled.div`
   }
 `;
 
-const BasketList = ({ category, baskets, onRemove, onBorrow, onToggle }) => {
+const BasketList = ({ category, baskets, onRemove }) => {
   return (
     <BasketListBlock>
-      {baskets.map((basket) => (
+      {baskets.map((basket, index) => (
         <BasketItem
           basket={basket}
           key={basket.doc.isbn13}
           onRemove={onRemove}
-          onBorrow={onBorrow}
-          onToggle={onToggle}
+          index={index}
         />
       ))}
     </BasketListBlock>

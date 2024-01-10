@@ -86,7 +86,7 @@ const BookItem = ({ book, index, onInsert }) => {
           출판: {publisher}, {publication_year}
         </p>
         <p>ISBN: {isbn13}</p>
-        <button onClick={() => onInsert(isbn13)}>북카트에 담기</button>
+        <button onClick={() => onInsert(isbn13)}>대출하기</button>
       </div>
     </BookItemBlock>
   );

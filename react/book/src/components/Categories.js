@@ -12,7 +12,7 @@ const categories = [
   },
   {
     name: "bookBskt",
-    text: "북카트",
+    text: "장바구니",
   },
 ];
 

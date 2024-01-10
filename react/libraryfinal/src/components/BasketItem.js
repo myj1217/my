@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import cn from "classnames";
+import {
+  MdOutlineCheckBoxOutlineBlank,
+  MdOutlineCheckBox,
+} from "react-icons/md";
 
 const BasketItemBlock = styled.div`
   display: flex;
@@ -40,8 +45,7 @@ const BasketItemBlock = styled.div`
       white-space: normal;
     }
     button {
-      display: block;
-      margin: 0;
+      margin-right: 10px;
       padding: 5px 10px;
       margin-top: 0.5rem;
       white-space: normal;
@@ -53,7 +57,7 @@ const BasketItemBlock = styled.div`
   }
 `;
 
-const BasketItem = ({ basket, index, onRemove }) => {
+const BasketItem = ({ basket, onRemove, onBorrow, onToggle }) => {
   const {
     bookname,
     authors,
@@ -62,11 +66,15 @@ const BasketItem = ({ basket, index, onRemove }) => {
     publisher,
     isbn13,
     publication_year,
+    checked,
   } = basket.doc;
   return (
     <BasketItemBlock>
-      <div className="index">
-        <p>{index + 1}</p>
+      <div
+        className={cn("checkbox", { checked })}
+        onClick={() => onToggle(isbn13)}
+      >
+        {checked ? <MdOutlineCheckBox /> : <MdOutlineCheckBoxOutlineBlank />}
       </div>
       {bookImageURL && (
         <div className="thumbnail">
@@ -86,7 +94,8 @@ const BasketItem = ({ basket, index, onRemove }) => {
           출판: {publisher}, {publication_year}
         </p>
         <p>ISBN: {isbn13}</p>
-        <button onClick={() => onRemove(isbn13)}>대출취소</button>
+        <button onClick={() => onBorrow(isbn13)}>대출신청</button>
+        <button onClick={() => onRemove(isbn13)}>삭제</button>
       </div>
     </BasketItemBlock>
   );

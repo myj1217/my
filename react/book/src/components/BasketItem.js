@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const BookItemBlock = styled.div`
+const BasketItemBlock = styled.div`
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -53,7 +53,7 @@ const BookItemBlock = styled.div`
   }
 `;
 
-const BookItem = ({ book, index, onInsert }) => {
+const BasketItem = ({ basket, index, onRemove }) => {
   const {
     bookname,
     authors,
@@ -62,9 +62,9 @@ const BookItem = ({ book, index, onInsert }) => {
     publisher,
     isbn13,
     publication_year,
-  } = book.doc;
+  } = basket.doc;
   return (
-    <BookItemBlock>
+    <BasketItemBlock>
       <div className="index">
         <p>{index + 1}</p>
       </div>
@@ -86,10 +86,10 @@ const BookItem = ({ book, index, onInsert }) => {
           출판: {publisher}, {publication_year}
         </p>
         <p>ISBN: {isbn13}</p>
-        <button onClick={() => onInsert(isbn13)}>북카트에 담기</button>
+        <button onClick={() => onRemove(isbn13)}>대출취소</button>
       </div>
-    </BookItemBlock>
+    </BasketItemBlock>
   );
 };
 
-export default BookItem;
+export default BasketItem;
