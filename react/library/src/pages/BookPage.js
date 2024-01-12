@@ -37,6 +37,7 @@ const BookPageBlock = styled.div`
 const BookPage = () => {
   const params = useParams();
   const category = params.category || "srchBooks";
+
   const [srchValue, setSrchValue] = useState("");
 
   const onChange = useCallback((e) => {

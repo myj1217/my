@@ -22,6 +22,7 @@ const BookDataBlock = styled.div`
 const BookData = ({ category, srchValue }) => {
   const [books, setBooks] = useState("");
   const [loading, setLoading] = useState(false);
+  const array = [];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +32,16 @@ const BookData = ({ category, srchValue }) => {
           const response = await axios.get(
             `http://data4library.kr/api/${category}?authKey=b85ec318ffca5a5f63a9fcf1e0a6cc95f00eda54e322fdb26fafe700420c33c5&title=${srchValue}&exactMatch=true&pageNo=1&pageSize=10&format=json`
           );
-          setBooks(response.data.response.docs);
+          for (let i = 0; i <= 9; i++) {
+            array.push({
+              doc: {
+                ...response.data.response.docs[i].doc,
+                checked: false,
+              },
+            });
+          }
+          console.log(array);
+          setBooks(array);
         }
         if (category === "hotTrend") {
           const date = new Date();

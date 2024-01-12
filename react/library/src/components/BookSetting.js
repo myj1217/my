@@ -11,23 +11,21 @@ const BookSearchBlock = styled.div`
 
 const BookSetting = ({ category, books }) => {
   const [baskets, setBaskets] = useState([]);
-  const clones = books;
 
   const onInsert = useCallback(
     (isbn13) => {
-      const addBaskets = clones.filter((clone) => clone.doc.isbn13 === isbn13);
-      setBaskets(baskets.concat(addBaskets));
+      const addBaskets = books.filter((book) => book.doc.isbn13 === isbn13);
+      setBaskets((baskets) => baskets.concat(addBaskets));
       alert("해당 도서가 북카트에 추가되었습니다.");
     },
-    [baskets, clones]
+    [books]
   );
 
-  const onRemove = useCallback(
-    (isbn13) => {
-      setBaskets(baskets.filter((basket) => basket.doc.isbn13 !== isbn13));
-    },
-    [baskets]
-  );
+  const onRemove = useCallback((isbn13) => {
+    setBaskets((baskets) =>
+      baskets.filter((basket) => basket.doc.isbn13 !== isbn13)
+    );
+  }, []);
 
   const onBorrow = useCallback((isbn13) => {
     setBaskets((baskets) =>
@@ -35,6 +33,19 @@ const BookSetting = ({ category, books }) => {
     );
     alert("해당 도서의 대출신청이 완료되었습니다.");
   }, []);
+
+  const onToggle = useCallback(
+    (isbn13) => {
+      setBaskets(
+        baskets.map((basket) =>
+          basket.doc.isbn13 === isbn13
+            ? { doc: { ...basket.doc, checked: !basket.doc.checked } }
+            : basket
+        )
+      );
+    },
+    [baskets]
+  );
 
   return (
     <BookSearchBlock>
@@ -47,6 +58,7 @@ const BookSetting = ({ category, books }) => {
           baskets={baskets}
           onRemove={onRemove}
           onBorrow={onBorrow}
+          onToggle={onToggle}
         />
       </div>
     </BookSearchBlock>
