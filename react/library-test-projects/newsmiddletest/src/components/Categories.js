@@ -15,8 +15,13 @@ const categories = [
     text: "신착도서",
   },
   {
+<<<<<<< Updated upstream:react/library-test-projects/newsmiddletest/src/components/Categories.js
     name: "bookBlkt",
     text: "장바구니",
+=======
+    name: "arndLib",
+    text: "주변 도서관",
+>>>>>>> Stashed changes:react/newsmiddletest/src/components/Categories.js
   },
 ];
 
