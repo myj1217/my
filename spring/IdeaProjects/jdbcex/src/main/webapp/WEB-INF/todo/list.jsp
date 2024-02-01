@@ -13,7 +13,9 @@
 </head>
 <body>
 <h1>Todo List</h1>
-
+<%-- 진짜 받아오나 확인하기 위해서 --%>
+<h2>${loginInfo}</h2>
+<h3>${loginInfo.mname}</h3>
 <ul>
     <c:forEach items="${dtoList}" var="dto">
         <li>
@@ -24,5 +26,9 @@
         </li>
     </c:forEach>
 </ul>
+<%--action=? : ?에 해당하는 서블릿을 찾아라 (WebServlet)--%>
+<form action="/logout" method="post">
+    <button>LOGOUT</button>
+</form>
 </body>
 </html>
