@@ -13,6 +13,7 @@
 </head>
 <body>
 <h1>Todo List</h1>
+<h2>${appName}</h2>
 <%-- 진짜 받아오나 확인하기 위해서 --%>
 <h2>${loginInfo}</h2>
 <h3>${loginInfo.mname}</h3>
