@@ -1,6 +1,7 @@
 package springex.mapper;
 
 import com.springex.domain.TodoVO;
+import com.springex.dto.PageRequestDTO;
 import com.springex.mapper.TodoMapper;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -22,12 +23,10 @@ public class TodoMapperTests {
     // true : 반드시 bean이 존재해야 함
     @Autowired(required = false)
     private TodoMapper todoMapper;
-
     @Test
     public void testGetTime() {
         log.info(todoMapper.getTime());
     }
-
     @Test
     public void testInsert() {
         TodoVO todoVO = TodoVO.builder()
@@ -37,10 +36,36 @@ public class TodoMapperTests {
                 .build();
         todoMapper.insert(todoVO);
     }
-
     @Test
     public void testSelectAll() {
         List<TodoVO> voList = todoMapper.selectAll();
+
+        voList.forEach(vo -> log.info(vo));
+    }
+    @Test
+    public void testSelectOne() {
+        TodoVO todoVO = todoMapper.selectOne(3L);
+        log.info(todoVO);
+    }
+    @Test
+    public void testSelectList() {
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                .page(1)
+                .size(10)
+                .build();
+        List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
+        voList.forEach(vo -> log.info(vo));
+    }
+    @Test
+    public void testSelectSearch() {
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                .page(1)
+                .size(10)
+                .types(new String[]{"t","w"}) // t : title , w : writer
+                .keyword("스프링")
+                .build();
+
+        List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
 
         voList.forEach(vo -> log.info(vo));
     }
