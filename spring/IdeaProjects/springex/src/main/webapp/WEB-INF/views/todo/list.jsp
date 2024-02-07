@@ -17,24 +17,35 @@
 <div class="container-fluid">
     <div class="row">
         <!-- 기존의 <h1>Header</h1> -->
-        <div class="row">
+        <div class="row content">
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                <a class="nav-link" href="#">Features</a>
-                                <a class="nav-link" href="#">Pricing</a>
-                                <a class="nav-link disabled">Disabled</a>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Search </h5>
+                        <form action="/todo/list" method="get">
+                            <input type="hidden" name="size" value="${pageRequestDTO.size}">
+                            <div class="mb-3">
+                                <input type="checkbox" name="finished" ${pageRequestDTO.finished?"checked":""}>완료여부
                             </div>
-                        </div>
+                            <div class="mb-3">
+                                <input type="checkbox" name="types" value="t" ${pageRequestDTO.checkType("t")?"checked":""}>제목
+                                <input type="checkbox" name="types" value="w" ${pageRequestDTO.checkType("w")?"checked":""}>작성자
+                                <input type="text"  name="keyword" class="form-control" value='<c:out value="${pageRequestDTO.keyword}"/>'>
+                            </div>
+                            <div class="input-group mb-3 dueDateDiv">
+                                <input type="date" name="from" class="form-control" value="${pageRequestDTO.from }">
+                                <input type="date" name="to" class="form-control"value="${pageRequestDTO.to }">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="float-end">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                    <button class="btn btn-info clearBtn" type="reset">Clear</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </nav>
+                </div>
+
             </div>
         </div>
         <!-- header end -->
@@ -59,20 +70,22 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <c:forEach items="${responseDTO.dtoList}" var="dto">
-                                    <tr>
-                                        <td><c:out value="${dto.tno}"/></td>
-                                        <td>
-                                            <a href="/todo/read?tno=${dto.tno}&${pageRequestDTO.link}"
-                                               class="text-decoration-none" data-tno="${dto.tno}">
-                                                <c:out value="${dto.title}"/>
-                                            </a>
-                                        </td>
-                                        <td><c:out value="${dto.writer}"/></td>
-                                        <td><c:out value="${dto.dueDate}"/></td>
-                                        <td><c:out value="${dto.finished}"/></td>
-                                    </tr>
-                                </c:forEach>
+                            <c:forEach items="${responseDTO.dtoList}" var="dto">
+                                <tr>
+                                    <th scope="row"><c:out value="${dto.tno}"/></th>
+                                    <td>
+                                        <a href="/todo/read?tno=${dto.tno}&${pageRequestDTO.link}"
+                                           class="text-decoration-none" data-tno="${dto.tno}">
+                                            <c:out value="${dto.title}"/>
+                                        </a>
+                                    </td>
+                                    <td><c:out value="${dto.writer}"/></td>
+                                    <td><c:out value="${dto.dueDate}"/></td>
+                                    <td><c:out value="${dto.finished}"/></td>
+                                </tr>
+                            </c:forEach>
+
+
                             </tbody>
                         </table>
                         <div class="float-end">
@@ -94,8 +107,10 @@
                                     </li>
                                 </c:if>
                             </ul>
+
                         </div>
                         <script>
+                            // 검색/필터링 조건을 유지하면서도 페이지번호만 변경
                             document.querySelector(".pagination").addEventListener("click", function (e) {
                                 e.preventDefault()
                                 e.stopPropagation()
@@ -108,8 +123,22 @@
                                 }
                                 const num = target.getAttribute("data-num")
 
-                                self.location = `/todo/list?page=\${num}` //백틱(` `)을 이용해서 템플릿 처리
+                                const formObj = document.querySelector("form")
+                                formObj.innerHTML += `<input type = 'hidden' name='page' value='\${num}'>`
+                                formObj.submit();
+
+                                // self.location = `/todo/list?page=\${num}` //백틱(` `)을 이용해서 템플릿 처리
                             },false)
+
+                            // 초기화 이벤트(Clear)
+                            document.querySelector(".clearBtn").addEventListener("click", function (e){
+                                e.preventDefault()
+                                e.stopPropagation()
+
+                                self.location ='/todo/list'
+
+                            },false)
+
                         </script>
                     </div>
                 </div>

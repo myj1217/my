@@ -63,10 +63,14 @@ public class TodoMapperTests {
                 .size(10)
                 .types(new String[]{"t","w"}) // t : title , w : writer
                 .keyword("스프링")
+                .from(LocalDate.of(2024, 1, 1))
+                .to(LocalDate.of(2025, 1, 1))
                 .build();
 
         List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
 
         voList.forEach(vo -> log.info(vo));
+
+        log.info(todoMapper.getCount(pageRequestDTO));
     }
 }

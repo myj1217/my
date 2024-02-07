@@ -50,45 +50,45 @@
                         <form action="/todo/modify" method="post">
                             <input type="hidden" name="page" value="${pageRequestDTO.page}">
                             <input type="hidden" name="size" value="${pageRequestDTO.size}">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">TNO</span>
-                            <input type="text" name="tno" class="form-control"
-                                   value=<c:out value="${dto.tno}"></c:out> readonly>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Title</span>
-                            <input type="text" name="title" class="form-control"
-                                   value='<c:out value="${dto.title}"></c:out>'>
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">DueDate</span>
-                            <input type="date" name="dueDate" class="form-control"
-                                   value=<c:out value="${dto.dueDate}"></c:out>>
-
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Writer</span>
-                            <input type="text" name="writer" class="form-control"
-                                   value=<c:out value="${dto.writer}"></c:out>>
-
-                        </div>
-
-                        <div class="form-check">
-                            <label class="form-check-label" >
-                                Finished &nbsp;
-                            </label>
-                            <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""} >
-                        </div>
-
-                        <div class="my-4">
-                            <div class="float-end">
-                                <button type="button" class="btn btn-danger">Remove</button>
-                                <button type="button" class="btn btn-primary">Modify</button>
-                                <button type="button" class="btn btn-secondary">List</button>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">TNO</span>
+                                <input type="text" name="tno" class="form-control"
+                                       value=<c:out value="${dto.tno}"></c:out> readonly>
                             </div>
-                        </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Title</span>
+                                <input type="text" name="title" class="form-control"
+                                       value='<c:out value="${dto.title}"></c:out>' >
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">DueDate</span>
+                                <input type="date" name="dueDate" class="form-control"
+                                       value=<c:out value="${dto.dueDate}"></c:out> >
+
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Writer</span>
+                                <input type="text" name="writer" class="form-control"
+                                       value=<c:out value="${dto.writer}"></c:out> >
+
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label" >
+                                    Finished &nbsp;
+                                </label>
+                                <input class="form-check-input" type="checkbox" name="finished" ${dto.finished?"checked":""} >
+                            </div>
+
+                            <div class="my-4">
+                                <div class="float-end">
+                                    <button type="button" class="btn btn-danger">Remove</button>
+                                    <button type="button" class="btn btn-primary">Modify</button>
+                                    <button type="button" class="btn btn-secondary">List</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <script>
@@ -102,9 +102,11 @@
                         </c:forEach>
 
                         console.log(serverValidResult)
+
                     </script>
                 </div>
             </div>
+
         </div>
         <div class="row footer">
             <!--<h1>Footer</h1>-->
@@ -119,19 +121,21 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <script>
     document.querySelector(".btn-primary").addEventListener("click", function(e){
         self.location = "/todo/modify?tno="+${dto.tno}
+        // self.location: 기존 창에서 event창으로 이동
     },false)
 
 
     //목록 페이지로 이동하는 이벤트 처리
     document.querySelector(".btn-secondary").addEventListener("click", function(e){
 
-        e.preventDefault() // 기본 동작 취소
-        e.stopPropagation() // 이벤트 흐름을 끊어라
+        e.preventDefault()
+        e.stopPropagation()
 
-        self.location = `/todo/list?${pageRequestDTO.link}`;
+        self.location = `/todo/list?=${pageRequestDTO.link}`;
     },false)
 
     // remove 버튼 처리
@@ -142,12 +146,13 @@
         e.preventDefault()
         e.stopPropagation()
 
-        formObj.action ="/todo/remove"
+        formObj.action =`/todo/remove?${pageRequestDTO.link}`
         formObj.method ="post"
 
         formObj.submit()
 
-    },false); // 이벤트 흐름이 false
+    },false);
+
     // modify 처리
     document.querySelector(".btn-primary").addEventListener("click",function(e) {
 
@@ -160,6 +165,18 @@
         formObj.submit()
 
     },false);
+
+    // list 버튼 처리
+    document.querySelector(".btn-secondary").addEventListener("click",function (e) {
+
+        e.preventDefault()
+        e.stopPropagation()
+
+        self.location= `/todo/list?${pageRequestDTO.link}`
+
+    },false);
+
+
 </script>
 </body>
 </html>
