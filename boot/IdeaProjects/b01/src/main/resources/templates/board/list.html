@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/basic.html}">
+<!-- layout:decorate : 템플릿을 지시하는 역할 -->
+<!-- 즉, basic.html를 틀로 사용하겠다. -->
+<div layout:fragment="content">
+
+    <h1>Board List</h1>
+
+</div>
+
+<script layout:fragment="script" th:inline="javascript">
+<!-- 인라인 형태의 자바스크립트다. -->
+    console.log("script---------------------")
+</script>
