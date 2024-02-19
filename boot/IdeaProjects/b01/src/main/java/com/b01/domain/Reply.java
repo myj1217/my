@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
+@Table(name = "Reply", indexes = {@Index(name = "idx_reply_board_bno", columnList = "board_bno")})
 @Getter
 @Builder
 @AllArgsConstructor
@@ -20,4 +21,8 @@ public class Reply extends BaseEntity{
     private Board board;
     private String replyText;
     private String replyer;
+
+    public void changeText(String text) {
+        this.replyText = text;
+    }
 }

@@ -1,6 +1,7 @@
 package com.b01.controller;
 
 import com.b01.dto.BoardDTO;
+import com.b01.dto.BoardListReplyCountDTO;
 import com.b01.dto.PageRequestDTO;
 import com.b01.dto.PageResponseDTO;
 import com.b01.service.BoardService;
@@ -24,7 +25,8 @@ public class BoardController {
     public void list(PageRequestDTO pageRequestDTO, Model model) {
         // 우리가 실제로 처리해야 하는 것 : BoardDTO
         // model의 역할 : jsp나 tymleaf에 전달하는 역할
-        PageResponseDTO<BoardDTO> responseDTO = boardService.list(pageRequestDTO);
+        // PageResponseDTO<BoardDTO> responseDTO = boardService.list(pageRequestDTO);
+        PageResponseDTO<BoardListReplyCountDTO> responseDTO = boardService.listWithReplyCount(pageRequestDTO);
 
         log.info(responseDTO);
 
