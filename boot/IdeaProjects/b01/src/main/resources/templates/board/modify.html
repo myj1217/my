@@ -52,47 +52,48 @@
     </div><!-- end row-->
 </div>
 <script layout:fragment="script" th:inline="javascript">
-    <!--에러처리-->
-    const errors = [[${errors}]]
-    console.log(errors)
+    <!--    에러-->
+                    const errors = [[${errors}]]
+                console.log(errors)
 
-    let errorMsg = ''
+                let errorMsg = ''
 
-    if(errors){
-    for(let i =0; i < errors.length; i++){
-        errorMsg += `${errors[i].field}은(는) ${errors[i].code} \n`
-        }
-        history.replaceState({}, null, null)
-        alert(errorMsg)
-    }
-    <!--에러처리 끝-->
+                if(errors){
+                for(let i =0; i < errors.length; i++){
+                    errorMsg += `${errors[i].field}은(는) ${errors[i].code} \n`
+                    }
+                    history.replaceState({}, null, null)
+                    alert(errorMsg)
+                }
 
+                <!--    에러처리 끝-->
     <!--수정-->
-    const link = [[${pageRequestDTO.getLink()}]]
-    const formObj = document.querySelector("#f1")
-    document.querySelector(".modBtn").addEventListener("click", function(e){
-        e.preventDefault()
-        e.stopPropagation()
-        formObj.action = `/board/modify?${link}`
-        formObj.method = 'post'
-        formObj.submit()
-    }, false)
+                const link = [[${pageRequestDTO.getLink()}]]
+                const formObj = document.querySelector("#f1")
 
+                document.querySelector(".modBtn").addEventListener("click", function(e){
+                e.preventDefault()
+                e.stopPropagation()
+
+                formObj.action = `/board/modify?${link}`
+                formObj.method = 'post'
+                formObj.submit()
+                }, false)
     <!--삭제-->
-    document.querySelector(".removeBtn").addEventListener("click", function(e){
-        e.preventDefault()
-        e.stopPropagation()
-        formObj.action=`/board/remove`
-        formObj.method='post'
-        formObj.submit()
-    }, false)
+            document.querySelector(".removeBtn").addEventListener("click", function(e){
+            e.preventDefault()
+            e.stopPropagation()
+            formObj.action=`/board/remove`
+            formObj.method='post'
+            formObj.submit()
+        }, false)
 
-    <!--    목록으로 이동-->
-    document.querySelector(".listBtn").addEventListener("click", function(e){
-        e.preventDefault()
-        e.stopPropagation()
-        formObj.reset()
-        self.location = `/board/list?${link}`
-    },false)
+        <!--    목록으로 이동-->
+        document.querySelector(".listBtn").addEventListener("click", function(e){
+            e.preventDefault()
+            e.stopPropagation()
+            formObj.reset()
+            self.location = `/board/list?${link}`
+        },false)
 </script>
 </html>
