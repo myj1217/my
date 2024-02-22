@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
@@ -18,6 +19,9 @@ public class ReplyRepositoryTests {
 
     @Autowired
     private ReplyRepository replyRepository;
+
+    @Autowired
+    private BoardRepository boardRepository;
 
     @Test
     public void testInsert() {
@@ -48,5 +52,14 @@ public class ReplyRepositoryTests {
         result.getContent().forEach(reply -> {
             log.info(reply);
         });
+    }
+
+    @Test
+    @Transactional
+    @Commit
+    public void testRemoveAll() {
+        Long bno = 1L;
+        replyRepository.deleteByBoard_Bno(bno);
+        boardRepository.deleteById(bno);
     }
 }

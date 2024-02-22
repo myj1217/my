@@ -3,10 +3,9 @@ package com.b01.repository.search;
 import com.b01.domain.Board;
 import com.b01.domain.QBoard;
 import com.b01.domain.QReply;
-import com.b01.dto.BoardListReplyCountDTO;
-import com.b01.dto.PageRequestDTO;
-import com.b01.dto.PageResponseDTO;
+import com.b01.dto.*;
 import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.JPQLQuery;
 import org.springframework.data.domain.Page;
@@ -15,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 // Spring Data JPA의 리포지토리를 지원하기 위한 기본 클래스
 public class BoardSearchImpl extends QuerydslRepositorySupport implements BoardSearch {
@@ -149,5 +149,75 @@ public class BoardSearchImpl extends QuerydslRepositorySupport implements BoardS
         long count = dtoQuery.fetchCount();
 
         return new PageImpl<>(dtoList, pageable, count);
+    }
+    @Override
+    public Page<BoardListAllDTO> searchWithAll(String[] types, String keyword, Pageable pageable) {
+        QBoard board = QBoard.board;
+        QReply reply = QReply.reply;
+
+        JPQLQuery<Board> boardJPQLQuery = from(board);
+        // board와 reply를 왼쪽으로 join할 것이다. reply와 일치하는 레코드가 없으면 null값을 갖게 된다.
+        boardJPQLQuery.leftJoin(reply).on(reply.board.eq(board)); // left join
+
+        // 페이징 처리하기 전에 검색조건과 키워드를 사용하는 부분의 코드
+        if ((types != null && types.length > 0) && keyword != null) {
+            BooleanBuilder booleanBuilder = new BooleanBuilder();
+            for (String type:types) {
+                switch (type) {
+                    case "t":
+                        booleanBuilder.or(board.title.contains(keyword));
+                        break;
+                    case "c":
+                        booleanBuilder.or(board.content.contains(keyword));
+                        break;
+                    case "w":
+                        booleanBuilder.or(board.writer.contains(keyword));
+                        break;
+                }
+            } // end for
+            boardJPQLQuery.where(booleanBuilder);
+        }
+
+        boardJPQLQuery.groupBy(board);
+
+        getQuerydsl().applyPagination(pageable, boardJPQLQuery); // paging
+
+        // Tuple를 생성하고 select()를 사용하여 Board와 댓글의 고유한 개수를 선택하여 쿼리로 반환.
+        JPQLQuery<Tuple> tupleJPQLQuery = boardJPQLQuery.select(board, reply.countDistinct());
+        // fetch()를 실행하여 결과를 List<Tuple>로 검색하여 결과 가져오기.
+        List<Tuple> tupleList = tupleJPQLQuery.fetch();
+
+        // 게시판 정보와 댓글 수를 포함. 변환해서 갖고옴.
+        List<BoardListAllDTO> dtoList = tupleList.stream().map(tuple -> {
+            Board board1 = (Board) tuple.get(board);
+            long replyCount = tuple.get(1, Long.class);
+
+            BoardListAllDTO dto = BoardListAllDTO.builder()
+                    .bno(board1.getBno())
+                    .title(board1.getTitle())
+                    .writer(board1.getWriter())
+                    .regDate(board1.getRegDate())
+                    .replyCount(replyCount)
+                    .build();
+
+            // BoardImage를 BoardImageDTO 처리할 부분
+            List<BoardImageDTO> imageDTOS = board1.getImageSet().stream().sorted()
+                    .map(boardImage -> BoardImageDTO.builder()
+                            .uuid(boardImage.getUuid())
+                            .fileName(boardImage.getFileName())
+                            .ord(boardImage.getOrd())
+                            .build()
+                    ).collect(Collectors.toList());
+            dto.setBoardImages(imageDTOS); // 처리된 BoardImageDTO들을 추가
+
+            return dto;
+        }).collect(Collectors.toList());
+
+        // 총 게시글 수를 조회. 쿼리 조건에 일치하는 Board 레코드의 전체 개수를 가져와
+        // 클라이언트에게 전체 레코드 수에 대한 정보를 제공.
+        long totalCount = boardJPQLQuery.fetchCount();
+
+        // 객체 리스트, 페이지 정보, 전체 개수
+        return new PageImpl<>(dtoList, pageable, totalCount);
     }
 }

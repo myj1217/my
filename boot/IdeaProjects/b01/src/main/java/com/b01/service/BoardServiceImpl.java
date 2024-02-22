@@ -1,10 +1,7 @@
 package com.b01.service;
 
 import com.b01.domain.Board;
-import com.b01.dto.BoardDTO;
-import com.b01.dto.BoardListReplyCountDTO;
-import com.b01.dto.PageRequestDTO;
-import com.b01.dto.PageResponseDTO;
+import com.b01.dto.*;
 import com.b01.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -28,7 +25,8 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public Long register(BoardDTO boardDTO) {
-        Board board = modelMapper.map(boardDTO, Board.class);
+        // Board board = modelMapper.map(boardDTO, Board.class);
+        Board board = dtoToEntity(boardDTO);
         Long bno = boardRepository.save(board).getBno();
         return bno;
     }
@@ -37,9 +35,9 @@ public class BoardServiceImpl implements BoardService{
     // 나가는 값: boardDTO
     @Override
     public BoardDTO readOne(Long bno) {
-        Optional<Board> result = boardRepository.findById(bno);
+        Optional<Board> result = boardRepository.findByIdWithImages(bno);
         Board board = result.orElseThrow();
-        BoardDTO boardDTO = modelMapper.map(board, BoardDTO.class);
+        BoardDTO boardDTO = entityToDTO(board);
         return boardDTO;
     }
 
@@ -91,5 +89,10 @@ public class BoardServiceImpl implements BoardService{
                 .dtoList(result.getContent())
                 .total((int)result.getTotalElements())
                 .build();
+    }
+
+    @Override
+    public PageResponseDTO<BoardListAllDTO> listWithAll(PageRequestDTO pageRequestDTO) {
+        return null;
     }
 }

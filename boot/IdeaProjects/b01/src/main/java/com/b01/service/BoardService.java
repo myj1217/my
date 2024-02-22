@@ -1,9 +1,10 @@
 package com.b01.service;
 
-import com.b01.dto.BoardDTO;
-import com.b01.dto.BoardListReplyCountDTO;
-import com.b01.dto.PageRequestDTO;
-import com.b01.dto.PageResponseDTO;
+import com.b01.domain.Board;
+import com.b01.dto.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public interface BoardService {
     Long register(BoardDTO boardDTO);
@@ -11,5 +12,39 @@ public interface BoardService {
     void modify(BoardDTO boardDTO);
     void remove(Long bno);
     PageResponseDTO<BoardDTO> list(PageRequestDTO pageRequestDTO);
+    // 댓글의 개수 처리
     PageResponseDTO<BoardListReplyCountDTO> listWithReplyCount(PageRequestDTO pageRequestDTO);
+    PageResponseDTO<BoardListAllDTO> listWithAll(PageRequestDTO pageRequestDTO);
+    default Board dtoToEntity(BoardDTO boardDTO) {
+        Board board = Board.builder()
+                .bno(boardDTO.getBno())
+                .title(boardDTO.getTitle())
+                .content(boardDTO.getContent())
+                .writer(boardDTO.getWriter())
+                .build();
+        if (boardDTO.getFileNames() != null) {
+            boardDTO.getFileNames().forEach(fileName -> {
+                // split : 기호를 기준으로 분리하라.
+                String[] arr = fileName.split("_");
+                // s_spring1.jpg
+                board.addImage(arr[0], arr[1]);
+            });
+        }
+        return board;
+    }
+    default BoardDTO entityToDTO(Board board){
+        BoardDTO boardDTO = BoardDTO.builder()
+                .bno(board.getBno())
+                .title(board.getTitle())
+                .content(board.getContent())
+                .writer(board.getWriter())
+                .regDate(board.getRegDate())
+                .modDate(board.getModDate())
+                .build();
+        List<String> fileNames = board.getImageSet().stream().sorted().map(boardImage ->
+                boardImage.getUuid()+"_"+boardImage.getFileName()).collect(Collectors.toList());
+        boardDTO.setFileNames(fileNames);
+
+        return boardDTO;
+    }
 }

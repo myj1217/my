@@ -13,19 +13,14 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @RestController
 @Log4j2
@@ -86,7 +81,7 @@ public class UpDownController {
 
     @Operation(summary = "GET방식으로 첨부파일 조회")
     @GetMapping("/view/{fileName}")
-    public ResponseEntity<Resource> viewFileGET(@PathVariable String fileName) {
+    public ResponseEntity<Resource> viewFileGET(@PathVariable(name = "fileName") String fileName) {
         // File.separator: 운영체제마다 사용하는 '/', '\' 기호가 다르기 때문에
         // 운영체제에 적합한 구분 기호를 사용하는지 확인한다.
         // C://upload\aaa.jpg
@@ -104,5 +99,31 @@ public class UpDownController {
         }
         // ok() : 응답 처리 200번
         return ResponseEntity.ok().headers(headers).body(resource);
+    }
+    @Operation(summary = "DELETE 방식으로 파일 삭제")
+    @DeleteMapping("/remove/{fileName}")
+    public Map<String, Boolean> removeFile(@PathVariable(name = "fileName") String fileName) {
+        Resource resource = new FileSystemResource(uploadPath + File.separator + fileName);
+
+        String resourceName = resource.getFilename();
+
+        Map<String, Boolean> resultMap = new HashMap<>();
+        boolean removed = false;
+
+        try {
+            String contentType = Files.probeContentType(resource.getFile().toPath());
+            removed = resource.getFile().delete();
+
+            // 섬네일이 존재한다면
+            if (contentType.startsWith("image")){
+                File thumbnailFile = new File(uploadPath + File.separator + "s_" + fileName);
+                thumbnailFile.delete();
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+        resultMap.put("result", removed); // 지우고 수정해라
+
+        return resultMap;
     }
 }
