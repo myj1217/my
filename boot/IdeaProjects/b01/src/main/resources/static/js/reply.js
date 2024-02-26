@@ -39,3 +39,4 @@ async function removeReply(rno){
     const response = await axios.delete(`/replies/${rno}`)
     return response.data
 }
+

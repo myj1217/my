@@ -1,14 +1,13 @@
 package com.b01.service;
 
-import com.b01.dto.BoardDTO;
-import com.b01.dto.PageRequestDTO;
-import com.b01.dto.PageResponseDTO;
+import com.b01.dto.*;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 @SpringBootTest
@@ -40,6 +39,10 @@ public class BoardServiceTests {
                 .title("update---------101")
                 .content("content------101")
                 .build();
+
+        // 첨부파일을 하나 추가
+        boardDTO.setFileNames(Arrays.asList(UUID.randomUUID()+"_zzz.jpg"));
+
         boardService.modify(boardDTO);
     }
 
@@ -85,5 +88,34 @@ public class BoardServiceTests {
         for (String fileName : boardDTO.getFileNames()) {
             log.info(fileName);
         } // end for
+    }
+
+    @Test
+    public void testRemoveAll() {
+        Long bno = 1L;
+        boardService.remove(bno);
+    }
+
+    @Test
+    public void testListWithAll() {
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                .page(1)
+                .size(10)
+                .build();
+
+        PageResponseDTO<BoardListAllDTO> responseDTO = boardService.listWithAll(pageRequestDTO);
+
+        List<BoardListAllDTO> dtoList = responseDTO.getDtoList();
+
+        dtoList.forEach(boardListAllDTO -> {
+            log.info(boardListAllDTO.getBno() + ":" + boardListAllDTO.getTitle());
+
+            if (boardListAllDTO.getBoardImages() != null) {
+                for (BoardImageDTO boardImage : boardListAllDTO.getBoardImages()) {
+                    log.info(boardImage);
+                }
+            }
+            log.info("------------");
+        });
     }
 }
