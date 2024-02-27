@@ -22,9 +22,10 @@
                             <span class="input-group-text">Content</span>
                             <textarea class="form-control col-sm-5" rows="5" name="content"></textarea>
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-3" th:with="username=${#authentication.principal.username}">
                             <span class="input-group-text">Writer</span>
-                            <input type="text" name="writer" class="form-control" placeholder="Writer">
+                            <input type="text" name="writer" class="form-control" placeholder="Writer"
+                            th:value="${username}" readonly>
                         </div>
                         <div class="input-group mb-3">
                             <span class ="input-group-text">Images</span>
@@ -78,6 +79,14 @@
 
 </div><!-- layout fragment end -->
 <script layout:fragment="script" th:inline="javascript">
+
+
+    const auth = [[${#authentication.principal}]]
+
+
+
+
+
     const errors = [[${errors}]]
     console.log(errors)
     let errorMsg = ''

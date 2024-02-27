@@ -51,8 +51,12 @@ public class CustomSecurityConfig {
         http.rememberMe(config -> {
             config.key("12345678")
                     .tokenRepository(persistentTokenRepository())
-                    .userDetailsService(userDetailsService)
-                    .tokenValiditySeconds(60*60*24*30);
+                    .userDetailsService(userDetailsService) // 쿠키 등 사용자의 정보 가져오겠다.
+                    .tokenValiditySeconds(60*60*24*30); // 60초 60분 24시간 30일 = 한달
+        });
+
+        http.oauth2Login(config -> {
+            config.loginPage("/member/login");
         });
 
         return http.build(); // HttpSecurity를 모두

@@ -65,7 +65,7 @@ public class BoardController {
 
         return "redirect:/board/list";
     }
-
+    @PreAuthorize("isAuthenticated()") // 인증된 사용자만 액세스 , 반환값 : 인증 되었으면 true
     @GetMapping({"/read", "/modify"})
     public void read(@RequestParam(name ="bno") Long bno, PageRequestDTO pageRequestDTO, Model model){
 
@@ -75,6 +75,8 @@ public class BoardController {
 
         model.addAttribute("dto", boardDTO);
     }
+    // 게시물 수정은 현재 로그인한 사용자와 게시물의 작성자가 정보와 일치할 때만 삭제할 수 있어야 한다.
+    @PreAuthorize("principal.username == #boardDTO.writer")
     @PostMapping("/modify")
     public String modify(PageRequestDTO pageRequestDTO, @Valid BoardDTO boardDTO,
                          BindingResult bindingResult, RedirectAttributes redirectAttributes){
@@ -92,7 +94,7 @@ public class BoardController {
         redirectAttributes.addAttribute("bno", boardDTO.getBno());
         return "redirect:/board/read";
     }
-
+    @PreAuthorize("principal.username == #boardDTO.writer")
     @PostMapping("/remove")
     public String remove(BoardDTO boardDTO,
                          RedirectAttributes redirectAttributes){ // DTO로 받아야지만 지울 수 있다. - record이기 때문에
