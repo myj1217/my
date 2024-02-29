@@ -25,16 +25,12 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor    // OAuth2 사용자 정보를 가져오기 위한 사용자 정의 서비스 클래스.
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
-
-
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
     @Override   // OAuth2 사용자 정보를 로드하는 메서드.
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException{
-
         log.info("userRequest...........");
         log.info(userRequest);
-
         log.info("oauth2 user..................................");
         // 클라이언트 등록정보를 가져온다.
         ClientRegistration clientRegistration = userRequest.getClientRegistration();
@@ -58,7 +54,6 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         return generateDTO(email, paramMap);
     }
-
     private MemberSecurityDTO generateDTO(String email, Map<String, Object> params){
 
         Optional<Member> result = memberRepository.findByEmail(email);

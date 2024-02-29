@@ -26,20 +26,17 @@ import java.util.List;
 public class BoardController {
     @Value("${com.upload.path}")
     private String uploadPath;
-
     private final BoardService boardService;
-
-    @GetMapping("/list")    // /board/list
+    @GetMapping("/list")
     public void list(PageRequestDTO pageRequestDTO, Model model){
 //        PageResponseDTO<BoardDTO> responseDTO = boardService.list(pageRequestDTO);
         PageResponseDTO<BoardListAllDTO> responseDTO = boardService.listWithAll(pageRequestDTO);
         log.info(responseDTO);
-
         model.addAttribute("responseDTO", responseDTO);
     }
 
     @PreAuthorize("hasRole('USER')")
-    @GetMapping("/register") // register에 USER라는 권한을 가진 사용자가 접근 가능.
+    @GetMapping("/register")// register에 USER라는 권한을 가진 사용자가 접근 가능.
     public void registerGET(){
 
     }
@@ -65,7 +62,9 @@ public class BoardController {
 
         return "redirect:/board/list";
     }
-    @PreAuthorize("isAuthenticated()") // 인증된 사용자만 액세스 , 반환값 : 인증 되었으면 true
+
+    // PreAuthorize:사용자의 권한을 검사
+    @PreAuthorize("isAuthenticated()")//isAuthenticated: 인증된 사용자만 액세스 할수 있다. 반환값은 인증되었을때는 true, 안되면 false
     @GetMapping({"/read", "/modify"})
     public void read(@RequestParam(name ="bno") Long bno, PageRequestDTO pageRequestDTO, Model model){
 
@@ -75,10 +74,10 @@ public class BoardController {
 
         model.addAttribute("dto", boardDTO);
     }
-    // 게시물 수정은 현재 로그인한 사용자와 게시물의 작성자가 정보와 일치할 때만 삭제할 수 있어야 한다.
+    // 게시물 수정은 현재 로그인한 사용자와 게시물의 작성자가 정보와 일치할때만 삭제할수 있어야 한다.
     @PreAuthorize("principal.username == #boardDTO.writer")
     @PostMapping("/modify")
-    public String modify(PageRequestDTO pageRequestDTO, @Valid BoardDTO boardDTO,
+    public String modify(PageRequestDTO pageRequestDTO, @Valid @ModelAttribute("boardDTO") BoardDTO boardDTO,
                          BindingResult bindingResult, RedirectAttributes redirectAttributes){
         log.info("board modify post_______" + boardDTO);
         if(bindingResult.hasErrors()){
@@ -96,35 +95,29 @@ public class BoardController {
     }
     @PreAuthorize("principal.username == #boardDTO.writer")
     @PostMapping("/remove")
-    public String remove(BoardDTO boardDTO,
-                         RedirectAttributes redirectAttributes){ // DTO로 받아야지만 지울 수 있다. - record이기 때문에
-        Long bno = boardDTO.getBno();
-        log.info("remove post___________"+ bno);
+    public String remove(@ModelAttribute("boardDTO") BoardDTO boardDTO, RedirectAttributes redirectAttributes) {
+        Long bno  = boardDTO.getBno();
+        log.info("remove post.. " + bno);
         boardService.remove(bno);
-
-        // 게시물이 데이터베이스 상에서 삭제되었다면 첨부파일 삭제
+        //게시물이 삭제되었다면 첨부 파일 삭제
         log.info(boardDTO.getFileNames());
         List<String> fileNames = boardDTO.getFileNames();
-        if (fileNames != null && fileNames.size() > 0) {
+        if(fileNames != null && fileNames.size() > 0){
             removeFiles(fileNames);
         }
 
         redirectAttributes.addFlashAttribute("result", "removed");
         return "redirect:/board/list";
     }
-
-    // 게시물을 삭제할 때는 fileNames라는 이름의 파라미터로 삭제해야하는 모든 파일들의 정보를 전달하고
-    // BoardService에서 삭제가 성공적으로 이루어진다면 BoardController에서는 업로드 되어있는 파일을 삭제하게 된다.
-    public void removeFiles(List<String> files) {
+    public void removeFiles(List<String> files){
         for (String fileName:files) {
             Resource resource = new FileSystemResource(uploadPath + File.separator + fileName);
-
             String resourceName = resource.getFilename();
 
             try {
                 String contentType = Files.probeContentType(resource.getFile().toPath());
                 resource.getFile().delete();
-                // 섬네일이 존재한다면
+                //섬네일이 존재한다면
                 if (contentType.startsWith("image")) {
                     File thumbnailFile = new File(uploadPath + File.separator + "s_" + fileName);
                     thumbnailFile.delete();
@@ -132,6 +125,6 @@ public class BoardController {
             } catch (Exception e) {
                 log.error(e.getMessage());
             }
-        } // end for
+        }//end for
     }
 }

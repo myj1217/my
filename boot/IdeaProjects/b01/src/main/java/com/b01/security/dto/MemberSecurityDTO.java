@@ -19,14 +19,10 @@ public class MemberSecurityDTO extends User implements OAuth2User {
     private String email;
     private boolean del;
     private boolean social;
-    private String username;
+    private Map<String, Object> props; //소셜 로그인 정보
 
-    private Map<String, Object> props; // 소셜 로그인 정보
-
-    public MemberSecurityDTO(String username, String password, String email, boolean del,
-                             boolean social, Collection<? extends GrantedAuthority> authorities) {
-                                                    // ? : 어떤 걸로 지정되도 괜찮다. (범위를 좀 넓게)
-        // 부모에게 상속받은 값을 사용하겠다.
+    public MemberSecurityDTO(String username, String password, String email, boolean del, boolean social,
+                             Collection<? extends GrantedAuthority> authorities) {
         super(username, password, authorities);
 
         this.mid = username;
@@ -34,7 +30,6 @@ public class MemberSecurityDTO extends User implements OAuth2User {
         this.email = email;
         this.del = del;
         this.social = social;
-        // this.username = username;
     }
     public Map<String, Object> getAttributes() {
         return this.getProps();
@@ -43,7 +38,5 @@ public class MemberSecurityDTO extends User implements OAuth2User {
     public String getName() {
         return this.mid;
     }
-    // public String getUsername() {
-    //     return this.mid;
-    // }
+
 }
